@@ -188,7 +188,8 @@ seamless system development. In the help, the entire model is described for the 
      
 [Basic information to start development](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/AutoJoinModelConditions.md)  
 [Standardized Page/Agenda Structure](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Page-AgendaStructure.md)  
-[System Templates](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/SystemTemplates.md)  
+[System Templates](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYSYSTEMBuilderTemplates/README.MD)  
+[System Templates Desc](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/SystemTemplates.md)  
 [Print Reports](./FYIReporting&Help&Tips/README.MD)  
          ```
     
@@ -199,7 +200,8 @@ seamless system development. In the help, the entire model is described for the 
 
       ```markdown
      
-[System Core Structure Definition](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md)  
+[System Core Structure Definition](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md) 
+[Global Communication API module](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYSYSTEMBuilderAPIExample/README.MD)   
 [MainWindow Central System Control](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/MainWindow-CentralCorePoint.md)   
 [Implemented Core Tools](./EASYTOOLS/README.MD)   
 [Printing Solution Information](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Printing&SystemJoins.md)   
@@ -295,3 +297,6 @@ Available agendas.
     
 [Signpost - README.MD](./README.md)  
      ```
+     
+More information, shared agendas, code samples, DB objects and databases
+and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-CZ
