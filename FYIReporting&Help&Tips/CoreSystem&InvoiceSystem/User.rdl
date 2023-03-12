@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>7.5in</PageHeight>
+  <PageWidth>3.87in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT u.UserName, u.Name, u.SurName, u.Photo,r.Role FROM UserList u,UserRoleList r WHERE 
+u.RoleId = r.Id AND u.Id = @Id</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Id">
+            <Value>={?Id}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SurName">
+          <DataField>SurName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Photo">
+          <DataField>Photo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Role">
+          <DataField>Role</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>1.1pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <Body>
+    <Height>83.3pt</Height>
+    <ReportItems>
+      <List Name="List1">
+        <DataSetName>Data</DataSetName>
+        <Height>79.70pt</Height>
+        <NoRows>Query returned no rows!</NoRows>
+        <ReportItems>
+          <Textbox Name="id">
+            <Top>32.7pt</Top>
+            <Left>160.5pt</Left>
+            <Width>75.27pt</Width>
+            <Height>15.07pt</Height>
+            <Value>={Name}</Value>
+            <CanGrow>false</CanGrow>
+            <Style>
+              <PaddingRight>2pt</PaddingRight>
+              <TextAlign>Left</TextAlign>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="userName">
+            <Top>47.6pt</Top>
+            <Left>158.0pt</Left>
+            <Width>84.27pt</Width>
+            <Height>18.07pt</Height>
+            <Value>={SurName}</Value>
+            <CanGrow>true</CanGrow>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <TextAlign>Left</TextAlign>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="terminalName">
+            <Top>18.1pt</Top>
+            <Left>159.2pt</Left>
+            <Width>67.78pt</Width>
+            <Height>16.57pt</Height>
+            <Value>={Role}</Value>
+            <CanGrow>true</CanGrow>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <TextAlign>Left</TextAlign>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Image Name="Image1">
+            <Height>61.13pt</Height>
+            <Width>76.90pt</Width>
+            <Left>4.0pt</Left>
+            <Top>2.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Center</TextAlign>
+            </Style>
+            <MIMEType>image/png</MIMEType>
+            <Source>Database</Source>
+            <Value>=Fields!Photo.Value</Value>
+            <Sizing>FitProportional</Sizing>
+          </Image>
+          <CustomReportItem Name="CustomReportItem1">
+            <Type>BarCode128</Type>
+            <Height>13.61pt</Height>
+            <Width>148.94pt</Width>
+            <CustomProperties>
+              <CustomProperty>
+                <Name>Code</Name>
+                <Value>={UserName}</Value>
+              </CustomProperty>
+            </CustomProperties>
+            <Left>93.0pt</Left>
+            <Top>63.2pt</Top>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </CustomReportItem>
+          <Textbox Name="Textbox1">
+            <Height>12pt</Height>
+            <Width>1in</Width>
+            <Value>=Today()</Value>
+            <ZIndex>1</ZIndex>
+            <Left>2.4pt</Left>
+            <Top>65.0pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox3">
+            <Height>11.25pt</Height>
+            <Width>36.17pt</Width>
+            <Value>Role: </Value>
+            <ZIndex>1</ZIndex>
+            <Left>82.8pt</Left>
+            <Top>17.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox4">
+            <Height>12.75pt</Height>
+            <Width>40.68pt</Width>
+            <Value>Name:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>82.3pt</Left>
+            <Top>31.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <Height>12.00pt</Height>
+            <Width>49.75pt</Width>
+            <Value>Surname:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>81.7pt</Left>
+            <Top>45.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Width>243.28pt</Width>
+        <Left>0.00pt</Left>
+        <Top>2.36pt</Top>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+        </Style>
+      </List>
+      <Textbox Name="Textbox2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Top>0.80pt</Top>
+        <Left>74.89pt</Left>
+        <Width>168.44pt</Width>
+        <Height>16.71pt</Height>
+        <Value>Personal Access Card</Value>
+        <Style>
+          <FontSize>15pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+          <TextDecoration>Underline</TextDecoration>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>1.6pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <ReportParameters >
+    <ReportParameter Name="Connect">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=groupware-solution.eu,1433;Database=VYKONY;User ID=vykony;Password=vykony;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Search">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Id">
+      <DataType>Integer</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataSources >
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?Connect}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+</Report>

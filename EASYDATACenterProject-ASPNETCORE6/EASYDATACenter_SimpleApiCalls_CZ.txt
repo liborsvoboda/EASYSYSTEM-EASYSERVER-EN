@@ -1,0 +1,117 @@
+Stávající rozhraní API popisuje existující volání k testování backendu. Vyèteny jsou jen seznamy dat.
+
+Vlastní backend server bìží na http://127.0.0.1:5000 a všech dalších IP adresách které daný poèítaè obsahuje.
+
+Nebo mùžete zkusit náš server http://groupware-solution.eu:5000 , je to ale pomalý virtuální poèítaè
+
+Každé volání je témìø stejné všechny mají tyto stejné obslužné rutiny: INSERT, UPDATE, DELETE, SELECT.
+Každý další vývoj je již jen COPY/PASTE/RENAME.
+
+Ukázky Typù volání:
+1)  Unauth Call
+	GET /TestApi HTTP/1.1
+	Host: 192.168.1.35:5000
+
+
+2)	Volání s Basic Auth 
+	POST /Authentication HTTP/1.1
+	Host: 127.0.0.1:5000
+	content-type: application/json
+	authorization: Basic c3lzdGVtOmFkbWlu
+
+
+3)  Volání s Bearer Auth 
+	GET /VisitorList HTTP/1.1
+	Host: 127.0.0.1:5000
+	content-type: application/json
+	authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJ0ZXN0ZXIiLCJyb2xlIjoi
+	dXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2RucyI6IjEyNy4
+	wLjAuMSIsIm5iZiI6MTY2NjY1ODk5NiwiZXhwIjoxNjY2NjYwMTk2LCJpYXQiOjE2NjY2NTg5OTYsImlzcyI6InRlc3Rlci
+	J9.4VZX1gKKKMjazCgHdk8wsJ81qO_Rrr-cvzvhmgfLdBk
+
+
+
+Existing Calls:
+
+1) AuthenticationApi
+	POST call type http://127.0.0.1:5000/Authentication  + Basic Authorization 
+	name / password =  tester / tester
+	Result is JWTBearer Token for Next communication
+
+
+	curl "http://127.0.0.1:5000/Authentication" \
+  -X POST \
+  -H "content-type: application/json" \
+  -H "authorization: Basic c3lzdGVtOmFkbWlu" 
+
+
+2) BackendCheckApi
+   UnAuth volání GET typu http://127.0.0.1:5000/BackendCheck
+   for check if the backend is running
+
+
+3) CalendarApi
+   Auth volání GET typu http://127.0.0.1:5000/Calendar/{UserId}
+   pro obdržení celého calendáøe uivatele
+
+
+5) LoginHistoryListApi
+   Auth volání GET typu http://127.0.0.1:5000/LoginHistoryList + Bearer token
+   pro obdržení celého seznamu LoginHistoryList
+
+6) MottoListApi
+   Unauth volání GET typu http://127.0.0.1:5000/MottoList + Bearer token
+   pro obdržení celého seznamu MottoList on start application
+
+10) ReportListApi
+    Auth volání GET typu http://127.0.0.1:5000/ReportList + Bearer token
+    pro obdržení celého seznamu ReportList
+
+11) ServerSettingApi
+    Unauth GET call type http://127.0.0.1:5000/ServerSetting
+    pro obdržení celého seznamu ServerSetting on start server
+
+12) UserListApi
+    Auth volání GET typu http://127.0.0.1:5000/UserList + Bearer token
+    pro obdržení celého seznamu UserList
+
+13) UserRoleListApi
+    Auth volání GET typu http://127.0.0.1:5000/UserRoleList + Bearer token
+    pro obdržení celého seznamu UserRoleList
+
+14) WebSocketExampleApi
+    Auth volání ws typu ws|wss://127.0.0.1:5000/id/
+    example of an optimized WEBSOCKET call. 
+	It loads only before the timeout expires or reacts when some other connection changes the common Data. 
+	Optimized for 1bit communication savings exactly.
+
+
+------------------------------------------------------------------------------------------------------------
+
+PRVNÍ ÚPLNÁ agenda pro vykazování práce ve výrobì u zákazníka trvala POUHÉ 4 DNY PRÁCE
+5 tabulek. Všechna volání jsou stejná, pouze jiné tabulky.
+Více informací je v CaseStudy.
+
+1) GroupListApi
+   Auth volání GET typu http://127.0.0.1:5000/GroupList + Bearer token
+   pro obdržení celého seznamu GroupList
+
+2) OperationListApi
+   Auth volání GET typu http://127.0.0.1:5000/OperationList
+   pro obdržení celého seznamu OperationList
+
+3) PartListApi
+   Auth volání GET typu http://127.0.0.1:5000/PartList
+   pro obdržení celého seznamu PartList
+
+4) PersonListApi
+   Auth volání GET typu http://127.0.0.1:5000/PersonList
+   pro obdržení celého seznamu PersonList
+
+5) WorkListApi
+   Auth volání GET typu http://127.0.0.1:5000/WorkList
+   pro obdržení celého seznamu WorkList
+
+
+A Takto STÁLE DOKOLA SE OPAKUJÍ CELÉ INFORMAÈNÍ SYSTÉMY. 
+Tak jak se vám šablonový systém pozdává nyní?

@@ -1,0 +1,22 @@
+### Basic listing of almost unlimited skill application
+
+- Pre-prepared with common agendas  
+- Operation possible on WINDOWS XP, 7, 8, 10, 11  
+- C# WFP, XAML, Drad&Drop technology  
+- Complete management of any Agenda (Table) RESTORE/NEW/EDIT/COPY/DELETE
+- Automatically generated list data view.
+- Easy preparation of the form according to pre-prepared templates and ready-made agendas
+- more than 100 types of input fields
+- Search in content in the data list
+- also optimized for TOUCH TERMINALS for MANUFACTURING or BUSINESS, SELF-SERVICE environments
+- own printing system with direct printing support
+- Almost unlimited development possibilities with the possibility of own involvement
+- Support for controlling operating systems
+- thousands of already free tools on github
+- connection to any third-party services
+- support for all known protocols EMAIL, IMAP, HTTPS, FTP, SSH, SMTP, TELNET
+- command line support, Javascript, Telnet
+- Option to connect to 3-party systems, IS and OS systems
+- Support multimedia, hardware, 3D, devices, RFID readers, QR, BAR, EAN, VIDEO, SOUND, MS OFFICE, PDF, XPS, RTF, etc.
+- development of any customized system from 20,000 CZK. System already prepared as a template for any more than just IS SYSTEM
+- the possibility of creating any INFORMATION OR CONTROL, MONITORING, REPORTING system, and so on

@@ -1,0 +1,23 @@
+
+Create Linux service and control for BACKEND
+Service Files are on Debian in folder: /lib/systemd/system
+create: dotnet-Project-service.service
+
+How to Create/Control LINUX service
+systemctl enable dotnet-TABackend-service.service
+systemctl start dotnet-TABackend-service.service
+systemctl status dotnet-TABackend-service.service
+systemctl stop dotnet-TABackend-service.service
+
+------------------------------------------------------------
+
+Run project dll command
+dotnet application.dll
+
+------------------------------------------------------------
+
+Not generate Static file for MVC Razor pages
+in project disle by parameter: <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled> 
+
+------------------------------------------------------------
+
