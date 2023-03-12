@@ -121,10 +121,10 @@ All documentation, license, case study, price list, media, developer information
 * Youtube: [https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb](https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb)  
 * Facebook: [https://www.facebook.com/GroupWareSolution](https://www.facebook.com/GroupWareSolution)  
 * LinkedIn: [https://www.linkedin.com/in/libor-svoboda-7b96014a/](https://www.linkedin.com/in/libor-svoboda-7b96014a/)  
-* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solutions.Eu)  
+* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solution.Eu)  
 * Website: [https://GroupWare-Solution.Eu](https://GroupWare-Solution.Eu)  
 * Online Application to try: [Https://KlikneteZde.Cz](Https://KlikneteZde.Cz)  
-* GitHub complete Information and help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN]()  
+* GitHub complete Information and help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN)  
 
 
 **Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
