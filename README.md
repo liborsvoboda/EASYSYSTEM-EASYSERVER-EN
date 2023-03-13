@@ -12,14 +12,13 @@
 
 **Complete Development Documentation and Smart Search:   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")**   
 
-
 ---
 
-#### ScreenShots
-
-![systembuilder.png](SolutionScreenShots/systembuilder.png "")   
+#### ScreenShoty
 
 ![Shop2.png](SolutionScreenShots/Shop2.png "")
+
+![document.gif](SolutionScreenShots/gif/document.gif "")    ![stl.gif](SolutionScreenShots/gif/stl.gif "") ![video.gif](SolutionScreenShots/gif/video.gif "")   
 
 ---
 
@@ -145,4 +144,4 @@ PostCode: 761 63
 State: Czech Republic  
 Phone: 00420 724 986 873  
 
-
+![systembuilder.png](SolutionScreenShots/systembuilder.png "")   
