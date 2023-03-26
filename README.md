@@ -36,6 +36,7 @@
 ----
 
 ## Complete System Core Information - A global view of everything is the building block of the core
+[Backend Server Core Settings Help](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYDATACenterProject-ASPNETCORE6/BACKENDCORE.md)   
 [Definition of the basic system structure](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md "")  
 [MainWindow Central System Control](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/MainWindow-CentralCorePoint.md "")   
 [Implemented tools in the core](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYTOOLS/README.MD "")   

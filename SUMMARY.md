@@ -123,6 +123,7 @@ The server therefore only ensures communication, variability according to the mo
         
       ```markdown
      
+[Backend Server Core Settings Help](./EASYDATACenterProject-ASPNETCORE6/BACKENDCORE.md)   
 [Easy Power Backend Server](./EASYDATACenterProject-ASPNETCORE6/README.MD)   
 [Knovledge Databases Support](./DatabasesKnowledge/README.MD)   
 [Backend Structure](./EASYDATACenterProject-ASPNETCORE6/README.MD)  
