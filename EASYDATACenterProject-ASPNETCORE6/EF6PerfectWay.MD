@@ -107,7 +107,47 @@ Scaffold-DbContext "Server=SQLSRV\SQLEXPRESS;Database=DATAPUB;Trusted_Connection
 ```  
 
 
+
+**EF6 Query Check Token.Role/Issuer - UserName, Include sub table Foreign Table**
+```cs
+if (Request.HttpContext.User.IsInRole("Admin")) {
+    data = new hotelsContext().AddressLists.ToList();
+} else {
+    data = new hotelsContext().AddressLists.Include(a => a.User)
+        .Where(a => a.User.UserName == Request.HttpContext.User.Claims.First().Issuer).ToList();
+}
+```   
     
+**Ignore more Sub Tables from include in API response**  
+```css
+return JsonSerializer.Serialize(data, new JsonSerializerOptions() { ReferenceHandler = ReferenceHandler.IgnoreCycles,WriteIndented = true });
+```
+
+**Advanced Query Select for Admin user Request suppport**
+```cs
+if (Request.HttpContext.User.IsInRole("Admin"))
+{ data = new hotelsContext().AddressLists.FromSqlRaw("SELECT * FROM AddressList WHERE 1=1 AND " + filter.Replace("+", " ")).AsNoTracking().ToList(); }
+else {
+    data = new hotelsContext().AddressLists.FromSqlRaw("SELECT * FROM AddressList WHERE 1=1 AND " + filter.Replace("+", " "))
+        .Include(a => a.User).Where(a => a.User.UserName == Request.HttpContext.User.Claims.First().Issuer)
+        .AsNoTracking().ToList();
+}
+```
+
+**Extend Table schema with columns from another table**
+```cs
+data = new hotelsContext().DocumentTypeLists
+.Include(d => (d.SystemNameNavigation)).Select(x => new ExtendedDocumentTypeList
+{
+    Id = x.Id,
+    SystemName = x.SystemName,
+    Description = x.Description,
+    DescriptionCz = x.SystemNameNavigation.DescriptionCz,
+    DescriptionEn = x.SystemNameNavigation.DescriptionEn,
+    UserId = x.UserId,
+    Timestamp = x.Timestamp
+}).ToList();
+```
 
 ---
 ### MYSQL IN ASPNETCORE HELP COMMANDS AND TYPES
