@@ -27,7 +27,7 @@ namespace GlobalNET.Pages
         {
             InitializeComponent();
             _ = MediaFunctions.SetLanguageDictionary(Resources, JsonConvert.DeserializeObject<Language>(App.Setting.DefaultLanguage).Value);
-            webViewer.Source = new Uri(Path.Combine(App.startupPath, "Data", "xpsDocument.xps"));  
+            webViewer.Address = Path.Combine(App.startupPath, "Data", "xpsDocument.xps");  
             //dv_docuentViewer.Document = new XpsDocument(Path.Combine(App.startupPath, "Data", "xpsDocument.xps"), FileAccess.Read).GetFixedDocumentSequence();
         }
     }

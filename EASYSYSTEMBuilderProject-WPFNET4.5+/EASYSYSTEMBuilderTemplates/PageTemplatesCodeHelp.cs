@@ -113,7 +113,7 @@ namespace GlobalNET.Templates
 
             #region Other Help Global Definitions and Methods
             ///Load Parameter From Table Parameters text is Parameter name
-            var res = SystemFunctions.ParameterCheck("someParameterName").Correct ? int.Parse(SystemFunctions.ParameterCheck("someParameterName").Value) : 50;
+            var res = int.Parse(SystemFunctions.ParameterCheck("someParameterName"));
 
             ///Set ComboBox Item By myValue (from selected record or another)
             int index = 0; ComboBox cb_defaultLanguage = new ComboBox();

@@ -3,6 +3,13 @@
 
 ## Contents
 
+- [GLOBALNETTemplateListApi](#T-GLOBALNET-Controllers-GLOBALNETTemplateListApi 'GLOBALNET.Controllers.GLOBALNETTemplateListApi')
+  - [DeleteTemplateList(id)](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-DeleteTemplateList-System-String- 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.DeleteTemplateList(System.String)')
+  - [GetTemplateList()](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateList 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.GetTemplateList')
+  - [GetTemplateListByFilter(filter)](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateListByFilter-System-String- 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.GetTemplateListByFilter(System.String)')
+  - [GetTemplateListKey(id)](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateListKey-System-Int32- 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.GetTemplateListKey(System.Int32)')
+  - [InsertTemplateList(record)](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-InsertTemplateList-GLOBALNET-DBModel-TemplateList- 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.InsertTemplateList(GLOBALNET.DBModel.TemplateList)')
+  - [UpdateTemplateList(record)](#M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-UpdateTemplateList-GLOBALNET-DBModel-TemplateList- 'GLOBALNET.Controllers.GLOBALNETTemplateListApi.UpdateTemplateList(GLOBALNET.DBModel.TemplateList)')
 - [Program](#T-BACKENDCORE-Program 'BACKENDCORE.Program')
   - [BackendServiceName](#F-BACKENDCORE-Program-BackendServiceName 'BACKENDCORE.Program.BackendServiceName')
   - [ConfigFile](#F-BACKENDCORE-Program-ConfigFile 'BACKENDCORE.Program.ConfigFile')
@@ -32,6 +39,124 @@
 - [Startup](#T-BACKENDCORE-Startup 'BACKENDCORE.Startup')
   - [Configure(app,loggerFactory)](#M-BACKENDCORE-Startup-Configure-Microsoft-AspNetCore-Builder-IApplicationBuilder,Microsoft-Extensions-Logging-ILoggerFactory- 'BACKENDCORE.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILoggerFactory)')
   - [ConfigureServices(app,loggerFactory)](#M-BACKENDCORE-Startup-ConfigureServices-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'BACKENDCORE.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
+
+<a name='T-GLOBALNET-Controllers-GLOBALNETTemplateListApi'></a>
+## GLOBALNETTemplateListApi `type`
+
+##### Namespace
+
+GLOBALNET.Controllers
+
+##### Summary
+
+Universal Template For Make Any Full Backend Server
+One Template Has All data operation Controls for simple copy and build ANY Backend Server
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-DeleteTemplateList-System-String-'></a>
+### DeleteTemplateList(id) `method`
+
+##### Summary
+
+Operation: Delete record by unique Id key
+Standart API for delete existing record in DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| id | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateList'></a>
+### GetTemplateList() `method`
+
+##### Summary
+
+Operation: Select All records
+Standart API for return all records from DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateListByFilter-System-String-'></a>
+### GetTemplateListByFilter(filter) `method`
+
+##### Summary
+
+Operation: Select By sent SQL Where Condition
+Standart API for return records by Where condition in Query from DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-GetTemplateListKey-System-Int32-'></a>
+### GetTemplateListKey(id) `method`
+
+##### Summary
+
+Operation: Select Unique record
+Standart API for return one record by primary Id key from DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| id | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') |  |
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-InsertTemplateList-GLOBALNET-DBModel-TemplateList-'></a>
+### InsertTemplateList(record) `method`
+
+##### Summary
+
+Operation: Insert new record
+Standart API for insert new record to DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| record | [GLOBALNET.DBModel.TemplateList](#T-GLOBALNET-DBModel-TemplateList 'GLOBALNET.DBModel.TemplateList') |  |
+
+<a name='M-GLOBALNET-Controllers-GLOBALNETTemplateListApi-UpdateTemplateList-GLOBALNET-DBModel-TemplateList-'></a>
+### UpdateTemplateList(record) `method`
+
+##### Summary
+
+Operation: Update record by unique Id key
+Standart API for update existing record in DB table
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| record | [GLOBALNET.DBModel.TemplateList](#T-GLOBALNET-DBModel-TemplateList 'GLOBALNET.DBModel.TemplateList') |  |
 
 <a name='T-BACKENDCORE-Program'></a>
 ## Program `type`
@@ -267,6 +392,7 @@ Configure Server Addons and Modules
 ##### Summary
 
 Server Module: Automatic DB Data Manager for work with data directly
+services.AddCoreAdmin("Admin"); is Token Rolename
 
 ##### Parameters
 

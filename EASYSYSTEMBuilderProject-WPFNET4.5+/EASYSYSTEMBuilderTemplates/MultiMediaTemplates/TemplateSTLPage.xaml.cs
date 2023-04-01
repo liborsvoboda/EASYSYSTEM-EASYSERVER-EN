@@ -21,6 +21,12 @@ namespace GlobalNET.Pages
 {
     public partial class TemplateSTLPage : UserControl
     {
+        /// <summary>
+        /// Standartized declaring static page data for global vorking with pages 
+        /// </summary>
+        public static DataViewSupport dataViewSupport = new DataViewSupport();
+        public static TemplateClassList selectedRecord = new TemplateClassList();
+
 
         public TemplateSTLPage()
         {
@@ -29,7 +35,7 @@ namespace GlobalNET.Pages
             _ = MediaFunctions.SetLanguageDictionary(Resources, defaultLanguage.Value);
 
             ModelVisual3D device3D = new ModelVisual3D();
-            device3D.Content = Display3d(Path.Combine(App.startupPath, "Data", "lama.stl")).GetAwaiter().GetResult();
+            device3D.Content = Display3d(Path.Combine(App.startupPath, "Data", "Track.stl")).GetAwaiter().GetResult();
             viewPort3d.Children.Add(device3D);
         }
 

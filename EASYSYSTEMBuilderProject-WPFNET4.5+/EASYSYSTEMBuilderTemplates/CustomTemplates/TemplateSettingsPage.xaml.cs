@@ -20,6 +20,12 @@ namespace GlobalNET.Pages
     public partial class TemplateSettingsPage : UserControl
     {
         /// <summary>
+        /// Standartized declaring static page data for global vorking with pages 
+        /// </summary>
+        public static DataViewSupport dataViewSupport = new DataViewSupport();
+        public static TemplateClassList selectedRecord = new TemplateClassList();
+
+        /// <summary>
         /// Define Collection For Combobox
         /// </summary>
         public ObservableCollection<Language> Languages = new ObservableCollection<Language>() {
@@ -53,7 +59,7 @@ namespace GlobalNET.Pages
                 btn_restart.Content = Resources["restart"].ToString();
                 btn_save.Content = Resources["btn_save"].ToString();
                 btnApiTest.Content = Resources["apiConnectionTest"].ToString();
-            } catch { }
+            } catch (Exception autoEx) {SystemFunctions.SaveSystemFailMessage(SystemFunctions.GetExceptionMessages(autoEx));}
 
             //data
             txt_apiAddress.Text = App.Setting.ApiAddress;
@@ -138,7 +144,7 @@ namespace GlobalNET.Pages
                 { DefaultExt = ".exe", Filter = "Exe files |*.exe", Title = Resources["fileOpenDescription"].ToString() };
                 if (dlg.ShowDialog() == true) { txt_powerBuilderPath.Text = dlg.FileName; }
             }
-            catch { }
+            catch (Exception autoEx) {SystemFunctions.SaveSystemFailMessage(SystemFunctions.GetExceptionMessages(autoEx));}
         }
     }
 }

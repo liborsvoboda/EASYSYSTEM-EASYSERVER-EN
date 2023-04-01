@@ -12,6 +12,8 @@
 
 **Complete Development Documentation and Smart Search:   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")**   
 
+**Complete free projects codes, templates, help, tips, trics, etc: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN "")**   
+
 ---
 
 #### ScreenShoty

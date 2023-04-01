@@ -15,6 +15,13 @@ namespace GlobalNET.Pages
 {
     public partial class TemplateVideoPage : UserControl
     {
+        /// <summary>
+        /// Standartized declaring static page data for global vorking with pages 
+        /// </summary>
+        public static DataViewSupport dataViewSupport = new DataViewSupport();
+        public static TemplateClassList selectedRecord = new TemplateClassList();
+
+
         private bool userIsDraggingSlider = false;
         private readonly Timer timer1Sec = new Timer() { Enabled = false, Interval = 1000 };
 
@@ -29,7 +36,7 @@ namespace GlobalNET.Pages
             btn_stop.Content = Resources["stop"].ToString();
 
             timer1Sec.Elapsed += Timer1sec_Elapsed;
-            me_videPlayer.Source = new Uri(Path.Combine(App.startupPath, "Data", "blackPink.mp4"));
+            me_videPlayer.Source = new Uri(Path.Combine(App.startupPath, "Data", "speed.mp4"));
         }
 
         private void Timer1sec_Elapsed(object sender, ElapsedEventArgs e)

@@ -3,6 +3,8 @@
 
 ## Contents
 
+- [AccessRoleListPage](#T-GlobalNET-Pages-AccessRoleListPage 'GlobalNET.Pages.AccessRoleListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-AccessRoleListPage-InitializeComponent 'GlobalNET.Pages.AccessRoleListPage.InitializeComponent')
 - [AddressListPage](#T-GlobalNET-Pages-AddressListPage 'GlobalNET.Pages.AddressListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-AddressListPage-InitializeComponent 'GlobalNET.Pages.AddressListPage.InitializeComponent')
 - [ApiUrls](#T-GlobalNET-Api-ApiUrls 'GlobalNET.Api.ApiUrls')
@@ -34,11 +36,23 @@
 - [DataViewSupport](#T-GlobalNET-Classes-DataViewSupport 'GlobalNET.Classes.DataViewSupport')
 - [DocumentAdviceListPage](#T-GlobalNET-Pages-DocumentAdviceListPage 'GlobalNET.Pages.DocumentAdviceListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-DocumentAdviceListPage-InitializeComponent 'GlobalNET.Pages.DocumentAdviceListPage.InitializeComponent')
+- [DocumentTypeListPage](#T-GlobalNET-Pages-DocumentTypeListPage 'GlobalNET.Pages.DocumentTypeListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-DocumentTypeListPage-InitializeComponent 'GlobalNET.Pages.DocumentTypeListPage.InitializeComponent')
+- [DocumentationPage](#T-GlobalNET-Pages-DocumentationPage 'GlobalNET.Pages.DocumentationPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-DocumentationPage-InitializeComponent 'GlobalNET.Pages.DocumentationPage.InitializeComponent')
 - [ExchangeRateListPage](#T-GlobalNET-Pages-ExchangeRateListPage 'GlobalNET.Pages.ExchangeRateListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ExchangeRateListPage-InitializeComponent 'GlobalNET.Pages.ExchangeRateListPage.InitializeComponent')
 - [ExtendedTemplateClassList](#T-GlobalNET-Classes-ExtendedTemplateClassList 'GlobalNET.Classes.ExtendedTemplateClassList')
 - [FileFunctions](#T-GlobalNET-GlobalFunctions-FileFunctions 'GlobalNET.GlobalFunctions.FileFunctions')
   - [VncServerIniFile(path)](#M-GlobalNET-GlobalFunctions-FileFunctions-VncServerIniFile-System-String- 'GlobalNET.GlobalFunctions.FileFunctions.VncServerIniFile(System.String)')
+- [GeneratedInternalTypeHelper](#T-XamlGeneratedNamespace-GeneratedInternalTypeHelper 'XamlGeneratedNamespace.GeneratedInternalTypeHelper')
+  - [AddEventHandler()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-AddEventHandler-System-Reflection-EventInfo,System-Object,System-Delegate- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)')
+  - [CreateDelegate()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-CreateDelegate-System-Type,System-Object,System-String- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)')
+  - [CreateInstance()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-CreateInstance-System-Type,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)')
+  - [GetPropertyValue()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-GetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)')
+  - [SetPropertyValue()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-SetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Object,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)')
+- [GraphsPage](#T-GlobalNET-Pages-GraphsPage 'GlobalNET.Pages.GraphsPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-GraphsPage-InitializeComponent 'GlobalNET.Pages.GraphsPage.InitializeComponent')
 - [IncomingInvoiceListPage](#T-GlobalNET-Pages-IncomingInvoiceListPage 'GlobalNET.Pages.IncomingInvoiceListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-IncomingInvoiceListPage-InitializeComponent 'GlobalNET.Pages.IncomingInvoiceListPage.InitializeComponent')
 - [IncomingOrderListPage](#T-GlobalNET-Pages-IncomingOrderListPage 'GlobalNET.Pages.IncomingOrderListPage')
@@ -46,6 +60,8 @@
 - [ItemListPage](#T-GlobalNET-Pages-ItemListPage 'GlobalNET.Pages.ItemListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ItemListPage-InitializeComponent 'GlobalNET.Pages.ItemListPage.InitializeComponent')
 - [Language](#T-GlobalNET-Classes-Language 'GlobalNET.Classes.Language')
+- [LanguageListPage](#T-GlobalNET-Pages-LanguageListPage 'GlobalNET.Pages.LanguageListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-LanguageListPage-InitializeComponent 'GlobalNET.Pages.LanguageListPage.InitializeComponent')
 - [LicenseActivationFailListPage](#T-GlobalNET-Pages-LicenseActivationFailListPage 'GlobalNET.Pages.LicenseActivationFailListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-LicenseActivationFailListPage-InitializeComponent 'GlobalNET.Pages.LicenseActivationFailListPage.InitializeComponent')
 - [LicenseAlgorithmListPage](#T-GlobalNET-Pages-LicenseAlgorithmListPage 'GlobalNET.Pages.LicenseAlgorithmListPage')
@@ -53,12 +69,19 @@
 - [LoginHistoryListPage](#T-GlobalNET-Pages-LoginHistoryListPage 'GlobalNET.Pages.LoginHistoryListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-LoginHistoryListPage-InitializeComponent 'GlobalNET.Pages.LoginHistoryListPage.InitializeComponent')
 - [MainWindow](#T-GlobalNET-MainWindow 'GlobalNET.MainWindow')
+  - [#ctor()](#M-GlobalNET-MainWindow-#ctor 'GlobalNET.MainWindow.#ctor')
+  - [metroWindowClosing](#F-GlobalNET-MainWindow-metroWindowClosing 'GlobalNET.MainWindow.metroWindowClosing')
+  - [VncRunning](#P-GlobalNET-MainWindow-VncRunning 'GlobalNET.MainWindow.VncRunning')
+  - [Cb_PrintReportsSelected(sender,e)](#M-GlobalNET-MainWindow-Cb_PrintReportsSelected-System-Object,System-Windows-Controls-SelectionChangedEventArgs- 'GlobalNET.MainWindow.Cb_PrintReportsSelected(System.Object,System.Windows.Controls.SelectionChangedEventArgs)')
   - [FilterField_SelectionChanged(sender,e)](#M-GlobalNET-MainWindow-FilterField_SelectionChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs- 'GlobalNET.MainWindow.FilterField_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)')
   - [InitializeComponent()](#M-GlobalNET-MainWindow-InitializeComponent 'GlobalNET.MainWindow.InitializeComponent')
+  - [IpKeyboardClick(sender,e)](#M-GlobalNET-MainWindow-IpKeyboardClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.MainWindow.IpKeyboardClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
+  - [MainGrid_IsDraggingChanged(sender,e)](#M-GlobalNET-MainWindow-MainGrid_IsDraggingChanged-System-Object,System-Windows-RoutedPropertyChangedEventArgs{System-Boolean}- 'GlobalNET.MainWindow.MainGrid_IsDraggingChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Boolean})')
   - [Menu_action_Click(sender,e)](#M-GlobalNET-MainWindow-Menu_action_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.Menu_action_Click(System.Object,System.Windows.RoutedEventArgs)')
   - [Mi_filter_Click(sender,e)](#M-GlobalNET-MainWindow-Mi_filter_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.Mi_filter_Click(System.Object,System.Windows.RoutedEventArgs)')
   - [RemoveFilterItem_Click(sender,e)](#M-GlobalNET-MainWindow-RemoveFilterItem_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.RemoveFilterItem_Click(System.Object,System.Windows.RoutedEventArgs)')
   - [StringToFilter(filterBox,advancedFilter)](#M-GlobalNET-MainWindow-StringToFilter-System-Windows-Controls-ComboBox,System-String- 'GlobalNET.MainWindow.StringToFilter(System.Windows.Controls.ComboBox,System.String)')
+  - [TiltOpenForm(translateHeader)](#M-GlobalNET-MainWindow-TiltOpenForm-System-String- 'GlobalNET.MainWindow.TiltOpenForm(System.String)')
   - [cb_FilterDropDownClosed(sender,e)](#M-GlobalNET-MainWindow-cb_FilterDropDownClosed-System-Object,System-EventArgs- 'GlobalNET.MainWindow.cb_FilterDropDownClosed(System.Object,System.EventArgs)')
 - [MaturityListPage](#T-GlobalNET-Pages-MaturityListPage 'GlobalNET.Pages.MaturityListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-MaturityListPage-InitializeComponent 'GlobalNET.Pages.MaturityListPage.InitializeComponent')
@@ -100,79 +123,91 @@
   - [InitializeComponent()](#M-GlobalNET-Pages-ServerSettingPage-InitializeComponent 'GlobalNET.Pages.ServerSettingPage.InitializeComponent')
 - [SupportPage](#T-GlobalNET-Pages-SupportPage 'GlobalNET.Pages.SupportPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-SupportPage-InitializeComponent 'GlobalNET.Pages.SupportPage.InitializeComponent')
+- [SystemFailListPage](#T-GlobalNET-Pages-SystemFailListPage 'GlobalNET.Pages.SystemFailListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-SystemFailListPage-InitializeComponent 'GlobalNET.Pages.SystemFailListPage.InitializeComponent')
 - [SystemFunctions](#T-GlobalNET-GlobalFunctions-SystemFunctions 'GlobalNET.GlobalFunctions.SystemFunctions')
   - [FilterToString(filterBox)](#M-GlobalNET-GlobalFunctions-SystemFunctions-FilterToString-System-Windows-Controls-ComboBox- 'GlobalNET.GlobalFunctions.SystemFunctions.FilterToString(System.Windows.Controls.ComboBox)')
+  - [ParameterCheck(parameterName)](#M-GlobalNET-GlobalFunctions-SystemFunctions-ParameterCheck-System-String- 'GlobalNET.GlobalFunctions.SystemFunctions.ParameterCheck(System.String)')
 - [TemplateClassList](#T-GlobalNET-Classes-TemplateClassList 'GlobalNET.Classes.TemplateClassList')
+- [TemplateClassListPage](#T-GlobalNET-Pages-TemplateClassListPage 'GlobalNET.Pages.TemplateClassListPage')
+  - [#ctor()](#M-GlobalNET-Pages-TemplateClassListPage-#ctor 'GlobalNET.Pages.TemplateClassListPage.#ctor')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateClassListPage-dataViewSupport 'GlobalNET.Pages.TemplateClassListPage.dataViewSupport')
+  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateClassListPage-DeleteRecord 'GlobalNET.Pages.TemplateClassListPage.DeleteRecord')
+  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateClassListPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateClassListPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
+  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListPage.DgListView_Translate(System.Object,System.EventArgs)')
+  - [EditRecord()](#M-GlobalNET-Pages-TemplateClassListPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateClassListPage.EditRecord(System.Boolean)')
+  - [Filter(filter)](#M-GlobalNET-Pages-TemplateClassListPage-Filter-System-String- 'GlobalNET.Pages.TemplateClassListPage.Filter(System.String)')
+  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateClassListPage-InitializeComponent 'GlobalNET.Pages.TemplateClassListPage.InitializeComponent')
+  - [LoadDataList()](#M-GlobalNET-Pages-TemplateClassListPage-LoadDataList 'GlobalNET.Pages.TemplateClassListPage.LoadDataList')
+  - [NewRecord()](#M-GlobalNET-Pages-TemplateClassListPage-NewRecord 'GlobalNET.Pages.TemplateClassListPage.NewRecord')
+- [TemplateClassListViewPage](#T-GlobalNET-Pages-TemplateClassListViewPage 'GlobalNET.Pages.TemplateClassListViewPage')
+  - [#ctor()](#M-GlobalNET-Pages-TemplateClassListViewPage-#ctor 'GlobalNET.Pages.TemplateClassListViewPage.#ctor')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateClassListViewPage-dataViewSupport 'GlobalNET.Pages.TemplateClassListViewPage.dataViewSupport')
+  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateClassListViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateClassListViewPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
+  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListViewPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListViewPage.DgListView_Translate(System.Object,System.EventArgs)')
+  - [Filter(filter)](#M-GlobalNET-Pages-TemplateClassListViewPage-Filter-System-String- 'GlobalNET.Pages.TemplateClassListViewPage.Filter(System.String)')
+  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateClassListViewPage-InitializeComponent 'GlobalNET.Pages.TemplateClassListViewPage.InitializeComponent')
+  - [LoadDataList()](#M-GlobalNET-Pages-TemplateClassListViewPage-LoadDataList 'GlobalNET.Pages.TemplateClassListViewPage.LoadDataList')
+- [TemplateClassListWithSubPage](#T-GlobalNET-Pages-TemplateClassListWithSubPage 'GlobalNET.Pages.TemplateClassListWithSubPage')
+  - [#ctor()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-#ctor 'GlobalNET.Pages.TemplateClassListWithSubPage.#ctor')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateClassListWithSubPage-dataViewSupport 'GlobalNET.Pages.TemplateClassListWithSubPage.dataViewSupport')
+  - [ClearItemsFields()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-ClearItemsFields 'GlobalNET.Pages.TemplateClassListWithSubPage.ClearItemsFields')
+  - [Customer_KeyDown(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-Customer_KeyDown-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.Customer_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)')
+  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-DeleteRecord 'GlobalNET.Pages.TemplateClassListWithSubPage.DeleteRecord')
+  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
+  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.DgListView_Translate(System.Object,System.EventArgs)')
+  - [DgSubListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-DgSubListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.DgSubListView_Translate(System.Object,System.EventArgs)')
+  - [EditRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateClassListWithSubPage.EditRecord(System.Boolean)')
+  - [Filter(filter)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-Filter-System-String- 'GlobalNET.Pages.TemplateClassListWithSubPage.Filter(System.String)')
+  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-InitializeComponent 'GlobalNET.Pages.TemplateClassListWithSubPage.InitializeComponent')
+  - [LoadDataList()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-LoadDataList 'GlobalNET.Pages.TemplateClassListWithSubPage.LoadDataList')
+  - [NewRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-NewRecord 'GlobalNET.Pages.TemplateClassListWithSubPage.NewRecord')
+  - [NotesChanged(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-NotesChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.NotesChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)')
+  - [PartNumberGotFocus(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-PartNumberGotFocus-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.PartNumberGotFocus(System.Object,System.Windows.RoutedEventArgs)')
+  - [PartNumber_KeyDown(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-PartNumber_KeyDown-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.PartNumber_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)')
+  - [SelectCustomer_Enter(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectCustomer_Enter-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.SelectCustomer_Enter(System.Object,System.Windows.Input.KeyEventArgs)')
+  - [SelectGotFocus(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectGotFocus-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.SelectGotFocus(System.Object,System.Windows.RoutedEventArgs)')
+  - [SelectPartNumber_Enter(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectPartNumber_Enter-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubPage.SelectPartNumber_Enter(System.Object,System.Windows.Input.KeyEventArgs)')
+  - [SetCustomer(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SetCustomer 'GlobalNET.Pages.TemplateClassListWithSubPage.SetCustomer')
+  - [SetPartNumber(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SetPartNumber 'GlobalNET.Pages.TemplateClassListWithSubPage.SetPartNumber')
+  - [SetSubListsNonActiveOnNewItem()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-SetSubListsNonActiveOnNewItem-System-Boolean- 'GlobalNET.Pages.TemplateClassListWithSubPage.SetSubListsNonActiveOnNewItem(System.Boolean)')
+  - [UpdateCustomerSearchResults()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-UpdateCustomerSearchResults 'GlobalNET.Pages.TemplateClassListWithSubPage.UpdateCustomerSearchResults')
+  - [UpdatePartNumberSearchResults()](#M-GlobalNET-Pages-TemplateClassListWithSubPage-UpdatePartNumberSearchResults 'GlobalNET.Pages.TemplateClassListWithSubPage.UpdatePartNumberSearchResults')
+- [TemplateClassListWithSubViewPage](#T-GlobalNET-Pages-TemplateClassListWithSubViewPage 'GlobalNET.Pages.TemplateClassListWithSubViewPage')
+  - [#ctor()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-#ctor 'GlobalNET.Pages.TemplateClassListWithSubViewPage.#ctor')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateClassListWithSubViewPage-dataViewSupport 'GlobalNET.Pages.TemplateClassListWithSubViewPage.dataViewSupport')
+  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DeleteRecord 'GlobalNET.Pages.TemplateClassListWithSubViewPage.DeleteRecord')
+  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateClassListWithSubViewPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
+  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListWithSubViewPage.DgListView_Translate(System.Object,System.EventArgs)')
+  - [DgSubListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgSubListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateClassListWithSubViewPage.DgSubListView_Translate(System.Object,System.EventArgs)')
+  - [EditRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateClassListWithSubViewPage.EditRecord(System.Boolean)')
+  - [Filter(filter)](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-Filter-System-String- 'GlobalNET.Pages.TemplateClassListWithSubViewPage.Filter(System.String)')
+  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-InitializeComponent 'GlobalNET.Pages.TemplateClassListWithSubViewPage.InitializeComponent')
+  - [LoadDataList()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-LoadDataList 'GlobalNET.Pages.TemplateClassListWithSubViewPage.LoadDataList')
+  - [LoadSubDataList()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-LoadSubDataList 'GlobalNET.Pages.TemplateClassListWithSubViewPage.LoadSubDataList')
+  - [NewRecord()](#M-GlobalNET-Pages-TemplateClassListWithSubViewPage-NewRecord 'GlobalNET.Pages.TemplateClassListWithSubViewPage.NewRecord')
 - [TemplateDocumentViewPage](#T-GlobalNET-Pages-TemplateDocumentViewPage 'GlobalNET.Pages.TemplateDocumentViewPage')
   - [#ctor()](#M-GlobalNET-Pages-TemplateDocumentViewPage-#ctor 'GlobalNET.Pages.TemplateDocumentViewPage.#ctor')
   - [dataViewSupport](#F-GlobalNET-Pages-TemplateDocumentViewPage-dataViewSupport 'GlobalNET.Pages.TemplateDocumentViewPage.dataViewSupport')
   - [InitializeComponent()](#M-GlobalNET-Pages-TemplateDocumentViewPage-InitializeComponent 'GlobalNET.Pages.TemplateDocumentViewPage.InitializeComponent')
-- [TemplateListPage](#T-GlobalNET-Pages-TemplateListPage 'GlobalNET.Pages.TemplateListPage')
-  - [#ctor()](#M-GlobalNET-Pages-TemplateListPage-#ctor 'GlobalNET.Pages.TemplateListPage.#ctor')
-  - [dataViewSupport](#F-GlobalNET-Pages-TemplateListPage-dataViewSupport 'GlobalNET.Pages.TemplateListPage.dataViewSupport')
-  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateListPage-DeleteRecord 'GlobalNET.Pages.TemplateListPage.DeleteRecord')
-  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateListPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateListPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
-  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListPage.DgListView_Translate(System.Object,System.EventArgs)')
-  - [EditRecord()](#M-GlobalNET-Pages-TemplateListPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateListPage.EditRecord(System.Boolean)')
-  - [Filter(filter)](#M-GlobalNET-Pages-TemplateListPage-Filter-System-String- 'GlobalNET.Pages.TemplateListPage.Filter(System.String)')
-  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateListPage-InitializeComponent 'GlobalNET.Pages.TemplateListPage.InitializeComponent')
-  - [LoadDataList()](#M-GlobalNET-Pages-TemplateListPage-LoadDataList 'GlobalNET.Pages.TemplateListPage.LoadDataList')
-  - [NewRecord()](#M-GlobalNET-Pages-TemplateListPage-NewRecord 'GlobalNET.Pages.TemplateListPage.NewRecord')
-- [TemplateListPageWithSubPage](#T-GlobalNET-Pages-TemplateListPageWithSubPage 'GlobalNET.Pages.TemplateListPageWithSubPage')
-  - [#ctor()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-#ctor 'GlobalNET.Pages.TemplateListPageWithSubPage.#ctor')
-  - [dataViewSupport](#F-GlobalNET-Pages-TemplateListPageWithSubPage-dataViewSupport 'GlobalNET.Pages.TemplateListPageWithSubPage.dataViewSupport')
-  - [ClearItemsFields()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-ClearItemsFields 'GlobalNET.Pages.TemplateListPageWithSubPage.ClearItemsFields')
-  - [Customer_KeyDown(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-Customer_KeyDown-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.Customer_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)')
-  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-DeleteRecord 'GlobalNET.Pages.TemplateListPageWithSubPage.DeleteRecord')
-  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
-  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.DgListView_Translate(System.Object,System.EventArgs)')
-  - [DgSubListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-DgSubListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.DgSubListView_Translate(System.Object,System.EventArgs)')
-  - [EditRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateListPageWithSubPage.EditRecord(System.Boolean)')
-  - [Filter(filter)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-Filter-System-String- 'GlobalNET.Pages.TemplateListPageWithSubPage.Filter(System.String)')
-  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-InitializeComponent 'GlobalNET.Pages.TemplateListPageWithSubPage.InitializeComponent')
-  - [LoadDataList()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-LoadDataList 'GlobalNET.Pages.TemplateListPageWithSubPage.LoadDataList')
-  - [NewRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-NewRecord 'GlobalNET.Pages.TemplateListPageWithSubPage.NewRecord')
-  - [NotesChanged(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-NotesChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.NotesChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)')
-  - [PartNumberGotFocus(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-PartNumberGotFocus-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.PartNumberGotFocus(System.Object,System.Windows.RoutedEventArgs)')
-  - [PartNumber_KeyDown(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-PartNumber_KeyDown-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.PartNumber_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)')
-  - [SelectCustomer_Enter(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectCustomer_Enter-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.SelectCustomer_Enter(System.Object,System.Windows.Input.KeyEventArgs)')
-  - [SelectGotFocus(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectGotFocus-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.SelectGotFocus(System.Object,System.Windows.RoutedEventArgs)')
-  - [SelectPartNumber_Enter(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectPartNumber_Enter-System-Object,System-Windows-Input-KeyEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubPage.SelectPartNumber_Enter(System.Object,System.Windows.Input.KeyEventArgs)')
-  - [SetCustomer(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SetCustomer 'GlobalNET.Pages.TemplateListPageWithSubPage.SetCustomer')
-  - [SetPartNumber(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SetPartNumber 'GlobalNET.Pages.TemplateListPageWithSubPage.SetPartNumber')
-  - [SetSubListsNonActiveOnNewItem()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-SetSubListsNonActiveOnNewItem-System-Boolean- 'GlobalNET.Pages.TemplateListPageWithSubPage.SetSubListsNonActiveOnNewItem(System.Boolean)')
-  - [UpdateCustomerSearchResults()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-UpdateCustomerSearchResults 'GlobalNET.Pages.TemplateListPageWithSubPage.UpdateCustomerSearchResults')
-  - [UpdatePartNumberSearchResults()](#M-GlobalNET-Pages-TemplateListPageWithSubPage-UpdatePartNumberSearchResults 'GlobalNET.Pages.TemplateListPageWithSubPage.UpdatePartNumberSearchResults')
-- [TemplateListPageWithSubViewPage](#T-GlobalNET-Pages-TemplateListPageWithSubViewPage 'GlobalNET.Pages.TemplateListPageWithSubViewPage')
-  - [#ctor()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-#ctor 'GlobalNET.Pages.TemplateListPageWithSubViewPage.#ctor')
-  - [dataViewSupport](#F-GlobalNET-Pages-TemplateListPageWithSubViewPage-dataViewSupport 'GlobalNET.Pages.TemplateListPageWithSubViewPage.dataViewSupport')
-  - [DeleteRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DeleteRecord 'GlobalNET.Pages.TemplateListPageWithSubViewPage.DeleteRecord')
-  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateListPageWithSubViewPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
-  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListPageWithSubViewPage.DgListView_Translate(System.Object,System.EventArgs)')
-  - [DgSubListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgSubListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListPageWithSubViewPage.DgSubListView_Translate(System.Object,System.EventArgs)')
-  - [EditRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-EditRecord-System-Boolean- 'GlobalNET.Pages.TemplateListPageWithSubViewPage.EditRecord(System.Boolean)')
-  - [Filter(filter)](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-Filter-System-String- 'GlobalNET.Pages.TemplateListPageWithSubViewPage.Filter(System.String)')
-  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-InitializeComponent 'GlobalNET.Pages.TemplateListPageWithSubViewPage.InitializeComponent')
-  - [LoadDataList()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-LoadDataList 'GlobalNET.Pages.TemplateListPageWithSubViewPage.LoadDataList')
-  - [LoadSubDataList()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-LoadSubDataList 'GlobalNET.Pages.TemplateListPageWithSubViewPage.LoadSubDataList')
-  - [NewRecord()](#M-GlobalNET-Pages-TemplateListPageWithSubViewPage-NewRecord 'GlobalNET.Pages.TemplateListPageWithSubViewPage.NewRecord')
-- [TemplateListViewPage](#T-GlobalNET-Pages-TemplateListViewPage 'GlobalNET.Pages.TemplateListViewPage')
-  - [#ctor()](#M-GlobalNET-Pages-TemplateListViewPage-#ctor 'GlobalNET.Pages.TemplateListViewPage.#ctor')
-  - [dataViewSupport](#F-GlobalNET-Pages-TemplateListViewPage-dataViewSupport 'GlobalNET.Pages.TemplateListViewPage.dataViewSupport')
-  - [DgListView_MouseDoubleClick(sender,e)](#M-GlobalNET-Pages-TemplateListViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs- 'GlobalNET.Pages.TemplateListViewPage.DgListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)')
-  - [DgListView_Translate(sender,ex)](#M-GlobalNET-Pages-TemplateListViewPage-DgListView_Translate-System-Object,System-EventArgs- 'GlobalNET.Pages.TemplateListViewPage.DgListView_Translate(System.Object,System.EventArgs)')
-  - [Filter(filter)](#M-GlobalNET-Pages-TemplateListViewPage-Filter-System-String- 'GlobalNET.Pages.TemplateListViewPage.Filter(System.String)')
-  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateListViewPage-InitializeComponent 'GlobalNET.Pages.TemplateListViewPage.InitializeComponent')
-  - [LoadDataList()](#M-GlobalNET-Pages-TemplateListViewPage-LoadDataList 'GlobalNET.Pages.TemplateListViewPage.LoadDataList')
 - [TemplateSTLPage](#T-GlobalNET-Pages-TemplateSTLPage 'GlobalNET.Pages.TemplateSTLPage')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateSTLPage-dataViewSupport 'GlobalNET.Pages.TemplateSTLPage.dataViewSupport')
   - [InitializeComponent()](#M-GlobalNET-Pages-TemplateSTLPage-InitializeComponent 'GlobalNET.Pages.TemplateSTLPage.InitializeComponent')
 - [TemplateSettingsPage](#T-GlobalNET-Pages-TemplateSettingsPage 'GlobalNET.Pages.TemplateSettingsPage')
   - [#ctor()](#M-GlobalNET-Pages-TemplateSettingsPage-#ctor 'GlobalNET.Pages.TemplateSettingsPage.#ctor')
   - [Languages](#F-GlobalNET-Pages-TemplateSettingsPage-Languages 'GlobalNET.Pages.TemplateSettingsPage.Languages')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateSettingsPage-dataViewSupport 'GlobalNET.Pages.TemplateSettingsPage.dataViewSupport')
   - [BtnApiTest_Click(sender,e)](#M-GlobalNET-Pages-TemplateSettingsPage-BtnApiTest_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Pages.TemplateSettingsPage.BtnApiTest_Click(System.Object,System.Windows.RoutedEventArgs)')
   - [InitializeComponent()](#M-GlobalNET-Pages-TemplateSettingsPage-InitializeComponent 'GlobalNET.Pages.TemplateSettingsPage.InitializeComponent')
 - [TemplateVideoPage](#T-GlobalNET-Pages-TemplateVideoPage 'GlobalNET.Pages.TemplateVideoPage')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateVideoPage-dataViewSupport 'GlobalNET.Pages.TemplateVideoPage.dataViewSupport')
   - [InitializeComponent()](#M-GlobalNET-Pages-TemplateVideoPage-InitializeComponent 'GlobalNET.Pages.TemplateVideoPage.InitializeComponent')
+- [TemplateWebViewPage](#T-GlobalNET-Pages-TemplateWebViewPage 'GlobalNET.Pages.TemplateWebViewPage')
+  - [#ctor()](#M-GlobalNET-Pages-TemplateWebViewPage-#ctor 'GlobalNET.Pages.TemplateWebViewPage.#ctor')
+  - [dataViewSupport](#F-GlobalNET-Pages-TemplateWebViewPage-dataViewSupport 'GlobalNET.Pages.TemplateWebViewPage.dataViewSupport')
+  - [InitializeComponent()](#M-GlobalNET-Pages-TemplateWebViewPage-InitializeComponent 'GlobalNET.Pages.TemplateWebViewPage.InitializeComponent')
+- [ToolPanelPage](#T-GlobalNET-Pages-ToolPanelPage 'GlobalNET.Pages.ToolPanelPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-ToolPanelPage-InitializeComponent 'GlobalNET.Pages.ToolPanelPage.InitializeComponent')
 - [UnitListPage](#T-GlobalNET-Pages-UnitListPage 'GlobalNET.Pages.UnitListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-UnitListPage-InitializeComponent 'GlobalNET.Pages.UnitListPage.InitializeComponent')
 - [UpdateVariant](#T-GlobalNET-GlobalClasses-UpdateVariant 'GlobalNET.GlobalClasses.UpdateVariant')
@@ -189,6 +224,28 @@
   - [InitializeComponent()](#M-GlobalNET-Pages-WarehouseListPage-InitializeComponent 'GlobalNET.Pages.WarehouseListPage.InitializeComponent')
 - [WelcomePage](#T-GlobalNET-Pages-WelcomePage 'GlobalNET.Pages.WelcomePage')
   - [InitializeComponent()](#M-GlobalNET-Pages-WelcomePage-InitializeComponent 'GlobalNET.Pages.WelcomePage.InitializeComponent')
+
+<a name='T-GlobalNET-Pages-AccessRoleListPage'></a>
+## AccessRoleListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+AccessRoleListPage
+
+<a name='M-GlobalNET-Pages-AccessRoleListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-GlobalNET-Pages-AddressListPage'></a>
 ## AddressListPage `type`
@@ -521,6 +578,50 @@ InitializeComponent
 
 This method has no parameters.
 
+<a name='T-GlobalNET-Pages-DocumentTypeListPage'></a>
+## DocumentTypeListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+DocumentTypeListPage
+
+<a name='M-GlobalNET-Pages-DocumentTypeListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-DocumentationPage'></a>
+## DocumentationPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+DocumentationPage
+
+<a name='M-GlobalNET-Pages-DocumentationPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
 <a name='T-GlobalNET-Pages-ExchangeRateListPage'></a>
 ## ExchangeRateListPage `type`
 
@@ -578,6 +679,94 @@ default password: groupware
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='T-XamlGeneratedNamespace-GeneratedInternalTypeHelper'></a>
+## GeneratedInternalTypeHelper `type`
+
+##### Namespace
+
+XamlGeneratedNamespace
+
+##### Summary
+
+GeneratedInternalTypeHelper
+
+<a name='M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-AddEventHandler-System-Reflection-EventInfo,System-Object,System-Delegate-'></a>
+### AddEventHandler() `method`
+
+##### Summary
+
+AddEventHandler
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-CreateDelegate-System-Type,System-Object,System-String-'></a>
+### CreateDelegate() `method`
+
+##### Summary
+
+CreateDelegate
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-CreateInstance-System-Type,System-Globalization-CultureInfo-'></a>
+### CreateInstance() `method`
+
+##### Summary
+
+CreateInstance
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-GetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Globalization-CultureInfo-'></a>
+### GetPropertyValue() `method`
+
+##### Summary
+
+GetPropertyValue
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-SetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Object,System-Globalization-CultureInfo-'></a>
+### SetPropertyValue() `method`
+
+##### Summary
+
+SetPropertyValue
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-GraphsPage'></a>
+## GraphsPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+GraphsPage
+
+<a name='M-GlobalNET-Pages-GraphsPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-GlobalNET-Pages-IncomingInvoiceListPage'></a>
 ## IncomingInvoiceListPage `type`
@@ -656,6 +845,28 @@ GlobalNET.Classes
 
 Language definition support
 
+<a name='T-GlobalNET-Pages-LanguageListPage'></a>
+## LanguageListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+LanguageListPage
+
+<a name='M-GlobalNET-Pages-LanguageListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
 <a name='T-GlobalNET-Pages-LicenseActivationFailListPage'></a>
 ## LicenseActivationFailListPage `type`
 
@@ -733,6 +944,45 @@ GlobalNET
 
 MainWindow
 
+<a name='M-GlobalNET-MainWindow-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+System Core AND ALL shared functionalities
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-MainWindow-metroWindowClosing'></a>
+### metroWindowClosing `constants`
+
+##### Summary
+
+MainControls Screen Variables
+
+<a name='P-GlobalNET-MainWindow-VncRunning'></a>
+### VncRunning `property`
+
+##### Summary
+
+MainWindow Controller Statuses
+
+<a name='M-GlobalNET-MainWindow-Cb_PrintReportsSelected-System-Object,System-Windows-Controls-SelectionChangedEventArgs-'></a>
+### Cb_PrintReportsSelected(sender,e) `method`
+
+##### Summary
+
+Print Report Selection Controller
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Controls.SelectionChangedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.SelectionChangedEventArgs 'System.Windows.Controls.SelectionChangedEventArgs') |  |
+
 <a name='M-GlobalNET-MainWindow-FilterField_SelectionChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs-'></a>
 ### FilterField_SelectionChanged(sender,e) `method`
 
@@ -757,6 +1007,34 @@ InitializeComponent
 ##### Parameters
 
 This method has no parameters.
+
+<a name='M-GlobalNET-MainWindow-IpKeyboardClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
+### IpKeyboardClick(sender,e) `method`
+
+##### Summary
+
+System tools controllers
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
+
+<a name='M-GlobalNET-MainWindow-MainGrid_IsDraggingChanged-System-Object,System-Windows-RoutedPropertyChangedEventArgs{System-Boolean}-'></a>
+### MainGrid_IsDraggingChanged(sender,e) `method`
+
+##### Summary
+
+Draging and separate to more App: TabPanel drag Controller - not Used
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.RoutedPropertyChangedEventArgs{System.Boolean}](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedPropertyChangedEventArgs 'System.Windows.RoutedPropertyChangedEventArgs{System.Boolean}') |  |
 
 <a name='M-GlobalNET-MainWindow-Menu_action_Click-System-Object,System-Windows-RoutedEventArgs-'></a>
 ### Menu_action_Click(sender,e) `method`
@@ -818,6 +1096,23 @@ Full dynamic build filter on selected page from saved advanced filter
 | ---- | ---- | ----------- |
 | filterBox | [System.Windows.Controls.ComboBox](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.ComboBox 'System.Windows.Controls.ComboBox') |  |
 | advancedFilter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-MainWindow-TiltOpenForm-System-String-'></a>
+### TiltOpenForm(translateHeader) `method`
+
+##### Summary
+
+Tilts: Standardized Opening or create Tilt documents
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| translateHeader | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
 <a name='M-GlobalNET-MainWindow-cb_FilterDropDownClosed-System-Object,System-EventArgs-'></a>
 ### cb_FilterDropDownClosed(sender,e) `method`
@@ -1265,6 +1560,28 @@ InitializeComponent
 
 This method has no parameters.
 
+<a name='T-GlobalNET-Pages-SystemFailListPage'></a>
+## SystemFailListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+SystemFailListPage
+
+<a name='M-GlobalNET-Pages-SystemFailListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
 <a name='T-GlobalNET-GlobalFunctions-SystemFunctions'></a>
 ## SystemFunctions `type`
 
@@ -1289,6 +1606,23 @@ return existing filter for saving to string in selected Page
 | ---- | ---- | ----------- |
 | filterBox | [System.Windows.Controls.ComboBox](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.ComboBox 'System.Windows.Controls.ComboBox') |  |
 
+<a name='M-GlobalNET-GlobalFunctions-SystemFunctions-ParameterCheck-System-String-'></a>
+### ParameterCheck(parameterName) `method`
+
+##### Summary
+
+Return User or default DB parameter
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| parameterName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
 <a name='T-GlobalNET-Classes-TemplateClassList'></a>
 ## TemplateClassList `type`
 
@@ -1299,6 +1633,857 @@ GlobalNET.Classes
 ##### Summary
 
 Example of Table Dataset
+
+<a name='T-GlobalNET-Pages-TemplateClassListPage'></a>
+## TemplateClassListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+This standartized Template is only for list view od Data table
+Called from MainWindow.cs on open New Tab
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Initialize page with loading Dictionary and start loding data
+Manual work needed Translate All XAML fields by Resources
+Runned on start
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-Pages-TemplateClassListPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data and selected record for All Pages
+this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
+All is setted as global Classes for All Pages and Work is Fully automatized by System core
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-DeleteRecord'></a>
+### DeleteRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Delete button Click
+Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
+Reload Datalist and cancel Selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
+### DgListView_MouseDoubleClick(sender,e) `method`
+
+##### Summary
+
+Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
+This is full automatic, not needed manual work
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working page its local control From XAML
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
+### DgListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of DatagidView (List Data)
+Manual Changing is needed for set Translate of Column Names via Dictionary Items
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-EditRecord-System-Boolean-'></a>
+### EditRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Edit button Click
+Only Set Record And Hide Dataview and Show Detail with selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-Filter-System-String-'></a>
+### Filter(filter) `method`
+
+##### Summary
+
+Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
+Manual Changing is needed of filtered columns by Search Value 
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs
+Dynamicaly Called Only from MainWindow.cs when Search value Inserted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-LoadDataList'></a>
+### LoadDataList() `method`
+
+##### Summary
+
+Standartized Method for Loading data. 
+Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
+Loading is same centralized only change ClasName For Diferent Dataset
+
+After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs on Refresh button click
+Runned on Pageloading or Filter or View Change
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListPage-NewRecord'></a>
+### NewRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on New button Click
+Only Set Record And Hide Dataview and Show Detail
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-TemplateClassListViewPage'></a>
+## TemplateClassListViewPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+This standartized Template is only for list view od Data table
+Called from MainWindow.cs on open New Tab
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Initialize page with loading Dictionary and start loding data
+Runned on start
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-Pages-TemplateClassListViewPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data and selected record for All Pages
+this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
+All is setted as global Classes for All Pages and Work is Fully automatized by System core
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
+### DgListView_MouseDoubleClick(sender,e) `method`
+
+##### Summary
+
+Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
+This is full automatic, not needed manual work
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working page its local control From XAML
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
+### DgListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of DatagidView (List Data)
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-Filter-System-String-'></a>
+### Filter(filter) `method`
+
+##### Summary
+
+Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
+Here you define which column of Dataset will be filtered
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs
+Dynamicaly Called Only from MainWindow.cs when Search value Inserted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListViewPage-LoadDataList'></a>
+### LoadDataList() `method`
+
+##### Summary
+
+Standartized Method for Loading data. 
+Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
+Loading is same centralized only change ClasName For Diferent Dataset
+
+After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs on Refresh button click
+Runned on Pageloading or Filter or View Change
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-TemplateClassListWithSubPage'></a>
+## TemplateClassListWithSubPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+This standartized Template is only for list view od Data table
+Called from MainWindow.cs on open New Tab
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Initialize page with loading Dictionary and start loding data
+Manual work needed Translate All XAML fields by Resources
+Runned on start
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-Pages-TemplateClassListWithSubPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data and selected record for All Pages
+this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
+All is setted as global Classes for All Pages and Work is Fully automatized by System core
+
+HERE you Define All Data Variables For This Form
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-ClearItemsFields'></a>
+### ClearItemsFields() `method`
+
+##### Summary
+
+Standartized Method for Clear SubRecord Input Fields with custom Dataset
+For Correct Using must be Fields changed for used dataset
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-Customer_KeyDown-System-Object,System-Windows-Input-KeyEventArgs-'></a>
+### Customer_KeyDown(sender,e) `method`
+
+##### Summary
+
+Standartized method for Keyboard control of SelectBox
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-DeleteRecord'></a>
+### DeleteRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Delete button Click
+Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
+Reload Datalist and cancel Selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
+### DgListView_MouseDoubleClick(sender,e) `method`
+
+##### Summary
+
+Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
+This is full automatic, not needed manual work
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working page its local control From XAML
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
+### DgListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of DatagidView (List Data)
+Manual Changing is needed for set Translate of Column Names via Dictionary Items
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-DgSubListView_Translate-System-Object,System-EventArgs-'></a>
+### DgSubListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of SubDatagidView (List Data)
+Manual Changing is needed for set Translate of Column Names via Dictionary Items
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-EditRecord-System-Boolean-'></a>
+### EditRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Edit button Click
+Only Set Record And Hide Dataview and Show Detail with selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-Filter-System-String-'></a>
+### Filter(filter) `method`
+
+##### Summary
+
+Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
+Manual Changing is needed of filtered columns by Search Value 
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs
+Dynamicaly Called Only from MainWindow.cs when Search value Inserted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-LoadDataList'></a>
+### LoadDataList() `method`
+
+##### Summary
+
+Standartized Method for Loading data. 
+Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
+Loading is same centralized only change ClasName For Diferent Dataset
+
+After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs on Refresh button click
+Runned on Pageloading or Filter or View Change
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-NewRecord'></a>
+### NewRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on New button Click
+Only Set Record And Hide Dataview and Show Detail
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-NotesChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs-'></a>
+### NotesChanged(sender,e) `method`
+
+##### Summary
+
+Standartized Maximal Simle Code with Reaction and Fill input After ParentComboboxSelection
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Controls.SelectionChangedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.SelectionChangedEventArgs 'System.Windows.Controls.SelectionChangedEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-PartNumberGotFocus-System-Object,System-Windows-RoutedEventArgs-'></a>
+### PartNumberGotFocus(sender,e) `method`
+
+##### Summary
+
+Standartized method indicate start loading all data of SubRecord after Selected in Combobox 
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.RoutedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedEventArgs 'System.Windows.RoutedEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-PartNumber_KeyDown-System-Object,System-Windows-Input-KeyEventArgs-'></a>
+### PartNumber_KeyDown(sender,e) `method`
+
+##### Summary
+
+Standartized method for Keyboard control of SelectBox
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectCustomer_Enter-System-Object,System-Windows-Input-KeyEventArgs-'></a>
+### SelectCustomer_Enter(sender,e) `method`
+
+##### Summary
+
+Standartized methods with Indicate Customer Selection and Start Filling Input
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectGotFocus-System-Object,System-Windows-RoutedEventArgs-'></a>
+### SelectGotFocus(sender,e) `method`
+
+##### Summary
+
+Standartized method indicate start loading all data of SubRecord after Selected in Combobox 
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.RoutedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedEventArgs 'System.Windows.RoutedEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SelectPartNumber_Enter-System-Object,System-Windows-Input-KeyEventArgs-'></a>
+### SelectPartNumber_Enter(sender,e) `method`
+
+##### Summary
+
+Standartized methods with Indicate Customer Selection and Start Filling Input
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SetCustomer'></a>
+### SetCustomer(sender,e) `method`
+
+##### Summary
+
+Standartized methods For Filling Input after Selection
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [M:GlobalNET.Pages.TemplateClassListWithSubPage.SetCustomer](#T-M-GlobalNET-Pages-TemplateClassListWithSubPage-SetCustomer 'M:GlobalNET.Pages.TemplateClassListWithSubPage.SetCustomer') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SetPartNumber'></a>
+### SetPartNumber(sender,e) `method`
+
+##### Summary
+
+Standartized methods For Filling Input after Selection
+This is full automatic, not needed manual work
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [M:GlobalNET.Pages.TemplateClassListWithSubPage.SetPartNumber](#T-M-GlobalNET-Pages-TemplateClassListWithSubPage-SetPartNumber 'M:GlobalNET.Pages.TemplateClassListWithSubPage.SetPartNumber') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-SetSubListsNonActiveOnNewItem-System-Boolean-'></a>
+### SetSubListsNonActiveOnNewItem() `method`
+
+##### Summary
+
+Standartized Method for Load All SubData which is needed for Working with SubRecord
+For Correct Using must be changed for actual datasets
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-UpdateCustomerSearchResults'></a>
+### UpdateCustomerSearchResults() `method`
+
+##### Summary
+
+Standartized method Filling Customer Input by Selected Value
+This is full automatic, not needed manual work
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubPage-UpdatePartNumberSearchResults'></a>
+### UpdatePartNumberSearchResults() `method`
+
+##### Summary
+
+Standartized method Filling Customer Input by Selected Value
+This is full automatic, not needed manual work
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-TemplateClassListWithSubViewPage'></a>
+## TemplateClassListWithSubViewPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+This standartized Template is only for list view od Data table
+Called from MainWindow.cs on open New Tab
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Initialize page with loading Dictionary and start loding data
+Manual work needed Translate All XAML fields by Resources
+Runned on start
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-Pages-TemplateClassListWithSubViewPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data and selected record for All Pages
+this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
+All is setted as global Classes for All Pages and Work is Fully automatized by System core
+
+HERE you Define All Data Variables For This Form
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DeleteRecord'></a>
+### DeleteRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Delete button Click
+Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
+Reload Datalist and cancel Selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
+### DgListView_MouseDoubleClick(sender,e) `method`
+
+##### Summary
+
+Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
+This is full automatic, not needed manual work
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working page its local control From XAML
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
+### DgListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of DatagidView (List Data)
+Manual Changing is needed for set Translate of Column Names via Dictionary Items
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-DgSubListView_Translate-System-Object,System-EventArgs-'></a>
+### DgSubListView_Translate(sender,ex) `method`
+
+##### Summary
+
+Standartized method for translating column names of SubDatagidView (List Data)
+Manual Changing is needed for set Translate of Column Names via Dictionary Items
+Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
+Runned On Page Loading
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-EditRecord-System-Boolean-'></a>
+### EditRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on Edit button Click
+Only Set Record And Hide Dataview and Show Detail with selected Record
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-Filter-System-String-'></a>
+### Filter(filter) `method`
+
+##### Summary
+
+Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
+Manual Changing is needed of filtered columns by Search Value 
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs
+Dynamicaly Called Only from MainWindow.cs when Search value Inserted
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-LoadDataList'></a>
+### LoadDataList() `method`
+
+##### Summary
+
+Standartized Method for Loading data. 
+Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
+Loading is same centralized only change ClasName For Diferent Dataset
+
+After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs on Refresh button click
+Runned on Pageloading or Filter or View Change
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-LoadSubDataList'></a>
+### LoadSubDataList() `method`
+
+##### Summary
+
+Standartized Method for Loading SubData. 
+Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
+Loading is same centralized only change ClasName For Diferent Dataset
+
+After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
+This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
+this method is for global working with pages Called from MainWindow.cs on Refresh button click
+Runned on Pageloading or Filter or View Change
+
+##### Returns
+
+
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-Pages-TemplateClassListWithSubViewPage-NewRecord'></a>
+### NewRecord() `method`
+
+##### Summary
+
+Standartized Method on All Pages with Forms for New Record
+ALL Needed changes Are done By Replace CLASSNAME not needed manual work
+Dynamicaly Called Only from MainWindow.cs on New button Click
+Only Set Record And Hide Dataview and Show Detail
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-GlobalNET-Pages-TemplateDocumentViewPage'></a>
 ## TemplateDocumentViewPage `type`
@@ -1340,857 +2525,6 @@ InitializeComponent
 
 This method has no parameters.
 
-<a name='T-GlobalNET-Pages-TemplateListPage'></a>
-## TemplateListPage `type`
-
-##### Namespace
-
-GlobalNET.Pages
-
-##### Summary
-
-This standartized Template is only for list view od Data table
-Called from MainWindow.cs on open New Tab
-
-<a name='M-GlobalNET-Pages-TemplateListPage-#ctor'></a>
-### #ctor() `constructor`
-
-##### Summary
-
-Initialize page with loading Dictionary and start loding data
-Manual work needed Translate All XAML fields by Resources
-Runned on start
-
-##### Parameters
-
-This constructor has no parameters.
-
-<a name='F-GlobalNET-Pages-TemplateListPage-dataViewSupport'></a>
-### dataViewSupport `constants`
-
-##### Summary
-
-Standartized declaring static page data and selected record for All Pages
-this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
-All is setted as global Classes for All Pages and Work is Fully automatized by System core
-
-<a name='M-GlobalNET-Pages-TemplateListPage-DeleteRecord'></a>
-### DeleteRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Delete button Click
-Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
-Reload Datalist and cancel Selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
-### DgListView_MouseDoubleClick(sender,e) `method`
-
-##### Summary
-
-Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
-This is full automatic, not needed manual work
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working page its local control From XAML
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
-### DgListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of DatagidView (List Data)
-Manual Changing is needed for set Translate of Column Names via Dictionary Items
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPage-EditRecord-System-Boolean-'></a>
-### EditRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Edit button Click
-Only Set Record And Hide Dataview and Show Detail with selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPage-Filter-System-String-'></a>
-### Filter(filter) `method`
-
-##### Summary
-
-Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
-Manual Changing is needed of filtered columns by Search Value 
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs
-Dynamicaly Called Only from MainWindow.cs when Search value Inserted
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPage-InitializeComponent'></a>
-### InitializeComponent() `method`
-
-##### Summary
-
-InitializeComponent
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPage-LoadDataList'></a>
-### LoadDataList() `method`
-
-##### Summary
-
-Standartized Method for Loading data. 
-Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
-Loading is same centralized only change ClasName For Diferent Dataset
-
-After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs on Refresh button click
-Runned on Pageloading or Filter or View Change
-
-##### Returns
-
-
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPage-NewRecord'></a>
-### NewRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on New button Click
-Only Set Record And Hide Dataview and Show Detail
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='T-GlobalNET-Pages-TemplateListPageWithSubPage'></a>
-## TemplateListPageWithSubPage `type`
-
-##### Namespace
-
-GlobalNET.Pages
-
-##### Summary
-
-This standartized Template is only for list view od Data table
-Called from MainWindow.cs on open New Tab
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-#ctor'></a>
-### #ctor() `constructor`
-
-##### Summary
-
-Initialize page with loading Dictionary and start loding data
-Manual work needed Translate All XAML fields by Resources
-Runned on start
-
-##### Parameters
-
-This constructor has no parameters.
-
-<a name='F-GlobalNET-Pages-TemplateListPageWithSubPage-dataViewSupport'></a>
-### dataViewSupport `constants`
-
-##### Summary
-
-Standartized declaring static page data and selected record for All Pages
-this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
-All is setted as global Classes for All Pages and Work is Fully automatized by System core
-
-HERE you Define All Data Variables For This Form
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-ClearItemsFields'></a>
-### ClearItemsFields() `method`
-
-##### Summary
-
-Standartized Method for Clear SubRecord Input Fields with custom Dataset
-For Correct Using must be Fields changed for used dataset
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-Customer_KeyDown-System-Object,System-Windows-Input-KeyEventArgs-'></a>
-### Customer_KeyDown(sender,e) `method`
-
-##### Summary
-
-Standartized method for Keyboard control of SelectBox
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-DeleteRecord'></a>
-### DeleteRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Delete button Click
-Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
-Reload Datalist and cancel Selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
-### DgListView_MouseDoubleClick(sender,e) `method`
-
-##### Summary
-
-Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
-This is full automatic, not needed manual work
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working page its local control From XAML
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
-### DgListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of DatagidView (List Data)
-Manual Changing is needed for set Translate of Column Names via Dictionary Items
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-DgSubListView_Translate-System-Object,System-EventArgs-'></a>
-### DgSubListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of SubDatagidView (List Data)
-Manual Changing is needed for set Translate of Column Names via Dictionary Items
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-EditRecord-System-Boolean-'></a>
-### EditRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Edit button Click
-Only Set Record And Hide Dataview and Show Detail with selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-Filter-System-String-'></a>
-### Filter(filter) `method`
-
-##### Summary
-
-Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
-Manual Changing is needed of filtered columns by Search Value 
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs
-Dynamicaly Called Only from MainWindow.cs when Search value Inserted
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-InitializeComponent'></a>
-### InitializeComponent() `method`
-
-##### Summary
-
-InitializeComponent
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-LoadDataList'></a>
-### LoadDataList() `method`
-
-##### Summary
-
-Standartized Method for Loading data. 
-Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
-Loading is same centralized only change ClasName For Diferent Dataset
-
-After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs on Refresh button click
-Runned on Pageloading or Filter or View Change
-
-##### Returns
-
-
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-NewRecord'></a>
-### NewRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on New button Click
-Only Set Record And Hide Dataview and Show Detail
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-NotesChanged-System-Object,System-Windows-Controls-SelectionChangedEventArgs-'></a>
-### NotesChanged(sender,e) `method`
-
-##### Summary
-
-Standartized Maximal Simle Code with Reaction and Fill input After ParentComboboxSelection
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Controls.SelectionChangedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.SelectionChangedEventArgs 'System.Windows.Controls.SelectionChangedEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-PartNumberGotFocus-System-Object,System-Windows-RoutedEventArgs-'></a>
-### PartNumberGotFocus(sender,e) `method`
-
-##### Summary
-
-Standartized method indicate start loading all data of SubRecord after Selected in Combobox 
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.RoutedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedEventArgs 'System.Windows.RoutedEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-PartNumber_KeyDown-System-Object,System-Windows-Input-KeyEventArgs-'></a>
-### PartNumber_KeyDown(sender,e) `method`
-
-##### Summary
-
-Standartized method for Keyboard control of SelectBox
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectCustomer_Enter-System-Object,System-Windows-Input-KeyEventArgs-'></a>
-### SelectCustomer_Enter(sender,e) `method`
-
-##### Summary
-
-Standartized methods with Indicate Customer Selection and Start Filling Input
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectGotFocus-System-Object,System-Windows-RoutedEventArgs-'></a>
-### SelectGotFocus(sender,e) `method`
-
-##### Summary
-
-Standartized method indicate start loading all data of SubRecord after Selected in Combobox 
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.RoutedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedEventArgs 'System.Windows.RoutedEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SelectPartNumber_Enter-System-Object,System-Windows-Input-KeyEventArgs-'></a>
-### SelectPartNumber_Enter(sender,e) `method`
-
-##### Summary
-
-Standartized methods with Indicate Customer Selection and Start Filling Input
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SetCustomer'></a>
-### SetCustomer(sender,e) `method`
-
-##### Summary
-
-Standartized methods For Filling Input after Selection
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [M:GlobalNET.Pages.TemplateListPageWithSubPage.SetCustomer](#T-M-GlobalNET-Pages-TemplateListPageWithSubPage-SetCustomer 'M:GlobalNET.Pages.TemplateListPageWithSubPage.SetCustomer') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SetPartNumber'></a>
-### SetPartNumber(sender,e) `method`
-
-##### Summary
-
-Standartized methods For Filling Input after Selection
-This is full automatic, not needed manual work
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [M:GlobalNET.Pages.TemplateListPageWithSubPage.SetPartNumber](#T-M-GlobalNET-Pages-TemplateListPageWithSubPage-SetPartNumber 'M:GlobalNET.Pages.TemplateListPageWithSubPage.SetPartNumber') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-SetSubListsNonActiveOnNewItem-System-Boolean-'></a>
-### SetSubListsNonActiveOnNewItem() `method`
-
-##### Summary
-
-Standartized Method for Load All SubData which is needed for Working with SubRecord
-For Correct Using must be changed for actual datasets
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-UpdateCustomerSearchResults'></a>
-### UpdateCustomerSearchResults() `method`
-
-##### Summary
-
-Standartized method Filling Customer Input by Selected Value
-This is full automatic, not needed manual work
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubPage-UpdatePartNumberSearchResults'></a>
-### UpdatePartNumberSearchResults() `method`
-
-##### Summary
-
-Standartized method Filling Customer Input by Selected Value
-This is full automatic, not needed manual work
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='T-GlobalNET-Pages-TemplateListPageWithSubViewPage'></a>
-## TemplateListPageWithSubViewPage `type`
-
-##### Namespace
-
-GlobalNET.Pages
-
-##### Summary
-
-This standartized Template is only for list view od Data table
-Called from MainWindow.cs on open New Tab
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-#ctor'></a>
-### #ctor() `constructor`
-
-##### Summary
-
-Initialize page with loading Dictionary and start loding data
-Manual work needed Translate All XAML fields by Resources
-Runned on start
-
-##### Parameters
-
-This constructor has no parameters.
-
-<a name='F-GlobalNET-Pages-TemplateListPageWithSubViewPage-dataViewSupport'></a>
-### dataViewSupport `constants`
-
-##### Summary
-
-Standartized declaring static page data and selected record for All Pages
-this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
-All is setted as global Classes for All Pages and Work is Fully automatized by System core
-
-HERE you Define All Data Variables For This Form
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DeleteRecord'></a>
-### DeleteRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Delete button Click
-Show MainWindow Standartized Message with info About Delete and After confirm Send DeleteApiRequest
-Reload Datalist and cancel Selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
-### DgListView_MouseDoubleClick(sender,e) `method`
-
-##### Summary
-
-Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
-This is full automatic, not needed manual work
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working page its local control From XAML
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
-### DgListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of DatagidView (List Data)
-Manual Changing is needed for set Translate of Column Names via Dictionary Items
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-DgSubListView_Translate-System-Object,System-EventArgs-'></a>
-### DgSubListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of SubDatagidView (List Data)
-Manual Changing is needed for set Translate of Column Names via Dictionary Items
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-EditRecord-System-Boolean-'></a>
-### EditRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on Edit button Click
-Only Set Record And Hide Dataview and Show Detail with selected Record
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-Filter-System-String-'></a>
-### Filter(filter) `method`
-
-##### Summary
-
-Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
-Manual Changing is needed of filtered columns by Search Value 
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs
-Dynamicaly Called Only from MainWindow.cs when Search value Inserted
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-InitializeComponent'></a>
-### InitializeComponent() `method`
-
-##### Summary
-
-InitializeComponent
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-LoadDataList'></a>
-### LoadDataList() `method`
-
-##### Summary
-
-Standartized Method for Loading data. 
-Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
-Loading is same centralized only change ClasName For Diferent Dataset
-
-After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs on Refresh button click
-Runned on Pageloading or Filter or View Change
-
-##### Returns
-
-
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-LoadSubDataList'></a>
-### LoadSubDataList() `method`
-
-##### Summary
-
-Standartized Method for Loading SubData. 
-Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
-Loading is same centralized only change ClasName For Diferent Dataset
-
-After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs on Refresh button click
-Runned on Pageloading or Filter or View Change
-
-##### Returns
-
-
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListPageWithSubViewPage-NewRecord'></a>
-### NewRecord() `method`
-
-##### Summary
-
-Standartized Method on All Pages with Forms for New Record
-ALL Needed changes Are done By Replace CLASSNAME not needed manual work
-Dynamicaly Called Only from MainWindow.cs on New button Click
-Only Set Record And Hide Dataview and Show Detail
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='T-GlobalNET-Pages-TemplateListViewPage'></a>
-## TemplateListViewPage `type`
-
-##### Namespace
-
-GlobalNET.Pages
-
-##### Summary
-
-This standartized Template is only for list view od Data table
-Called from MainWindow.cs on open New Tab
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-#ctor'></a>
-### #ctor() `constructor`
-
-##### Summary
-
-Initialize page with loading Dictionary and start loding data
-Runned on start
-
-##### Parameters
-
-This constructor has no parameters.
-
-<a name='F-GlobalNET-Pages-TemplateListViewPage-dataViewSupport'></a>
-### dataViewSupport `constants`
-
-##### Summary
-
-Standartized declaring static page data and selected record for All Pages
-this method is for global working with pages Called from MainWindow.cs for Control of Button Menu and Selections (Report,Filter and more)
-All is setted as global Classes for All Pages and Work is Fully automatized by System core
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-DgListView_MouseDoubleClick-System-Object,System-Windows-Input-MouseButtonEventArgs-'></a>
-### DgListView_MouseDoubleClick(sender,e) `method`
-
-##### Summary
-
-Standartized method for selecting and opening Detail Form. This is only View Page, that is only for Select record
-This is full automatic, not needed manual work
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working page its local control From XAML
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.MouseButtonEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.MouseButtonEventArgs 'System.Windows.Input.MouseButtonEventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-DgListView_Translate-System-Object,System-EventArgs-'></a>
-### DgListView_Translate(sender,ex) `method`
-
-##### Summary
-
-Standartized method for translating column names of DatagidView (List Data)
-Here you can set Format(Date,time, etc),Index position, Hide Column, Translate, change grahics Style
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with page internal reaction on DatagrigView DataFiling on Start Page
-Runned On Page Loading
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| ex | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-Filter-System-String-'></a>
-### Filter(filter) `method`
-
-##### Summary
-
-Standartized method for searching match in setted columns. Searched value is from the simple 'Search Input' for DatagidView (List Data)
-Here you define which column of Dataset will be filtered
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs
-Dynamicaly Called Only from MainWindow.cs when Search value Inserted
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| filter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-InitializeComponent'></a>
-### InitializeComponent() `method`
-
-##### Summary
-
-InitializeComponent
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Pages-TemplateListViewPage-LoadDataList'></a>
-### LoadDataList() `method`
-
-##### Summary
-
-Standartized Method for Loading data. 
-Manual Changing is needed for simple form is All changed By CLASNAME Chage, but If you need More API data for selection Here are Defined All incoming Data
-Loading is same centralized only change ClasName For Diferent Dataset
-
-After all data for DatagridView (List Data) are loaded The ProgressRing is hidden
-This is on Every page ('View' and 'Form' Types) without 'Setting' Type (Name=Setting and Tag=Setting in XAML part)
-this method is for global working with pages Called from MainWindow.cs on Refresh button click
-Runned on Pageloading or Filter or View Change
-
-##### Returns
-
-
-
-##### Parameters
-
-This method has no parameters.
-
 <a name='T-GlobalNET-Pages-TemplateSTLPage'></a>
 ## TemplateSTLPage `type`
 
@@ -2201,6 +2535,13 @@ GlobalNET.Pages
 ##### Summary
 
 TemplateSTLPage
+
+<a name='F-GlobalNET-Pages-TemplateSTLPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data for global vorking with pages
 
 <a name='M-GlobalNET-Pages-TemplateSTLPage-InitializeComponent'></a>
 ### InitializeComponent() `method`
@@ -2244,6 +2585,13 @@ This constructor has no parameters.
 
 Define Collection For Combobox
 
+<a name='F-GlobalNET-Pages-TemplateSettingsPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data for global vorking with pages
+
 <a name='M-GlobalNET-Pages-TemplateSettingsPage-BtnApiTest_Click-System-Object,System-Windows-RoutedEventArgs-'></a>
 ### BtnApiTest_Click(sender,e) `method`
 
@@ -2280,7 +2628,76 @@ GlobalNET.Pages
 
 TemplateVideoPage
 
+<a name='F-GlobalNET-Pages-TemplateVideoPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data for global vorking with pages
+
 <a name='M-GlobalNET-Pages-TemplateVideoPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-TemplateWebViewPage'></a>
+## TemplateWebViewPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+Template Page For internet pages document, pictures, text and and much more file formats opened in WebViewer
+
+<a name='M-GlobalNET-Pages-TemplateWebViewPage-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Initialize page with loading Dictionary and direct show example file
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-GlobalNET-Pages-TemplateWebViewPage-dataViewSupport'></a>
+### dataViewSupport `constants`
+
+##### Summary
+
+Standartized declaring static page data for global vorking with pages
+
+<a name='M-GlobalNET-Pages-TemplateWebViewPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-ToolPanelPage'></a>
+## ToolPanelPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+ToolPanelPage
+
+<a name='M-GlobalNET-Pages-ToolPanelPage-InitializeComponent'></a>
 ### InitializeComponent() `method`
 
 ##### Summary

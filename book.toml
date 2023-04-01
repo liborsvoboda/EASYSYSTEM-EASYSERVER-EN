@@ -10,6 +10,7 @@ multilingual = false
 edition = "2018"
 
 [output.html]
+default-theme = "rust"
 mathjax-support = true
 site-url = "/mdBook/"
 git-repository-url = "https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN"

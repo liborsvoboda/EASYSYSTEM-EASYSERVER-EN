@@ -12,6 +12,7 @@
     xmlns:local="clr-namespace:GlobalNET"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     Name="Setting"
     HorizontalAlignment="Stretch"
@@ -30,7 +31,7 @@
 
         <!--  Limited for installed XPS support  -->
         <!--<DocumentViewer x:Name="dv_documentViewer" Width="{Binding Path=ActualWidth, ElementName=View}" Height="{Binding Path=ActualHeight, ElementName=View}" />-->
-        <WebBrowser
+        <wpf:ChromiumWebBrowser
             x:Name="webViewer"
             Width="{Binding Path=ActualWidth, ElementName=View}"
             Height="{Binding Path=ActualHeight, ElementName=View}" />
