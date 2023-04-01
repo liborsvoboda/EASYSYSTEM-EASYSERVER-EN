@@ -17,7 +17,7 @@ git-repository-url = "https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN"
 edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 
 [output.html.playground]
-editable = true
+editable = false
 line-numbers = true
 
 [output.html.search]
