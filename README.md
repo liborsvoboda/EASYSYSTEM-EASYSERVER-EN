@@ -1,7 +1,7 @@
 EN: 
  
 New in the menu "Absolutely unique EASY SYSTEM BUILDER"
-absolutely easy to create a 3-tier system with excel knowledge
+absolutely easy to create a 3-tier system (LIBOVOLNÁ DB, BACKEND-SERVER, FRONTEND-KLIENT) with excel knowledge
 Just create a Table for Data and a Form, all in graphic designers
 So you literally click on the system, 1 table every day = sales system with orders and offers per month
 And that's not all, by any chance.
@@ -9,7 +9,7 @@ It doesn't have to be only a data system, but also a multimedia one without any 
 or even a CONTROL SYSTEM for machine control (Currently SIEMENS PLC is supported), or any other Hardware
 after delivery of specifications.
 Or the Control system, Backup, DataWarehouse, Controlling, BI OLAP, Flow Processes,
-Production, Information or business touch Terminals.
+Production, Information or business touch Terminals. IT CAN ALSO BE USED ONLY AS AN EXTENSION OR CONNECTION OF SYSTEMS
 
 The starting cost for the core is only 10,000 CZK / 400 Euro, and you can try it yourself or order cheaply
 what you want to add there. Don't bow down to the system, GET A CUSTOMIZED SYSTEM.
@@ -17,12 +17,14 @@ For idea:
   - invoicing system with OBJ+NAB+MULTI BRANCHES, WAREHOUSE, CHECKOUT - 14 DAYS
   - implementation of a touch terminal in production for work reports - 4 DAYS
   - A system for hotels including room agency, invoicing and orders is currently being created - 1 MONTH
+  - Free updates, 1 development for all clients via shared project agendas in code
  
   Unlimited users, unlimited printing, unlimited options, tutorials, tips, tricks, advice,
   Prepared for all types of systems and terminals for MS WINDOWS
  
-INTELLIGENT DOCUMENTATION: https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN/
-CODE: https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN
+INTELLIGENT DOCUMENTATION: https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN/  
+CODE: https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN  
+ONLINE EXAMPLE: https://kliknetezde.cz  
 
   SO DON'T DELAY AND CALL TODAY BEFORE THE PRICE GOES UP
  
