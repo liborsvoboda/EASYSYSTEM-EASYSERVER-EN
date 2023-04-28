@@ -24,7 +24,7 @@ For idea:
 INTELLIGENT DOCUMENTATION: https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN/
 CODE: https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN
 
-  SO DON'T DELAY AND CALL TODAY
+  SO DON'T DELAY AND CALL TODAY BEFORE THE PRICE GOES UP
  
   IT Architect
   Libor Svoboda GroupWare-Solution.Eu
