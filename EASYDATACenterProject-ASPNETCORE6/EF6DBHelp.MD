@@ -145,9 +145,43 @@ Generate executable Files
 
 [https://learn.microsoft.com/cs-cz/dotnet/core/tools/dotnet-publish](https://learn.microsoft.com/cs-cz/dotnet/core/tools/dotnet-publish "")
 
+
 **Run debug**   
 dotnet run --project BACKENDCORE -r win-x64 -c Debug --self-contained
 
 Generate exe file Without WebPage support
 dotnet publish BACKENDCORE -c Release -o bin -r win-x64 /p:PublishSingleFile=true
 
+
+**DB backup procedure in Linux**  
+```sql
+CREATE procedure [dbo].[DB_AUTOBACKUP]
+AS
+BEGIN 
+	DECLARE @dbName as varchar(50) = DB_NAME();
+	DECLARE @fileName as varchar(80) = CONCAT('/root/DBbackup/',@dbName,'_',FORMAT(GETDATE(),'yyyyMMdd'),'.bak');
+
+	DBCC SHRINKFILE (2, 1); BACKUP DATABASE @dbName TO DISK = @fileName;
+	DBCC SHRINKFILE (2, 1); BACKUP DATABASE @dbName TO DISK = @fileName;
+END;
+GO
+```
+
+**One Project support More DBs = DBContexts**   
+these can be used whatever, MOre Api for More App for example
+
+The test version, if requested, should ideally
+be deployed separately for making changes
+
+
+**Solution for Data selection by Role - its needed in SELECT API only**  
+```cs
+if (Request.HttpContext.User.IsInRole("Admin"))
+{ data = new EASYDATACenterContext().ImageGalleryLists.FromSqlRaw("SELECT * FROM ImageGalleryList WHERE 1=1 AND " + filter.Replace("+", " ")).AsNoTracking().ToList(); }
+else
+{
+    data = new EASYDATACenterContext().ImageGalleryLists.FromSqlRaw("SELECT * FROM ImageGalleryList WHERE 1=1 AND " + filter.Replace("+", " "))
+        .Include(a => a.User).Where(a => a.User.UserName == Request.HttpContext.User.Claims.First().Issuer)
+        .AsNoTracking().ToList();
+}
+```

@@ -27,3 +27,17 @@ Run project dll command
 ## DOCKER & GCLOUD OS HELP & TIPS
    [GitLab publish to GCloud Project config file](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/raw/main/OSSystemHelps/.gitlab-ci.yml)  
    [Publish Docker config File](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/raw/main/OSSystemHelps/Dockerfile)  
+
+
+## Windows Store Download App Link Generator
+[https://store.rg-adguard.net/](https://store.rg-adguard.net/ "")   
+
+insert App detail link from web store
+Example: [https://apps.microsoft.com/store/detail/xaml-studio/9NTLS214TKMQ](https://apps.microsoft.com/store/detail/xaml-studio/9NTLS214TKMQ "")  
+
+
+## Windows Apps & Windows Tools
+in start menu Windows Kits
+
+cmd Rese Store Settings
+wsreset.exe

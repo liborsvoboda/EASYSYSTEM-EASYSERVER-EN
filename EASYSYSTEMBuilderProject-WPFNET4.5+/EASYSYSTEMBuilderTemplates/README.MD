@@ -33,3 +33,6 @@ These types, which you can click on in Visual Studio in the case of necessity, w
 **Shared Agendas - Real Creation**
 In the SharedAgendas folder you will find approx. 50 Agendas - all forms already created forms for
 immediate use or as an inspiration for the creation of new agendas.
+
+**Code Examples**  
+[https://learn.microsoft.com/cs-cz/samples/browse/?terms=xaml](https://learn.microsoft.com/cs-cz/samples/browse/?terms=xaml "")  

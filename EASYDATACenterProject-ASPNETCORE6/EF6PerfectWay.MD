@@ -149,6 +149,45 @@ data = new hotelsContext().DocumentTypeLists
 }).ToList();
 ```
 
+**Join Table with new custom join condition with exist record**  
+**And next more condition in WHERE to List<string> **  
+(_joiner, _joined) => _joiner.City
+```css
+        [HttpGet("/WebApi/Search/GetSearchDial/{language}")]
+        public async Task<string> GetSearchDial(string language = "cz") {
+
+            List<string> data;
+            List<string> cityData;
+            List<string> countryData;
+
+            using (new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadUncommitted })) {
+
+                countryData = _dbContext.CountryLists.
+                    Join(_dbContext.HotelLists.Where(a => a.Advertised && a.Approved == true), 
+                    joiner => joiner.Id, joined => joined.CountryId, (_joiner, _joined) => _joiner.SystemName).ToList();
+                
+                cityData = _dbContext.CityLists.Join(_dbContext.HotelLists.Where(a => a.Advertised && a.Approved == true),
+                    joiner => joiner.Id, joined => joined.CountryId, (_joiner, _joined) => _joiner.City).ToList();
+
+                data = _dbContext.HotelLists.Where(a=> a.Approved == true && a.Advertised == true).Select(a => a.Name).ToList();
+            }
+            countryData.ForEach(item => data.Add(DBOperations.DBTranslate(item, language)));
+            cityData.ForEach(item => data.Add(DBOperations.DBTranslate(item, language)));
+            data = data.Distinct().ToList();
+            data.Sort();
+            return JsonSerializer.Serialize(data, new JsonSerializerOptions() { ReferenceHandler = ReferenceHandler.IgnoreCycles, WriteIndented = true });
+        }
+```
+
+
+**Join Table with new custom join condition with exist record to Tuple List**  
+```css
+countryData = _dbContext.CountryLists.
+                    Join(_dbContext.HotelLists.Where(a => a.Advertised && a.Approved == true),
+                    joiner => joiner.Id, joined => joined.CountryId, (_joiner, _joined) => new Tuple<int, string>(_joined.Id, _joined.Name)).ToList();
+```
+
+
 ---
 ### MYSQL IN ASPNETCORE HELP COMMANDS AND TYPES
 
