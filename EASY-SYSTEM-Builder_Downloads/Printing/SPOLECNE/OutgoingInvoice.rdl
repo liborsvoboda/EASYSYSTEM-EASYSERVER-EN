@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="HEADER">
+      <Query>
+        <DataSourceName>MAIN</DataSourceName>
+        <CommandText>SELECT 
+oil.Id,oil.DocumentNumber,oil.Supplier,oil.Customer,oil.OrderNumber,oil.[Description],oil.[TotalPriceWithVat],
+FORMAT(oil.[IssueDate],'dd.MM.yyyy') as IssueDate,
+FORMAT(oil.[TaxDate],'dd.MM.yyyy') as TaxDate,
+FORMAT(oil.[MaturityDate],'dd.MM.yyyy') as MaturityDate,
+pml.[Name] as PaymentMethod,
+ROUND(ISNULL((SELECT SUM(oiil.TotalPrice) FROM OutgoingInvoiceItemList oiil WHERE oiil.DocumentNumber = oil.DocumentNumber),0),2) as TotalWithoutDPH,
+ROUND(ISNULL((SELECT SUM(oiil.TotalPriceWithVat - oiil.TotalPrice) FROM OutgoingInvoiceItemList oiil WHERE oiil.DocumentNumber = oil.DocumentNumber),0),2) as DPH,
+ROUND((oil.[TotalPriceWithVat] - ISNULL((SELECT SUM(oiil.TotalPriceWithVat) FROM OutgoingInvoiceItemList oiil WHERE oiil.DocumentNumber = oil.DocumentNumber ),0)),2) as Rounded
+FROM OutgoingInvoiceList oil, PaymentMethodList pml 
+WHERE pml.Id = oil.PaymentMethodId AND oil.Id = @Id</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Id">
+            <Value>={?Id}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DocumentNumber">
+          <DataField>DocumentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Supplier">
+          <DataField>Supplier</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer">
+          <DataField>Customer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderNumber">
+          <DataField>OrderNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalPriceWithVat">
+          <DataField>TotalPriceWithVat</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IssueDate">
+          <DataField>IssueDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TaxDate">
+          <DataField>TaxDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaturityDate">
+          <DataField>MaturityDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentMethod">
+          <DataField>PaymentMethod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalWithoutDPH">
+          <DataField>TotalWithoutDPH</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DPH">
+          <DataField>DPH</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Rounded">
+          <DataField>Rounded</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>MAIN</DataSourceName>
+        <CommandText>SELECT * FROM OutgoingInvoiceItemList 
+WHERE 1=1 AND 
+DocumentNumber = ISNULL((SELECT DocumentNumber FROM OutgoingInvoiceList WHERE Id = @Id ),NULL)</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Id">
+            <Value>={?Id}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="DocumentNumber">
+          <DataField>DocumentNumber</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="PartNumber">
+          <DataField>PartNumber</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="Unit">
+          <DataField>Unit</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="PcsPrice">
+          <DataField>PcsPrice</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="Count">
+          <DataField>Count</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="TotalPrice">
+          <DataField>TotalPrice</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="Vat">
+          <DataField>Vat</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="TotalPriceWithVat">
+          <DataField>TotalPriceWithVat</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>258.2pt</Height>
+    <ReportItems>
+      <Rectangle Name="Rectangle1">
+        <Height>166.37pt</Height>
+        <Width>557.01pt</Width>
+        <Left>5.60pt</Left>
+        <Top>51.10pt</Top>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+            <Left>Solid</Left>
+            <Right>Solid</Right>
+            <Top>Solid</Top>
+            <Bottom>Solid</Bottom>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ReportItems>
+          <Line Name="Line1">
+            <Height>165.75pt</Height>
+            <Width>0.59pt</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Left>278.25pt</Left>
+            <Top>0.00pt</Top>
+          </Line>
+          <Textbox Name="Textbox3">
+            <Height>15.76pt</Height>
+            <Width>142.89pt</Width>
+            <Value>Dodavatel:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>2.10pt</Left>
+            <Top>2.70pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox4">
+            <Height>105.28pt</Height>
+            <Width>229.57pt</Width>
+            <Value>={?Supplier}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>4.60pt</Left>
+            <Top>18.20pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <Height>14.25pt</Height>
+            <Width>83.52pt</Width>
+            <Value>Odběratel:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>282.7pt</Left>
+            <Top>2.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <Height>109.83pt</Height>
+            <Width>269.47pt</Width>
+            <Value>={?Customer}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>281.7pt</Left>
+            <Top>14.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox11">
+            <Height>12.00pt</Height>
+            <Width>101.63pt</Width>
+            <Value>Datum Vystavení:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>4.5pt</Left>
+            <Top>126.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox12">
+            <Height>12.75pt</Height>
+            <Width>99.30pt</Width>
+            <Value>Datum usk. zd. pl.:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>4.4pt</Left>
+            <Top>138.9pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox13">
+            <Height>14.25pt</Height>
+            <Width>88.89pt</Width>
+            <Value>Datum splatnosti:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>4.8pt</Left>
+            <Top>151.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle2">
+            <Height>39.93pt</Height>
+            <Width>105.39pt</Width>
+            <Left>173.0pt</Left>
+            <Top>126.2pt</Top>
+            <ReportItems>
+              <Textbox Name="Textbox14">
+                <Height>12.75pt</Height>
+                <Width>92.52pt</Width>
+                <Value>={?IssueDate}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>4.4pt</Left>
+                <Top>0.0pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <Format>MM/dd/yyyy</Format>
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox15">
+                <Height>11.25pt</Height>
+                <Width>95.57pt</Width>
+                <Value>={?TaxDate}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>2.8pt</Left>
+                <Top>13.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox16">
+                <Height>13.50pt</Height>
+                <Width>94.79pt</Width>
+                <Value>={?MaturityDate}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>2.9pt</Left>
+                <Top>26.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+                <Left>Solid</Left>
+                <Right>Solid</Right>
+                <Top>Solid</Top>
+                <Bottom>Solid</Bottom>
+              </BorderStyle>
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Rectangle>
+          <Textbox Name="Textbox17">
+            <Height>12.00pt</Height>
+            <Width>72.27pt</Width>
+            <Value>Forma Úhrady:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>279.80pt</Left>
+            <Top>127.10pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Height>0.00pt</Height>
+            <Width>281.58pt</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Left>274.9pt</Left>
+            <Top>126.0pt</Top>
+          </Line>
+          <Textbox Name="Textbox18">
+            <Height>12.75pt</Height>
+            <Width>102.33pt</Width>
+            <Value>Variabilní symbol: </Value>
+            <ZIndex>1</ZIndex>
+            <Left>279.8pt</Left>
+            <Top>139.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox19">
+            <Height>12.75pt</Height>
+            <Width>106.82pt</Width>
+            <Value>Konstantní symbol: </Value>
+            <ZIndex>1</ZIndex>
+            <Left>279.9pt</Left>
+            <Top>151.8pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox20">
+            <Height>12.75pt</Height>
+            <Width>158.02pt</Width>
+            <Value>={?PaymentMethod}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>396.5pt</Left>
+            <Top>127.8pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox21">
+            <Height>13.50pt</Height>
+            <Width>131.65pt</Width>
+            <Value>={?DocNr}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>423.4pt</Left>
+            <Top>139.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <Height>12.00pt</Height>
+            <Width>72.27pt</Width>
+            <Value>0308</Value>
+            <ZIndex>1</ZIndex>
+            <Left>481.0pt</Left>
+            <Top>152.0pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox23">
+            <Height>15.00pt</Height>
+            <Width>206.81pt</Width>
+            <Value>='Objednávka: ' + {?OrderNumber}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>347.0pt</Left>
+            <Top>2.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+        </ReportItems>
+      </Rectangle>
+      <Textbox Name="Textbox1">
+        <Height>28.61pt</Height>
+        <Width>225.87pt</Width>
+        <Value>FAKTURA VYDANÁ</Value>
+        <ZIndex>1</ZIndex>
+        <Left>341.1pt</Left>
+        <Top>1.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>22pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <Height>19.50pt</Height>
+        <Width>306.27pt</Width>
+        <Value>= 'Variabilní symbol: ' + {?DocNr}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>257.3pt</Left>
+        <Top>26.8pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontSize>12pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <Height>26.26pt</Height>
+        <Width>566.92pt</Width>
+        <Value>={?Description}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>5.90pt</Left>
+        <Top>224.90pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <Body>
+    <Height>204.6pt</Height>
+    <ReportItems>
+      <List Name="List1">
+        <DataSetName>Data</DataSetName>
+        <Height>15.74pt</Height>
+        <NoRows>Query returned no rows!</NoRows>
+        <Width>565.27pt</Width>
+        <Left>0.73pt</Left>
+        <Top>21.90pt</Top>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ReportItems>
+          <Textbox Name="Textbox8">
+            <Height>12.00pt</Height>
+            <Width>74.52pt</Width>
+            <Value>={PartNumber}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>3.60pt</Left>
+            <Top>2.35pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <Height>12.76pt</Height>
+            <Width>138.66pt</Width>
+            <Value>={Name}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>81.09pt</Left>
+            <Top>3.20pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <Height>13.50pt</Height>
+            <Width>67.80pt</Width>
+            <Value>={Count} + ' ' + {Unit}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>208.10pt</Left>
+            <Top>2.40pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>None</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox31">
+            <Height>13.50pt</Height>
+            <Width>72.27pt</Width>
+            <Value>={PcsPrice}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>288.7pt</Left>
+            <Top>2.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox32">
+            <Height>12.75pt</Height>
+            <Width>74.52pt</Width>
+            <Value>={TotalPrice}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>401.10pt</Left>
+            <Top>2.70pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <Format>0.00 Kč</Format>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox33">
+            <Height>14.25pt</Height>
+            <Width>38.43pt</Width>
+            <Value>={Vat}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>360.0pt</Left>
+            <Top>2.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <Format>0 %</Format>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox35">
+            <Height>12.75pt</Height>
+            <Width>82.77pt</Width>
+            <Value>={TotalPriceWithVat}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>476.9pt</Left>
+            <Top>2.9pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+        </ReportItems>
+      </List>
+      <Textbox Name="Textbox9">
+        <Height>12.75pt</Height>
+        <Width>51.26pt</Width>
+        <Value>Kód</Value>
+        <ZIndex>1</ZIndex>
+        <Left>5.60pt</Left>
+        <Top>5.95pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+      <Line Name="Line2">
+        <Height>-0.03pt</Height>
+        <Width>560.90pt</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth>
+            <Default>2pt</Default>
+          </BorderWidth>
+        </Style>
+        <Left>3.01pt</Left>
+        <Top>21.24pt</Top>
+      </Line>
+      <Textbox Name="Textbox10">
+        <Height>13.50pt</Height>
+        <Width>44.34pt</Width>
+        <Value>Popis</Value>
+        <ZIndex>1</ZIndex>
+        <Left>79.4pt</Left>
+        <Top>6.7pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <Height>12.00pt</Height>
+        <Width>72.27pt</Width>
+        <Value>Množství</Value>
+        <ZIndex>1</ZIndex>
+        <Left>207.4pt</Left>
+        <Top>6.8pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <Height>12.75pt</Height>
+        <Width>80.51pt</Width>
+        <Value>J.cena bez DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>282.4pt</Left>
+        <Top>6.8pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Normal</FontWeight>
+          <FontSize>10pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <Height>13.50pt</Height>
+        <Width>71.53pt</Width>
+        <Value>Celkem b.DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>406.3pt</Left>
+        <Top>7.5pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Normal</FontWeight>
+          <FontSize>10pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <Height>12.00pt</Height>
+        <Width>31.68pt</Width>
+        <Value>DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>370.3pt</Left>
+        <Top>7.4pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle6" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>21.80pt</Height>
+        <Width>243.76pt</Width>
+        <Left>318.7pt</Left>
+        <Top>113.0pt</Top>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+            <Left>Solid</Left>
+            <Right>Solid</Right>
+            <Top>Solid</Top>
+            <Bottom>Solid</Bottom>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ReportItems>
+          <Textbox Name="Textbox38">
+            <Height>14.25pt</Height>
+            <Width>122.61pt</Width>
+            <Value>Cena Celkem s DPH:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>6.4pt</Left>
+            <Top>3.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox39">
+            <Height>19.23pt</Height>
+            <Width>121.94pt</Width>
+            <Value>={?TotalPriceWithVat}+' Kč'</Value>
+            <ZIndex>1</ZIndex>
+            <Left>118.5pt</Left>
+            <Top>1.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <Format>None</Format>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+        </ReportItems>
+      </Rectangle>
+      <Textbox Name="Textbox40">
+        <Height>13.50pt</Height>
+        <Width>88.83pt</Width>
+        <Value>Zaokrouhlení:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>391.4pt</Left>
+        <Top>98.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <Height>12.00pt</Height>
+        <Width>89.52pt</Width>
+        <Value>Celkem s DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>475.3pt</Left>
+        <Top>7.4pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <TextAlign>Right</TextAlign>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox36">
+        <Height>12.75pt</Height>
+        <Width>85.02pt</Width>
+        <Value>={?Rounded}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>476.8pt</Left>
+        <Top>97.8pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+          <Format>0.00 Kč</Format>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox37" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>14.25pt</Height>
+        <Width>127.93pt</Width>
+        <Value>Cena Celkem Bez DPH:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>352.3pt</Left>
+        <Top>69.3pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox41" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>14.25pt</Height>
+        <Width>127.93pt</Width>
+        <Value>DPH:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>351.5pt</Left>
+        <Top>84.6pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox42" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.75pt</Height>
+        <Width>85.02pt</Width>
+        <Value>={?DPH}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>476.6pt</Left>
+        <Top>84.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+          <Format>0.00 Kč</Format>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox43" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.75pt</Height>
+        <Width>85.02pt</Width>
+        <Value>={?TotalWithoutDPH}</Value>
+        <ZIndex>1</ZIndex>
+        <Left>476.8pt</Left>
+        <Top>69.8pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <TextAlign>Right</TextAlign>
+          <Format>0.00 Kč</Format>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>22.3pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox7">
+        <Top>7.9pt</Top>
+        <Left>0.0pt</Left>
+        <Height>12pt</Height>
+        <Width>3in</Width>
+        <Value>='Stránka: ' + Globals!PageNumber + ' z ' + Globals!TotalPages</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSources>
+    <DataSource Name="MAIN">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?Connect}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="Connect">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=192.168.1.141,1433;Database=SHOPINGER;User ID=shopinger;Password=shopinger;Connection Timeout=10;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Id">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>8</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocNr">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>DocumentNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Supplier">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>Supplier</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Customer">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>Customer</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IssueDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>IssueDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TaxDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>TaxDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MaturityDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>MaturityDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaymentMethod">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>PaymentMethod</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="OrderNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>OrderNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Description">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>Description</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="newparm">
+      <DataType>String</DataType>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalPriceWithVat">
+      <DataType>Float</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>TotalPriceWithVat</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Rounded">
+      <DataType>Float</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>Rounded</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalWithoutDPH">
+      <DataType>Float</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>TotalWithoutDPH</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DPH">
+      <DataType>Float</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>DPH</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

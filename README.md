@@ -1,7 +1,8 @@
+
 EN: 
  
 New in the menu "Absolutely unique EASY SYSTEM BUILDER"
-absolutely easy to create a 3-tier system (LIBOVOLNÁ DB, BACKEND-SERVER, FRONTEND-KLIENT) with excel knowledge
+absolutely easy to create a 3-tier system (ANY DB, BACKEND-SERVER, FRONTEND-KLIENT) with excel knowledge
 Just create a Table for Data and a Form, all in graphic designers
 So you literally click on the system, 1 table every day = sales system with orders and offers per month
 And that's not all, by any chance.
@@ -51,34 +52,20 @@ ONLINE EXAMPLE: https://kliknetezde.cz
 **Complete free projects codes, templates, help, tips, trics, etc: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN "")**   
 
 ---
+## GroupWare-Solutions FOR Universal IT World
 
-#### ScreenShoty
-
-![Shop2.png](SolutionScreenShots/Shop2.png "")
-
-![document.gif](SolutionScreenShots/gif/document.gif "")    ![stl.gif](SolutionScreenShots/gif/stl.gif "") ![video.gif](SolutionScreenShots/gif/video.gif "")   
-
----
-
-#### GLOBAL CORE POLICY - QUICK START BUILDING YOUR OWN SYSTEM
-
-[Quick Start of Custom System Development - Manual EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/CustomSystemCreationIdeaCz.MD "Logic of Global Systems")  
-
----
-## What you need to know for proper development
-[Basic information to start development](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/AutoJoinModelConditions.md "")  
-[Standardized Page/Agenda structure](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Page-AgendaStructure.md "")  
-[System templates](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/SystemTemplates.md "")  
-[Print Reports](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/FYIReporting%26Help%26Tips/README.MD "")  
-
-----
-
-## Complete System Core Information - A global view of everything is the building block of the core
-[Backend Server Core Settings Help](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYDATACenterProject-ASPNETCORE6/BACKENDCORE.md)   
-[Definition of the basic system structure](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md "")  
-[MainWindow Central System Control](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/MainWindow-CentralCorePoint.md "")   
-[Implemented tools in the core](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYTOOLS/README.MD "")   
-[Information about printing solution](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/tree/main/EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Printing&SystemJoins.md "")  
+[SolutionsVisions&Ideas.MD](SolutionsVisions&Ideas.MD)  
+[AUTO_STEPS_Look_First.md](AUTO_STEPS_Look_First.md)  
+[CoreStructureDefinition.md](CoreStructureDefinition.md)  
+[DATABASES.md](DATABASES.md)  
+[EASYDATACENTER_Code_Help.MD](EASYDATACENTER_Code_Help.MD)  
+[EASYSYSTEMBuilder_Code_Help.md](EASYSYSTEMBuilder_Code_Help.md)   
+[EASYTools_3rdFreeAddons.MD](EASYTools_3rdFreeAddons.MD)  
+[FIYReporting.md](FIYReporting.md)  
+[OS_GIT_GCLOUD_WIN_LIN_DOCKER_Help.md](OS_GIT_GCLOUD_WIN_LIN_DOCKER_Help.md)  
+[SolutionsChangeLog.MD](SolutionsChangeLog.MD)  
+[3rdPartyVisionsTips.md](3rdPartyVisionsTips.md)  
+[SUMMARY.md](SUMMARY.md)  
 
 
 ---
@@ -154,27 +141,24 @@ MultiOS license server with listening API GET/POST server / generation of unlimi
 All documentation, license, case study, price list, media, developer information, help, manuals, technology information, installation, images, videos, downloads, etc. can be found here:
 
 
-* Info Storage: [https://groupware-solution.eu/webdav/Marketing/](https://groupware-solution.eu/webdav/Marketing/ "webdav Projects Storage")  
-   with login name/password: marketing/marketing
-* Youtube: [https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb](https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb)  
-* Facebook: [https://www.facebook.com/GroupWareSolution](https://www.facebook.com/GroupWareSolution)  
-* LinkedIn: [https://www.linkedin.com/in/libor-svoboda-7b96014a/](https://www.linkedin.com/in/libor-svoboda-7b96014a/)  
-* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solution.Eu)  
-* Website: [https://GroupWare-Solution.Eu](https://GroupWare-Solution.Eu)  
-* Online Application to try: [Https://KlikneteZde.Cz](Https://KlikneteZde.Cz)  
-* GitHub complete Information and help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN)  
-
+* Info Global Server Running: [https://Kliknetezde.Cz:5000/](https://Kliknetezde.Cz:5000/)
+* Generators & Client Support is Preparing: [https://Kliknetezde.Cz:5000/DashBoard](https://Kliknetezde.Cz:5000/DashBoard)  
+* Youtube: [https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb](https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb)
+* Facebook: [https://www.facebook.com/GroupWareSolution](https://www.facebook.com/GroupWareSolution)
+* LinkedIn: [https://www.linkedin.com/in/libor-svoboda-7b96014a/](https://www.linkedin.com/in/libor-svoboda-7b96014a/)
+* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solutions.Eu)
+* WebPages: [https://GroupWare-Solution.Eu](https://GroupWare-Solution.Eu)
+* Online Application for testing: [Https://KlikneteZde.Cz](Https://KlikneteZde.Cz)
+* GitHub Complete Information and Help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN) 
 
 **Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
 
 ---
-## Contacts  
-
+## Company contact for suppliers   
 
 **Email:**
 - Libor.Svoboda@GroupWare-Solution.eu  
 - Libor.Svoboda@KlikneteZde.Cz
-
 
 **Address:**  
 Street: Žlutava 173  
@@ -182,38 +166,4 @@ City: Žlutava
 PostCode: 761 63  
 State: Czech Republic  
 Phone: 00420 724 986 873  
-
-![systembuilder.png](SolutionScreenShots/systembuilder.png "")   
-
-![FullOfflineDocumentation.PNG](SolutionScreenShots/FuooOfflineDocumentation.PNG "")
-
-![RichThemeDesign.PNG](SolutionScreenShots/RichThemeDesign.PNG "")
-
-![AutoVersioning&Update.PNG](SolutionScreenShots/AutoVersioning&Update.PNG "")
-
-![ReportingIncluded.PNG](SolutionScreenShots/ReportingIncluded.PNG "")
-
-![TouchSystemSuppoerted.png](SolutionScreenShots/TouchSystemSuppoerted.png "")
-
-![customDataListFormater.png](SolutionScreenShots/customDataListFormater.png "")
-
-![ReportDatasetBuilder.png](SolutionScreenShots/ReportDatasetBuilder.png "")
-
-![videoPlayer.png](SolutionScreenShots/videoPlayer.png "")
-
-![ModerWebBrowser.png](SolutionScreenShots/ModerWebBrowser.png "")
-
-![customToolPanel.png](SolutionScreenShots/customToolPanel.png "")
-
-![OneOfMoreGraphsSupported.png](SolutionScreenShots/OneOfMoreGraphsSupported.png "")
-
-![devDocumentationIncluded.png](SolutionScreenShots/devDocumentationIncluded.png "")
-
-![3Dviewer.png](SolutionScreenShots/3Dviewer.png "")  
-
-![DocumentViewer.png](SolutionScreenShots/DocumentViewer.png "")
-
-![invoiceDetail.png](SolutionScreenShots/invoiceDetail.png "")
-
-![invoiceList.png](SolutionScreenShots/invoiceList.png "")
 

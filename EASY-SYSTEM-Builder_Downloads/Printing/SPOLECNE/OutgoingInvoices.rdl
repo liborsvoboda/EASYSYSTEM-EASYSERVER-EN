@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="HEADER">
+      <Query>
+        <DataSourceName>MAIN</DataSourceName>
+        <CommandText>SET FMTONLY OFF;
+EXEC ReportDataset @TableName='OutgoingInvoiceList', @Sequence='10' 
+
+</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Id">
+            <Value>={?Id}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DocumentNumber">
+          <DataField>DocumentNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Supplier">
+          <DataField>Supplier</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer">
+          <DataField>Customer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderNumber">
+          <DataField>OrderNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalPriceWithVat">
+          <DataField>TotalPriceWithVat</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="IssueDate">
+          <DataField>IssueDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TaxDate">
+          <DataField>TaxDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaturityDate">
+          <DataField>MaturityDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentMethod">
+          <DataField>PaymentMethod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalWithoutDPH">
+          <DataField>TotalWithoutDPH</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DPH">
+          <DataField>DPH</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Rounded">
+          <DataField>Rounded</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>1.6pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <Body>
+    <Height>542.8pt</Height>
+    <Columns>1</Columns>
+    <ReportItems>
+      <List Name="List1">
+        <Height>423.43pt</Height>
+        <Width>561.09pt</Width>
+        <Left>1.60pt</Left>
+        <Top>0.00pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ReportItems>
+          <Textbox Name="Textbox21" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>25.51pt</Height>
+            <Width>554.91pt</Width>
+            <Value>={Description}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>2.00pt</Left>
+            <Top>213.20pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox19" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>19.50pt</Height>
+            <Width>306.27pt</Width>
+            <Value>= 'Variabilní symbol: ' + {DocumentNumber}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>251.6pt</Left>
+            <Top>19.8pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontSize>12pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox18" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>28.61pt</Height>
+            <Width>225.87pt</Width>
+            <Value>FAKTURA VYDANÁ</Value>
+            <ZIndex>1</ZIndex>
+            <Left>334.1pt</Left>
+            <Top>0.0pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>22pt</FontSize>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox17" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>15.00pt</Height>
+            <Width>206.81pt</Width>
+            <Value>='Objednávka: ' + {OrderNumber}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>349.5pt</Left>
+            <Top>43.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>166.37pt</Height>
+            <Width>557.01pt</Width>
+            <Left>0.00pt</Left>
+            <Top>41.90pt</Top>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+                <Left>Solid</Left>
+                <Right>Solid</Right>
+                <Top>Solid</Top>
+                <Bottom>Solid</Bottom>
+              </BorderStyle>
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+            <ReportItems>
+              <Textbox Name="Textbox4" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>109.83pt</Height>
+                <Width>269.47pt</Width>
+                <Value>={Customer}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>274.8pt</Left>
+                <Top>15.0pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>105.28pt</Height>
+                <Width>229.57pt</Width>
+                <Value>={Supplier}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>8.50pt</Left>
+                <Top>14.00pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>15.76pt</Height>
+                <Width>142.89pt</Width>
+                <Value>Dodavatel:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>7.2pt</Left>
+                <Top>0.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox5" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.00pt</Height>
+                <Width>101.63pt</Width>
+                <Value>Datum Vystavení:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>7.6pt</Left>
+                <Top>126.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox6" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.75pt</Height>
+                <Width>99.30pt</Width>
+                <Value>Datum usk. zd. pl.:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>7.6pt</Left>
+                <Top>139.4pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox7" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>14.25pt</Height>
+                <Width>88.89pt</Width>
+                <Value>Datum splatnosti:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>7.6pt</Left>
+                <Top>151.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox8" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.75pt</Height>
+                <Width>92.52pt</Width>
+                <Value>={IssueDate}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>173.1pt</Left>
+                <Top>126.9pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <Format>MM/dd/yyyy</Format>
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Textbox>
+              <Rectangle Name="Rectangle2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>40.68pt</Height>
+                <Width>105.39pt</Width>
+                <Left>165.6pt</Left>
+                <Top>125.5pt</Top>
+                <Style>
+                  <BorderStyle>
+                    <Default>Solid</Default>
+                    <Left>Solid</Left>
+                    <Right>Solid</Right>
+                    <Top>Solid</Top>
+                    <Bottom>Solid</Bottom>
+                  </BorderStyle>
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+                <ReportItems>
+                  <Textbox Name="Textbox9" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                    <Height>11.25pt</Height>
+                    <Width>95.57pt</Width>
+                    <Value>={TaxDate}</Value>
+                    <ZIndex>1</ZIndex>
+                    <Left>5.9pt</Left>
+                    <Top>14.4pt</Top>
+                    <Style>
+                      <BorderStyle />
+                      <BorderColor />
+                      <BorderWidth />
+                      <FontWeight>Bold</FontWeight>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Textbox>
+                  <Textbox Name="Textbox10" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                    <Height>13.50pt</Height>
+                    <Width>94.79pt</Width>
+                    <Value>={MaturityDate}</Value>
+                    <ZIndex>1</ZIndex>
+                    <Left>5.8pt</Left>
+                    <Top>26.4pt</Top>
+                    <Style>
+                      <BorderStyle />
+                      <BorderColor />
+                      <BorderWidth />
+                      <FontWeight>Bold</FontWeight>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+              </Rectangle>
+              <Textbox Name="Textbox11" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.00pt</Height>
+                <Width>72.27pt</Width>
+                <Value>Forma Úhrady:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>276.9pt</Left>
+                <Top>128.0pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox12" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.75pt</Height>
+                <Width>102.33pt</Width>
+                <Value>Variabilní symbol: </Value>
+                <ZIndex>1</ZIndex>
+                <Left>276.9pt</Left>
+                <Top>140.6pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox13" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.75pt</Height>
+                <Width>106.82pt</Width>
+                <Value>Konstantní symbol: </Value>
+                <ZIndex>1</ZIndex>
+                <Left>277.0pt</Left>
+                <Top>152.7pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox14" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.75pt</Height>
+                <Width>158.02pt</Width>
+                <Value>={PaymentMethod}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>395.0pt</Left>
+                <Top>127.9pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox15" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>13.50pt</Height>
+                <Width>131.65pt</Width>
+                <Value>={DocumentNumber}</Value>
+                <ZIndex>1</ZIndex>
+                <Left>421.2pt</Left>
+                <Top>140.7pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox16" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>12.00pt</Height>
+                <Width>72.27pt</Width>
+                <Value>0308</Value>
+                <ZIndex>1</ZIndex>
+                <Left>479.1pt</Left>
+                <Top>152.8pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Textbox>
+              <Line Name="Line4">
+                <Height>-165.82pt</Height>
+                <Width>0.01pt</Width>
+                <Style>
+                  <BorderStyle>
+                    <Default>Solid</Default>
+                  </BorderStyle>
+                </Style>
+                <Left>270.92pt</Left>
+                <Top>165.82pt</Top>
+              </Line>
+              <Line Name="Line2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+                <Height>0.00pt</Height>
+                <Width>286.08pt</Width>
+                <Style>
+                  <BorderStyle>
+                    <Default>Solid</Default>
+                  </BorderStyle>
+                </Style>
+                <Left>271.00pt</Left>
+                <Top>125.60pt</Top>
+              </Line>
+            </ReportItems>
+          </Rectangle>
+          <Textbox Name="Textbox22" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.75pt</Height>
+            <Width>51.26pt</Width>
+            <Value>Kód</Value>
+            <ZIndex>1</ZIndex>
+            <Left>3.4pt</Left>
+            <Top>247.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox37" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>13.50pt</Height>
+            <Width>44.34pt</Width>
+            <Value>Popis</Value>
+            <ZIndex>1</ZIndex>
+            <Left>76.2pt</Left>
+            <Top>246.0pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox38" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.00pt</Height>
+            <Width>72.27pt</Width>
+            <Value>Množství</Value>
+            <ZIndex>1</ZIndex>
+            <Left>195.7pt</Left>
+            <Top>247.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox39" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.75pt</Height>
+            <Width>80.51pt</Width>
+            <Value>J.cena bez DPH</Value>
+            <ZIndex>1</ZIndex>
+            <Left>270.7pt</Left>
+            <Top>247.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Normal</FontWeight>
+              <FontSize>10pt</FontSize>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox40" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.00pt</Height>
+            <Width>31.68pt</Width>
+            <Value>DPH</Value>
+            <ZIndex>1</ZIndex>
+            <Left>358.6pt</Left>
+            <Top>248.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <FontSize>12pt</FontSize>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox41" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>13.50pt</Height>
+            <Width>71.53pt</Width>
+            <Value>Celkem b.DPH</Value>
+            <ZIndex>1</ZIndex>
+            <Left>394.6pt</Left>
+            <Top>248.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Normal</FontWeight>
+              <FontSize>10pt</FontSize>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox42" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.00pt</Height>
+            <Width>89.52pt</Width>
+            <Value>Celkem s DPH</Value>
+            <ZIndex>1</ZIndex>
+            <Left>466.0pt</Left>
+            <Top>248.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <FontSize>12pt</FontSize>
+            </Style>
+          </Textbox>
+          <Line Name="Line3" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>-0.03pt</Height>
+            <Width>554.90pt</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderColor />
+              <BorderWidth>
+                <Default>2pt</Default>
+              </BorderWidth>
+            </Style>
+            <Left>0.7pt</Left>
+            <Top>261.0pt</Top>
+          </Line>
+          <Subreport Name="Subreport1">
+            <Height>17.37pt</Height>
+            <Width>555.55pt</Width>
+            <Left>0.00pt</Left>
+            <Top>264.10pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+            <ReportName>OutgoingInvoicesItems</ReportName>
+            <MergeTransactions>true</MergeTransactions>
+            <Parameters>
+              <Parameter Name="Connect">
+                <Value>={?Connect}</Value>
+              </Parameter>
+              <Parameter Name="DocNr">
+                <Value>={DocumentNumber}</Value>
+              </Parameter>
+            </Parameters>
+          </Subreport>
+          <Rectangle Name="Rectangle4" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>21.80pt</Height>
+            <Width>243.76pt</Width>
+            <Left>306.7pt</Left>
+            <Top>393.4pt</Top>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+                <Left>Solid</Left>
+                <Right>Solid</Right>
+                <Top>Solid</Top>
+                <Bottom>Solid</Bottom>
+              </BorderStyle>
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+            <ReportItems>
+              <Textbox Name="Textbox29">
+                <Height>14.25pt</Height>
+                <Width>122.61pt</Width>
+                <Value>Cena Celkem s DPH:</Value>
+                <ZIndex>1</ZIndex>
+                <Left>1.60pt</Left>
+                <Top>3.20pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox30">
+                <Height>19.23pt</Height>
+                <Width>121.94pt</Width>
+                <Value>={TotalPriceWithVat}+' Kč'</Value>
+                <ZIndex>1</ZIndex>
+                <Left>118.40pt</Left>
+                <Top>1.60pt</Top>
+                <Style>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                  <FontWeight>Bold</FontWeight>
+                  <FontSize>12pt</FontSize>
+                  <TextAlign>Right</TextAlign>
+                  <Format>None</Format>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+            </ReportItems>
+          </Rectangle>
+          <Textbox Name="Textbox31" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>13.50pt</Height>
+            <Width>88.83pt</Width>
+            <Value>Zaokrouhlení:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>377.9pt</Left>
+            <Top>376.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox32" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>14.25pt</Height>
+            <Width>127.93pt</Width>
+            <Value>Cena Celkem Bez DPH:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>338.8pt</Left>
+            <Top>348.0pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox33" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.75pt</Height>
+            <Width>85.02pt</Width>
+            <Value>={TotalWithoutDPH}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>463.3pt</Left>
+            <Top>348.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox34" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>14.25pt</Height>
+            <Width>127.93pt</Width>
+            <Value>DPH:</Value>
+            <ZIndex>1</ZIndex>
+            <Left>338.0pt</Left>
+            <Top>363.3pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox35" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.75pt</Height>
+            <Width>85.02pt</Width>
+            <Value>={DPH}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>463.1pt</Left>
+            <Top>362.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox43" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+            <Height>12.75pt</Height>
+            <Width>85.02pt</Width>
+            <Value>={Rounded}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>463.3pt</Left>
+            <Top>376.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <PageBreakAtEnd>false</PageBreakAtEnd>
+        <DataSetName>HEADER</DataSetName>
+        <PageBreakAtStart>false</PageBreakAtStart>
+      </List>
+      <Line Name="Line1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>165.75pt</Height>
+        <Width>-0.16pt</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Left>272.9pt</Left>
+        <Top>41.6pt</Top>
+      </Line>
+      <Textbox Name="Textbox3" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>14.25pt</Height>
+        <Width>73.02pt</Width>
+        <Value>Odběratel:</Value>
+        <ZIndex>1</ZIndex>
+        <Left>274.3pt</Left>
+        <Top>43.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </Body>
+  <PageFooter>
+    <Height>0.0pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSources>
+    <DataSource Name="MAIN">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?Connect}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="Connect">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=192.168.1.141,1433;Database=GLOBALNET;User ID=globalnet;Password=globalnet;Connection Timeout=10;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Id">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>8</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PageBreak">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>HEADER</DataSetName>
+          <ValueField>DocumentNumber</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

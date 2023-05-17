@@ -1,29 +1,29 @@
-### Marketing materials - We just click and half the job is done
+## Marketing materials - We just click and half the job is done
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 EASY SYSTEM Builder & EASY DATA Center is the perfect solution for:
-> Fast MS Modern system with 3-layer technology right from the start
-> Standalone cross-platform backend server for websites, systems, etc. with REST API/WebSocket
-> For any simple development of any HW/SW DATA/Control system and much more
+* Fast MS Modern system with 3-layer technology right from the start
+* Standalone cross-platform backend server for websites, systems, etc. with REST API/WebSocket
+* For any simple development of any HW/SW DATA/Control system and much more
 
 
 
 The basic logic of the solution includes 2 main separate projects:
 
-> WPF FRONTEND system processor for WINDOWS XP+ = User application - FRONTEND
-> ASP NET CORE 6 (LTS) UNIVERSAL MULTIPLATFORM BACKEND SERVER for demanding systems
+* WPF FRONTEND system processor for WINDOWS XP+ = User application - FRONTEND
+* ASP NET CORE 6 (LTS) UNIVERSAL MULTIPLATFORM BACKEND SERVER for demanding systems
 
   and are intended for:
 
-> for companies with an IT worker
-> for IT developers
-> for DataCentra
-> for secondary schools
-> for the second grade of elementary school
-> for do-it-yourselfers
+* for companies with an IT worker
+* for IT developers
+* for DataCenter
+* for secondary schools
+* for the second grade of elementary school
+* for do-it-yourSelfers
 
 > **The possibilities far exceed the normal requirements of companies**
-> **No exaggeration The challenge for these solutions to push the limits would be automatic air traffic control** = So add Addons
+> **No exaggeration The challenge for these solutions to push the limits would be automatic air traffic control** = So add AddOns
 
 
 **You can confirm this by reading the Information for Starting Development, which is a must
@@ -31,40 +31,25 @@ teach everyone with a little interest.**
 
 Processing difficulty has been moved to the core of the system, and if you follow the simple conditions of creation, you will soon fulfill the password: **NEW AGENDA EVERY DAY**
 
-         ```markdown
-        
-[Marketing Project Descriptions](./EASYBuilder&EASYDATACenter_Solution/README.MD)  
-[Business Price List](./EASYBuilder&EASYDATACenter_Solution/Price List.MD)  
-[Solved Jobs - Case Studies](./EASYBuilder&EASYDATACenter_CaseStudies/README.MD)  
-     ```
-
-
 ---
 
-### System Philosophy, Structures of systems and their division
+## System Philosophy, Structures of systems and their division
 ***Click is way How to Develop Robust System*** - Is it possible? Yes
-> The solution was built on existing standards for 3-Layers SW Technology without exceptions
+* The solution was built on existing standards for 3-Layers SW Technology without exceptions
 
-> And there came a necessary exception - not just a unique rule - So List or Settings?
+* And there came a necessary exception - not just a unique rule - So List or Settings?
 
-> LOW/NO code Knowledge is a Prerequisite for developing a maximum global system rule core sufficient to create a Custom System
+* LOW/NO code Knowledge is a Prerequisite for developing a maximum global system rule core sufficient to create a Custom System
   
-> In the Database Management Software, you need to click on the database model
-> and all the others are just copying parts of the automatically generated structure from the databases
-> simple connection with prepared TABLE/API/FORM templates and
-> Click again on the XAML graphical form for a new table (for example the invoice header table)
-> Read Logis, Designing ideal systems and developing practice
-
-
-     ```markdown
-    
-[Creating your own robust system in just a few steps](./CustomSystemCreationIdeaCz.MD)  
-[Unlimited Possibility As Result Of Modern Way](./EASYSYSTEMBuilderProject-WPFNET4.5+/UnlimitedPosibilityAsResultOfModernWay/README.MD)  
-     ```
+* In the Database Management Software, you need to click on the database model
+* and all the others are just copying parts of the automatically generated structure from the databases
+* simple connection with prepared TABLE/API/FORM templates and
+* Click again on the XAML graphical form for a new table (for example the invoice header table)
+* Read Logis, Designing ideal systems and developing practice
 
 ---
 
-### Implemented system logic and Development Procedure / Instructions
+## Implemented system logic and Development Procedure / Instructions
 ***Initial conditions of correct development - right at the beginning***
 
 > The system has fixed rules for object names for automatic background work
@@ -99,14 +84,13 @@ Read the model and view the templates. If they are clear to you, you can develop
 > The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
 nothing but one big copy.
     
-     ```markdown
-
+```
 [Backend Server - Best Way for ANY Using](./EASYDATACenterProject-ASPNETCORE6/EF6PerfectWay.MD)   
 [Solution Logical Core Structure Manual](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/README.MD)    
-     ```
+```
 
 ---
-### Backend UNIVERSAL Super Server -
+## Backend UNIVERSAL Super Server -
 
 ***Easy intuitive development*** - is a universal Backend Server for every application with standard RESTFULL/SOCKET communication. (WSDL will be supported within 1 year)
 
@@ -121,20 +105,9 @@ Backend server development depends on the knowledge of creating database tables/
        
 The server therefore only ensures communication, variability according to the most modern standards, which in turn gives you the ability to connect any systems at the data level in the base itself, minimize demands, maximize the correctness of the connection, offer use for different clients at the same time with support for all databases commonly used today
         
-      ```markdown
-     
-[Backend Server Core Settings Help](./EASYDATACenterProject-ASPNETCORE6/BACKENDCORE.md)   
-[Easy Power Backend Server](./EASYDATACenterProject-ASPNETCORE6/README.MD)   
-[Knovledge Databases Support](./DatabasesKnowledge/README.MD)   
-[Backend Structure](./EASYDATACenterProject-ASPNETCORE6/README.MD)  
-[Backend Core](./EASYDATACenterProject-ASPNETCORE6/EF6PerfectWay.MD)   
-
-         ```
-    
-    
 ---
 
-### Frontend Application - User Friendly is in our hands - horror or fairy tale?
+## Frontend Application - User Friendly is in our hands - horror or fairy tale?
 ***Easy intuitive development*** - additional upgrades intentionally filled
 
 Visual Studio project solution EASYSYSTEMBuilder for
@@ -146,9 +119,9 @@ Visual Studio project solution EASYSYSTEMBuilder for
      Control system with graph support  
      Support for a unique media system,   
      Touch terminals supported  
-     Bussiness/City/Country/ANY touch touch terminals on Windows AIO monitors are supported  
+     Business/City/Country/ANY touch touch terminals on Windows AIO monitors are supported  
      NEXT YEAR Web Convert support for LINUX/WINDOWS  
-     Thousands of IS/OS/etc. tools on Github for free  
+     Thousands of IS/OS/etc. tools on GitHub for free  
      Transparent clean code  
      Low/no code development support - Click-to-click graphic development  
     
@@ -164,140 +137,87 @@ DATAView / DATADetail / DATAView with SubDATAview / DATAView with SubFullDataDet
 1. To build ANY information / multimedia / control / flow / reporting and other systems
 ```
 
-     ```markdown
-
-[Quick Start of custom system development - Manual CZ](./CustomSystemCreationIdeaCz.MD)   
-[Core System Definition](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md)   
-[Agenga Mandatory Full Description](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Page-AgendaStructure.md)   
-[MainWindow Automatic System Center](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/MainWindow-CentralCorePoint.md)  
-[AutoJoinModelConditions Definitions and Functions](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/AutoJoinModelConditions.md)   
-
-[System Templates](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/SystemTemplates.md)   
- 
-     ```
-
-
-
 ---
 ## What you need to know for proper development
 Here is a list of documents to read and note the rules to follow for
 seamless system development. In the help, the entire model is described for the possibility of any further development
 
-
-
-      ```markdown
-     
-[Basic information to start development](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/AutoJoinModelConditions.md)  
-[Standardized Page/Agenda Structure](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Page-AgendaStructure.md)  
-[System Templates](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYSYSTEMBuilderTemplates/README.MD)  
-[System Templates Desc](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/SystemTemplates.md)  
-[Print Reports](./FYIReporting&Help&Tips/README.MD)  
-         ```
-    
-
-----
-
-## Complete System Core Information - A global view of everything is the building block of the core
-
-      ```markdown
-     
-[System Core Structure Definition](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/CoreStructureDefinition.md) 
-[Global Communication API module](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYSYSTEMBuilderAPIExample/README.MD)   
-[MainWindow Central System Control](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/MainWindow-CentralCorePoint.md)   
-[Implemented Core Tools](./EASYTOOLS/README.MD)   
-[Printing Solution Information](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Printing&SystemJoins.md)   
-         ```
-    
-    
 ---
 
-### EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
+## EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
 ***Easy intuitive development***
      Add-ons for touch panels, controls, data types, forms, media, documents, 3D,
      They are completely free to download (including every license pack)
      Open Source community to include more than 1000 tools in the system by community
 
-
-         ```markdown
-     
-[Implemented Core Tools](./EASYTOOLS/README.MD)   
-         ```
-    
-
-### Press Releases and Reporting - Direct Help - FRONTEND
-FreeWare Full Report Designer and Viewer for printing all types of documents / barcodes, EAN, QR
-
-      ```markdown
-     
-[System Joins Printing Solution](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/Printing&SystemJoins.md)  
-[Print Reports](./FYIReporting&Help&Tips/README.MD)  
-         ```
-    
 ---
 
-### OS - Operating systems - Direct help - BACKEND Technology
+## Press Releases and Reporting - Direct Help - FRONTEND
+FreeWare Full Report Designer and Viewer for printing all types of documents / barcodes, EAN, QR
+
+---
+
+## OS - Operating systems - Direct help - BACKEND Technology
 ***Easy intuitive development***
 In the folder you will also find tools for installing windows services.
 The Backend project itself is set up so that it can be run as an application or installed
 as a Linux / Windows / GCloud / Docker service
 
+---
 
-      ```markdown
-     
-[LIN/WIN Project/Service Deployment](./OSSystemHelps/README.MD)   
-         ```
- 
-
-### DATABASE - Direct help - BACKEND Technology
+## DATABASE - Direct help - BACKEND Technology
 ***Easy intuitive development***
 
-
-      ```markdown
-     
-[Database Management](./DatabasesKnowledge/README.MD)   
-[SQL Templates and Codes](./DatabasesKnowledge/Templates/README.MD)  
-[Entity Framework working with Database](./EASYDATACenterProject-ASPNETCORE6/EF6PerfectWay.MD)  
-[EF6 Database Management](./EASYDATACenterProject-ASPNETCORE6/EF6DBHelp.MD)  
-
-         ```
+---
  
-### Windows HELP and Documentation - Direct help
+## Windows HELP and Documentation - Direct help
 ***Easy intuitive development***
 Generated Help file for Windows systems, using the DOXYGEN program.
 The program can be used for any help file logic and is completely free
 If there is more interest, instructions will appear here
 
-      ```markdown
-     
-[Windows Dev Help File](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderWindowsHelpFileForDevelopers/README.MD)  
-         ```
+---
  
-
-
-
-### Planned development for 1 year
+## Planned development for 1 year
 ***Easy intuitive development***
 Planned expansions that will be above the 2023 order cap
 In the event of greater interest, the development will be extremely accelerated and everyone will benefit
 Available agendas.
 
-
-      ```markdown
-     
-[Planned Extensions](./SOLUTIONYearDevPlan/README.MD)   
-         ```
- 
+---
 
 
 
-
-### Signpost - README.MD
+## Signpost - README.MD
 ***Easy intuitive development***
 
-     ```markdown
-    
-[Signpost - README.MD](./README.md)  
-     ```
-     
 More information, shared agendas, code samples, DB objects and databases
 and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-CZ
+
+---
+
+* Info Global Server Running: [https://Kliknetezde.Cz:5000/](https://Kliknetezde.Cz:5000/)
+* Generators & Client Support is Preparing: [https://Kliknetezde.Cz:5000/DashBoard](https://Kliknetezde.Cz:5000/DashBoard)  
+* Youtube: [https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb](https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb)
+* Facebook: [https://www.facebook.com/GroupWareSolution](https://www.facebook.com/GroupWareSolution)
+* LinkedIn: [https://www.linkedin.com/in/libor-svoboda-7b96014a/](https://www.linkedin.com/in/libor-svoboda-7b96014a/)
+* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solutions.Eu)
+* WebPages: [https://GroupWare-Solution.Eu](https://GroupWare-Solution.Eu)
+* Online Application for testing: [Https://KlikneteZde.Cz](Https://KlikneteZde.Cz)
+* GitHub Complete Information and Help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN) 
+
+**Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
+
+---
+## Company contact for suppliers   
+
+**Email:**
+- Libor.Svoboda@GroupWare-Solution.eu  
+- Libor.Svoboda@KlikneteZde.Cz
+
+**Address:**  
+Street: Žlutava 173  
+City: Žlutava  
+PostCode: 761 63  
+State: Czech Republic  
+Phone: 00420 724 986 873  

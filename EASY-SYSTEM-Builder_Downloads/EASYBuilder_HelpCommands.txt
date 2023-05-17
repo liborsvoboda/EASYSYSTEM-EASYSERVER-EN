@@ -1,0 +1,293 @@
+Literatura:
+
+https://www.c-sharpcorner.com/article/what-is-power-bi-report-builder-and-how-to-design-paginated-report-using-power-b/
+https://github.com/majorsilence/My-FyiReporting/releases
+https://mahapps.com/api/MahApps.Metro.Controls/
+https://helix-toolkit.github.io/
+https://www.c-sharpcorner.com/UploadFile/mahesh/viewing-word-documents-in-wpf/
+https://techcohere.com/post/Create-PDF-File-From-WPF-Window-using-iTextsharp-1001
+https://www.c-sharpcorner.com/UploadFile/mahesh/viewing-word-documents-in-wpf/
+https://github.com/xceedsoftware/wpftoolkit
+https://www.tutorialspoint.com/wpf/wpf_3d_graphics.htm
+Formáty èísla
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
+Manual Builder
+https://github.com/EWSoftware/SHFB/releases 
+https://github.com/psoares33/FyiReporting-Docs/wiki
+--------------------------------------------------------------------------
+
+volaní metody z mainWindow na nìkteré page
+((SchedulerPage)((MainWindowViewModel)DataContext).TabContents[0].Content).LoadScheduledTask();
+--------------------------------------------------------------------------
+https://learn.microsoft.com/cs-cz/dotnet/core/porting/upgrade-assistant-overview?WT.mc_id=dotnet-35129-website
+dotnet tool install -g --add-source "https://api.nuget.org/v3/index.json" --ignore-failed-sources upgrade-assistant
+upgrade-assistant upgrade <Path to csproj or sln to upgrade> pøevod na web
+
+--------------------------------------------------------------------------
+PDFYViewer NET FRAMEWORK 4.7.1
+https://github.com/LanderVe/WPF_PDFDocument/blob/master/WPF_PDFDocument/MainWindow.xaml
+
+--------------------------------------------------------------------------
+Settings Page 
+
+Connection string Example
+Server=192.168.1.35,1433;Database=db;User ID=user;Password=pw;
+Server=SQLSRV;DataBase=db;Trusted_Connection=True;Connect Timeout=30;
+
+--------------------------------------------------------------------------
+
+#region log4net
+//Log4Net messages
+//log.Debug("EASYBuilder Application started ...");
+//log.Info("EASYBuilder Application started ...");
+//log.Warn("EASYBuilder Application started ...");
+//log.Error("EASYBuilder Application started ...");
+//log.Fatal("EASYBuilder Application started ...");
+#endregion
+
+--------------------------------------------------------------------------
+Print example from CMD with parameters
+
+"RdlReader.exe" "C:\WorkListPrint.rdl" -p "&Search=%%&Id=0"
+
+List má nastave dataset a následné objekty musí být vkládány pøes pravé tlaèítko myši / Insert / Object 
+Tímto má k dispozici daný dataset
+
+Expressions
+na listu s PageBreak ={PersonalNumber} - na zmenu personal number bude tisk na nové stránce
+
+funkce jsou C# ne MSSQL
+
+použití napø ="Filter:" + Replace({?Search}, "%", "")  - Search je parametr, replace %%
+
+pro spuštìní reportu z designeru musejí bý nadstaveny DEFAULT hodnoty pro parametry
+
+=Fields!OperationNumber.Value + " " + {Note}
+=Sum({Amount})
+--------------------------------------------------------------------------
+Print SQL Example 
+
+SET FMTONLY OFF;
+
+SELECT
+w.[Id],FORMAT([Date],'MM.yyyy') as Month,
+FORMAT([Date],'dd.MM.yyyy') as Date,
+CONCAT(FORMAT([Date],'MMyy'),w.[PersonalNumber]) as ListBreak,
+w.[PersonalNumber],o.[PartNumber],w.[WorkPlace],w.[OperationNumber],
+[WorkTime],[Pcs],[Amount],[WorkPower] ,[Name],[SurName],o.[Note]
+FROM [WorkList] w,[PersonList] p,[OperationList] o 
+WHERE w.PersonalNumber = p.PersonalNumber AND w.WorkPlace = o.WorkPlace 
+
+AND o.OperationNumber = w.OperationNumber AND
+(@Id = 0 AND ((LEN(@Search) > 2 AND w.Id LIKE @Search) OR LEN(@Search) = 2))
+OR w.Id = @Id 
+
+ORDER BY w.[Date] ASC, w.PersonalNumber, w.[OperationNumber]
+
+--------------------------------------------------------------------------
+Print SQL example  -  Select with simple search and Id selection
+
+SELECT Id, UserName, TerminalName, Description, Timestamp 
+FROM LoginHistoryList 
+WHERE 1=1 AND (
+( @Search <> '%%' AND id LIKE @Search )
+OR ( @Search = '%%' AND @Id = 0  )
+OR ( @Search = '%%' AND @Id <> 0 AND Id = @Id )
+)
+--------------------------------------------------------------------------
+Print SQL example  -  Select with advanced Filter
+
+SET FMTONLY OFF;
+DECLARE @whereClause NVARCHAR(MAX) = @Filter ;
+DECLARE @sql NVARCHAR(MAX) = 'SELECT Id, UserName, TerminalName, Description, Timestamp FROM LoginHistoryList  WHERE @whereClause';
+
+SELECT @sql = REPLACE(@sql, '@whereClause', @whereClause);
+
+EXEC sp_executesql @sql;
+
+--------------------------------------------------------------------------
+
+volani funkce ze stejneho vlakna
+//this.Invoke(() => { if (ServiceStatus != Resources["running"].ToString()) reloadScheduledTasks(); });
+
+--------------------------------------------------------------------------
+
+Ikona aplikace z IconPacku v mainWindow nastavit
+Application.Current.MainWindow.Icon = IconMaker.Icon(Colors.White);
+
+--------------------------------------------------------------------------
+
+odstranìní formuláøe
+MetroWindow wnd = (MetroWindow)App.Current.MainWindow;
+TabablzControl tc = (TabablzControl)wnd.FindName("InitialTabablzControl");
+TabContent itc0 = (TabContent)tc.SelectedItem;
+tc.RemoveFromSource(itc0);
+
+--------------------------------------------------------------------------
+
+mainWindow
+MetroWindow mw = (MetroWindow)App.Current.MainWindow;
+
+--------------------------------------------------------------------------
+remove tabPage
+MetroWindow wnd = (MetroWindow)Application.Current.MainWindow;
+TabablzControl tc = (TabablzControl)wnd.FindName("InitialTabablzControl");
+TabContent itc0 = (TabContent)tc.SelectedItem;
+tc.RemoveFromSource(itc0);
+
+--------------------------------------------------------------------------
+
+Pøidání HELP èásti
+Adding Help
+#region Help Added
+        private DependencyObject CurrentHelpDO { get; set; }
+        private Popup CurrentHelpPopup { get; set; }
+        private bool HelpActive { get; set; }
+        private MouseEventHandler _helpHandler = null;
+        static bool isHelpMode = false;
+#endregion
+
+private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    if (isHelpMode && 1 == 0)
+    {
+        e.Handled = true;
+        isHelpMode = false;
+        Mouse.OverrideCursor = null;
+
+        if (Help.MyHelpCommand.CanExecute(null, this))
+        {
+            Help.MyHelpCommand.Execute(null, this);
+        }
+    }
+}
+
+private void winMain_MouseMove(object sender, MouseEventArgs e)
+{
+    HitTestResult hitTestResult = VisualTreeHelper.HitTest(((Visual)sender), e.GetPosition(this));
+
+    if (hitTestResult.VisualHit != null && CurrentHelpDO != hitTestResult.VisualHit)
+    {
+        DependencyObject checkHelpDO = hitTestResult.VisualHit;
+        string helpText = AutomationProperties.GetHelpText(checkHelpDO);
+
+        while (String.IsNullOrEmpty(helpText) && checkHelpDO != null && checkHelpDO != mainWindow)
+        {
+            checkHelpDO = VisualTreeHelper.GetParent(checkHelpDO);
+            helpText = AutomationProperties.GetHelpText(checkHelpDO);
+        }
+
+        if (String.IsNullOrEmpty(helpText) && CurrentHelpPopup != null)
+        {
+            CurrentHelpPopup.IsOpen = false;
+            CurrentHelpDO = null;
+        }
+        else if (!String.IsNullOrEmpty(helpText) && CurrentHelpDO != checkHelpDO)
+        {
+            CurrentHelpDO = checkHelpDO;
+            if (CurrentHelpPopup != null)
+            {
+                CurrentHelpPopup.IsOpen = false;
+            }
+
+            CurrentHelpPopup = new Popup()
+            {
+                PopupAnimation = PopupAnimation.Scroll,
+                PlacementTarget = (UIElement)hitTestResult.VisualHit,
+                IsOpen = true,
+                Child = new Border()
+                {
+                    CornerRadius = new CornerRadius(10),
+                    BorderBrush = new SolidColorBrush(Colors.Goldenrod),
+                    BorderThickness = new Thickness(2),
+                    Background = new SolidColorBrush(Colors.LightYellow),
+                    Child = new TextBlock()
+                    {
+                        Margin = new Thickness(10),
+                        Text = helpText.Replace("\\r\\n", "\r\n"),
+                        FontSize = 14,
+                        FontWeight = FontWeights.Normal
+                    }
+                }
+            };
+            CurrentHelpPopup.IsOpen = true;
+        }
+    }
+}
+
+private void btnHelp_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    if (isHelpMode)
+    {
+        isHelpMode = false;
+        Mouse.OverrideCursor = null;
+    }
+}
+
+private void btn_LaunchHelp_Click(object sender, RoutedEventArgs e)
+{
+    System.Windows.Forms.Help.ShowHelp(null, "SIMTERM.chm");
+}
+
+private void ToggleHelp()
+{
+    CurrentHelpDO = null;
+    if (CurrentHelpPopup != null)
+    {
+        CurrentHelpPopup.IsOpen = false;
+    }
+
+    HelpActive = !HelpActive;
+
+    if (_helpHandler == null)
+    {
+        _helpHandler = new MouseEventHandler(winMain_MouseMove);
+    }
+
+    if (HelpActive)
+    {
+        mainWindow.MouseMove += _helpHandler;
+    }
+    else
+    {
+        mainWindow.MouseMove -= _helpHandler;
+    }
+    ToggleHelp(mainWindow);
+}
+
+private void ToggleHelp(DependencyObject dependObj)
+{
+    for (int x = 0; x < VisualTreeHelper.GetChildrenCount(dependObj); x++)
+    {
+        DependencyObject child = VisualTreeHelper.GetChild(dependObj, x);
+        ToggleHelp(child);
+    }
+
+    if (dependObj is UIElement)
+    {
+        UIElement element = (UIElement)dependObj;
+
+        if (HelpActive)
+        {
+            string helpText = AutomationProperties.GetHelpText(element);
+
+            if (!String.IsNullOrEmpty(helpText))
+            {
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------
+
+Support Managed SQL codes for reports from application
+
+each report then just contains:
+    SET FMTONLY OFF;
+    EXEC ReportDataset @TableName='tableName', @Sequence='SeqNr' 
+
+tableName is selected Table Name in ReportQueueList table, 
+SeqNr is number Sequence in ReportQueueList table for posibilyty more Reports for One table
+
+--------------------------------------------------------------------------

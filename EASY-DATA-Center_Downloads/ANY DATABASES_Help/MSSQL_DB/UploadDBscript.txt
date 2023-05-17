@@ -1,0 +1,67 @@
+--!!!!      AFTER UPLOAD DATABASE PLEASE START SHOPINGERDATACenterServer Icon from Desktop  !!!!
+--!!!!                                                                                      !!!!
+--!!!!                                                                                      !!!!
+--!!!!               SET CORRECT CONNECTION STRING WITH NAME/PASSWORD: shopinger            !!!!
+--!!!!                    IN  C:\ProgramData\SHOPINGERDATACenter\config.json                !!!!
+--!!!!              (config example: Server=SQLSRV; or Server=192.168.1.35,1433;)           !!!!
+--!!!!                                          AND                                         !!!!
+--!!!!                 START THE SHOPINGERDATACenterServer Icon from Desktop                !!!!
+--!!!!                                                                                      !!!!
+--!!!!                                                                                      !!!!
+--!!!!      AFTER UPLOAD DATABASE PLEASE START SHOPINGERDATACenterServer Icon from Desktop  !!!!
+
+USE [master]
+GO
+
+--1] SET MANUALLY RIGHT CLICK/FACETS/SERVER SECURITY/XPCmdShellEnabled/TRUE
+--2] SELECT AND EXECUTE SQL CODE
+--3] MODIFY CONNECTION STRING IN CONFIG.JSON in folder c:\ProgramData\SHOPINGERDATACenter\config.json
+--E] config example: Server=SQLSRV; or Server=192.168.1.35,1433;
+--4] START THE SHOPINGERDATACenterServer Icon from Desktop
+
+
+-- CREATE C:\Database Folder
+BEGIN TRY EXEC xp_cmdshell 'MD C:\Database'; END TRY
+BEGIN CATCH SELECT ERROR_NUMBER() AS ErrorNumber ,ERROR_MESSAGE() AS ErrorMessage; END CATCH;
+GO
+
+
+
+-- UPLOAD DATABASE SHOPINGER
+RESTORE DATABASE [SHOPINGER] FROM DISK = N'C:\Program Files (x86)\GroupWare-Solution.eu\SHOPINGERDATACenter\MSSQL_DB\SHOPINGER.bak' 
+WITH MOVE N'SHOPINGER' TO N'C:\Database\SHOPINGER.mdf',  
+     MOVE N'SHOPINGER_log' TO N'C:\Database\SHOPINGER_log.ldf', FILE = 2,
+RECOVERY,  REPLACE,  STATS = 10;
+ALTER DATABASE [SHOPINGER] SET MULTI_USER;
+GO
+
+
+
+-- CREATE USER 'shopinger'
+BEGIN TRY
+	CREATE LOGIN [shopinger] WITH PASSWORD=N'shopinger', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+END TRY 
+BEGIN CATCH SELECT ERROR_NUMBER() AS ErrorNumber ,ERROR_MESSAGE() AS ErrorMessage; END CATCH;
+GO
+
+USE [SHOPINGER]
+BEGIN TRY CREATE USER [shopinger] FOR LOGIN [shopinger] END TRY BEGIN CATCH END CATCH;
+BEGIN TRY ALTER ROLE [db_datareader] ADD MEMBER [shopinger]; END TRY BEGIN CATCH END CATCH;
+BEGIN TRY ALTER ROLE [db_datawriter] ADD MEMBER [shopinger]; END TRY BEGIN CATCH END CATCH;
+
+
+--!!!!      AFTER UPLOAD DATABASE PLEASE START SHOPINGERDATACenterServer Icon from Desktop  !!!!
+--!!!!                                                                                      !!!!
+--!!!!                                                                                      !!!!
+--!!!!               SET CORRECT CONNECTION STRING WITH NAME/PASSWORD: shopinger            !!!!
+--!!!!                    IN  C:\ProgramData\SHOPINGERDATACenter\config.json                !!!!
+--!!!!              (config example: Server=SQLSRV; or Server=192.168.1.35,1433;)           !!!!
+--!!!!                                          AND                                         !!!!
+--!!!!                 START THE SHOPINGERDATACenterServer Icon from Desktop                !!!!
+--!!!!                                                                                      !!!!
+--!!!!                                                                                      !!!!
+--!!!!      AFTER UPLOAD DATABASE PLEASE START SHOPINGERDATACenterServer Icon from Desktop  !!!!
+
+
+
+

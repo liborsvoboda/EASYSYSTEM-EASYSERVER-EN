@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript" src="./vue-gallery-slideshow.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .image {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 3px;
+        border: 1px solid lightgray;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <img class="image" v-for="(image, i) in images" :src="image" @click="index = i">
+      <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+    </div>
+    <script>
+	
+//const fs=require('fs');
+var files = [];
+
+function getFiles (dir, files_){
+    files_ = files_ || [];
+    var files = fs.readdirSync(dir+"/img");
+    for (var i in files){
+        var name = dir + '/img' + files[i];
+        if (fs.statSync(name).isDirectory()){
+            getFiles(name, files_);
+        } else {
+            files_.push(name);
+        }
+    }
+    return files_;
+}
+
+window.onload = function(e) {
+	console.log("window loaded");
+};
+
+	
+function readFile(file) {
+  const reader = new FileReader();
+  reader.addEventListener('load', (event) => {
+    const result = event.target.result;
+    reader.readAsDataURL(file);
+  });
+}
+      new Vue({
+        el: '#app',
+        components: {
+          VueGallerySlideshow
+        },
+        data: {
+		//images: getFiles(windows.location.href, files)
+        images: [
+            './img/1 (1).png',
+            './img/1 (2).png',
+            './img/1 (3).png',
+            './img/1 (4).png',
+            './img/1 (5).png',
+            './img/1 (6).png',
+            './img/1 (7).png',
+            './img/1 (8).png',
+            './img/1 (9).png',
+            './img/1 (10).png',
+            './img/1 (11).png',
+            './img/1 (12).png',
+            './img/1 (13).png',
+            './img/1 (14).png',
+            './img/1 (15).png',
+            './img/1 (16).png',
+            './img/1 (17).png',
+            './img/1 (18).png',
+            './img/1 (19).png',
+            './img/1 (20).png',
+            './img/1 (21).png',
+            './img/1 (22).png',
+            './img/1 (23).png',
+            './img/1 (24).png',
+            './img/1 (25).png',
+            './img/1 (26).png',
+            './img/1 (27).png',
+            './img/1 (28).png',
+            './img/1 (29).png',
+            './img/1 (30).png',
+            './img/1 (31).png',
+            './img/1 (32).png',
+            './img/1 (33).png',
+            './img/1 (34).png',
+            './img/1 (35).png',
+            './img/1 (36).png',
+            './img/1 (37).png',
+            './img/1 (38).png',
+            './img/1 (39).png',
+            './img/1 (40).png',
+            './img/1 (41).png',
+            './img/1 (42).png'
+          ],
+          index: null
+        }
+      })
+    </script>
+  </body>
+</html>

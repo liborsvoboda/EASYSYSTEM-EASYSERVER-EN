@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>MAIN</DataSourceName>
+        <CommandText>SELECT * FROM OutgoingInvoiceItemList 
+WHERE 1=1 AND 
+DocumentNumber = @DocNr</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="DocNr">
+            <Value>={?DocNr}</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="DocumentNumber">
+          <DataField>DocumentNumber</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="PartNumber">
+          <DataField>PartNumber</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="Unit">
+          <DataField>Unit</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="PcsPrice">
+          <DataField>PcsPrice</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="Count">
+          <DataField>Count</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="TotalPrice">
+          <DataField>TotalPrice</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="Vat">
+          <DataField>Vat</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="TotalPriceWithVat">
+          <DataField>TotalPriceWithVat</DataField>
+          <TypeName>System.Decimal</TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <TypeName>System.Int32</TypeName>
+        </Field>
+        <Field Name="TimeStamp">
+          <DataField>TimeStamp</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>20.1pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.75pt</Height>
+        <Width>51.26pt</Width>
+        <Value>Kód</Value>
+        <ZIndex>1</ZIndex>
+        <Left>9.8pt</Left>
+        <Top>3.1pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+      <Line Name="Line1" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>-0.03pt</Height>
+        <Width>554.90pt</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth>
+            <Default>2pt</Default>
+          </BorderWidth>
+        </Style>
+        <Left>7.1pt</Left>
+        <Top>16.6pt</Top>
+      </Line>
+      <Textbox Name="Textbox2" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>13.50pt</Height>
+        <Width>44.34pt</Width>
+        <Value>Popis</Value>
+        <ZIndex>1</ZIndex>
+        <Left>82.6pt</Left>
+        <Top>1.6pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.00pt</Height>
+        <Width>72.27pt</Width>
+        <Value>Množství</Value>
+        <ZIndex>1</ZIndex>
+        <Left>202.1pt</Left>
+        <Top>3.3pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.75pt</Height>
+        <Width>80.51pt</Width>
+        <Value>J.cena bez DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>277.1pt</Left>
+        <Top>3.3pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Normal</FontWeight>
+          <FontSize>10pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.00pt</Height>
+        <Width>31.68pt</Width>
+        <Value>DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>365.0pt</Left>
+        <Top>3.9pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>13.50pt</Height>
+        <Width>71.53pt</Width>
+        <Value>Celkem b.DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>401.0pt</Left>
+        <Top>4.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Normal</FontWeight>
+          <FontSize>10pt</FontSize>
+          <TextAlign>Right</TextAlign>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+        <Height>12.00pt</Height>
+        <Width>89.52pt</Width>
+        <Value>Celkem s DPH</Value>
+        <ZIndex>1</ZIndex>
+        <Left>470.0pt</Left>
+        <Top>3.9pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+          <TextAlign>Right</TextAlign>
+          <FontSize>12pt</FontSize>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>19.2pt</Height>
+    <ReportItems>
+      <List Name="List1">
+        <DataSetName>Data</DataSetName>
+        <Height>15.74pt</Height>
+        <NoRows>Query returned no rows!</NoRows>
+        <Width>565.27pt</Width>
+        <Left>0.0pt</Left>
+        <Top>1.2pt</Top>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ReportItems>
+          <Textbox Name="Textbox8">
+            <Height>12.00pt</Height>
+            <Width>74.52pt</Width>
+            <Value>={PartNumber}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>3.60pt</Left>
+            <Top>2.35pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <Height>12.76pt</Height>
+            <Width>138.66pt</Width>
+            <Value>={Name}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>79.5pt</Left>
+            <Top>2.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <Height>13.50pt</Height>
+            <Width>67.80pt</Width>
+            <Value>={Count} + ' ' + {Unit}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>202.5pt</Left>
+            <Top>2.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>None</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox31">
+            <Height>13.50pt</Height>
+            <Width>72.27pt</Width>
+            <Value>={PcsPrice}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>280.7pt</Left>
+            <Top>2.5pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox32">
+            <Height>12.75pt</Height>
+            <Width>74.52pt</Width>
+            <Value>={TotalPrice}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>394.7pt</Left>
+            <Top>2.7pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <Format>0.00 Kč</Format>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox33">
+            <Height>14.25pt</Height>
+            <Width>38.43pt</Width>
+            <Value>={Vat}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>353.6pt</Left>
+            <Top>2.4pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <Format>0 %</Format>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox35">
+            <Height>12.75pt</Height>
+            <Width>82.77pt</Width>
+            <Value>={TotalPriceWithVat}</Value>
+            <ZIndex>1</ZIndex>
+            <Left>475.3pt</Left>
+            <Top>2.9pt</Top>
+            <Style>
+              <BorderStyle />
+              <BorderColor />
+              <BorderWidth />
+              <TextAlign>Right</TextAlign>
+              <Format>0.00 Kč</Format>
+            </Style>
+          </Textbox>
+        </ReportItems>
+      </List>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>0.0pt</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <DataSources>
+    <DataSource Name="MAIN">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>={?Connect}</ConnectString>
+        <IntegratedSecurity>false</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="Connect">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Server=192.168.1.141,1433;Database=GLOBALNET;User ID=globalnet;Password=globalnet;Connection Timeout=10;</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocNr">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>GFAKV2023000001</Value>
+        </Values>
+      </DefaultValue>
+      <Nullable>false</Nullable>
+      <AllowBlank>false</AllowBlank>
+      <MultiValue>false</MultiValue>
+      <Prompt>
+      </Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>
