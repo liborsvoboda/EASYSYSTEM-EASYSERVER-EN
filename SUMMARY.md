@@ -138,10 +138,10 @@ DATAView / DATADetail / DATAView with SubDATAview / DATAView with SubFullDataDet
 Here is a list of documents to read and note the rules to follow for
 seamless system development. In the help, the entire model is described for the possibility of any further development
 
-```markdown  
+    ```markdown  
 [EASYDATACENTER Full Code Help](./EASYDATACENTER_Code_Help.MD)  
-[EASYSYSTEMBuilder Full Code Help](./_Code_Help.md)  
-``` 
+[EASYSYSTEMBuilder Full Code Help](./EASYSYSTEMBuilder_Code_Help.md)  
+    ``` 
 
 
 ### EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
@@ -150,9 +150,9 @@ seamless system development. In the help, the entire model is described for the 
      They are completely free to download (including every license pack)
      Open Source community to include more than 1000 tools in the system by community
 
-```markdown  
+    ```markdown  
 [EASYTools 3rdFree Addons](./EASYTools_3rdFreeAddons.MD)  
-```  
+    ```  
 
 
 ### Press Releases and Reporting - Direct Help - FRONTEND
@@ -217,3 +217,4 @@ Available agendas.
 More information, shared agendas, code samples, DB objects and databases
 and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-EN
 
+---
