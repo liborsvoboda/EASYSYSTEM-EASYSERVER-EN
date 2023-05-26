@@ -1,4 +1,4 @@
-## Marketing materials - We just click and half the job is done
+### Marketing materials - We just click and half the job is done
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 EASY SYSTEM Builder & EASY DATA Center is the perfect solution for:
@@ -34,7 +34,7 @@ Processing difficulty has been moved to the core of the system, and if you follo
 
 
 
-## System Philosophy, Structures of systems and their division
+### System Philosophy, Structures of systems and their division
 ***Click is way How to Develop Robust System*** - Is it possible? Yes
 > The solution was built on existing standards for 3-Layers SW Technology without exceptions
 
@@ -50,7 +50,7 @@ Processing difficulty has been moved to the core of the system, and if you follo
 
 ---
 
-## Implemented system logic and Development Procedure / Instructions
+### Implemented system logic and Development Procedure / Instructions
 ***Initial conditions of correct development - right at the beginning***
 
 > The system has fixed rules for object names for automatic background work
@@ -86,7 +86,7 @@ Read the model and view the templates. If they are clear to you, you can develop
 nothing but one big copy.  
     
 
-## Backend UNIVERSAL Super Server -
+### Backend UNIVERSAL Super Server -
 
 ***Easy intuitive development*** - is a universal Backend Server for every application with standard RESTFULL/SOCKET communication. (WSDL will be supported within 1 year)
 
@@ -103,7 +103,7 @@ The server therefore only ensures communication, variability according to the mo
         
 
 
-## Frontend Application - User Friendly is in our hands - horror or fairy tale?
+### Frontend Application - User Friendly is in our hands - horror or fairy tale?
 ***Easy intuitive development*** - additional upgrades intentionally filled
 
 Visual Studio project solution EASYSYSTEMBuilder for
@@ -134,7 +134,7 @@ DATAView / DATADetail / DATAView with SubDATAview / DATAView with SubFullDataDet
 ```
 
 
-## What you need to know for proper development
+### What you need to know for proper development
 Here is a list of documents to read and note the rules to follow for
 seamless system development. In the help, the entire model is described for the possibility of any further development
 
@@ -144,7 +144,7 @@ seamless system development. In the help, the entire model is described for the 
 ``` 
 
 
-## EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
+### EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
 ***Easy intuitive development***
      Add-ons for touch panels, controls, data types, forms, media, documents, 3D,
      They are completely free to download (including every license pack)
@@ -155,7 +155,7 @@ seamless system development. In the help, the entire model is described for the 
 ```  
 
 
-## Press Releases and Reporting - Direct Help - FRONTEND
+### Press Releases and Reporting - Direct Help - FRONTEND
 FreeWare Full Report Designer and Viewer for printing all types of documents / barcodes, EAN, QR
 
 ```markdown  
@@ -163,7 +163,7 @@ FreeWare Full Report Designer and Viewer for printing all types of documents / b
 ```  
 
 
-## OS - Operating systems - Direct help - BACKEND Technology
+### OS - Operating systems - Direct help - BACKEND Technology
 ***Easy intuitive development***
 In the folder you will also find tools for installing windows services.
 The Backend project itself is set up so that it can be run as an application or installed
@@ -174,7 +174,7 @@ as a Linux / Windows / GCloud / Docker service
 ```  
 
 
-## DATABASE - Direct help - BACKEND Technology
+### DATABASE - Direct help - BACKEND Technology
 ***Easy intuitive development***
 
 ```markdown  
@@ -182,7 +182,7 @@ as a Linux / Windows / GCloud / Docker service
 ```
 
  
-## Windows HELP and Documentation - Direct help
+### Windows HELP and Documentation - Direct help
 ***Easy intuitive development***
 Generated Help file for Windows systems, using the DOXYGEN program.
 The program can be used for any help file logic and is completely free
@@ -193,7 +193,7 @@ If there is more interest, instructions will appear here
 ```  
 
  
-## Planned development for 1 year
+### Planned development for 1 year
 ***Easy intuitive development***
 Planned expansions that will be above the 2023 order cap
 In the event of greater interest, the development will be extremely accelerated and everyone will benefit
@@ -206,7 +206,7 @@ Available agendas.
 
 
 
-## Signpost - README.MD
+### Signpost - README.MD
 ***Easy intuitive development***
 
 
