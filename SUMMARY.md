@@ -1,50 +1,66 @@
 
 ### GroupWare Solutions - EASY-DATA-Center & EASY-SYSTEM-Builder   
 
-        ```markdown  
+    ```markdown  
+
+[Solutions Visions & Ideas](./SolutionsVisions&Ideas.MD)  
+
+[Automatic Steps](./AUTO_STEPS_Look_First.md)  
+
+[3rd Party Visions & Tips](./3rdPartyVisionsTips.md)  
         
-[EASYDATACENTER Developer Help](./EASYDATACENTER_Code_Help.MD)  
+[OS_Systems Git Gcloud Docker Help](./OS_System_Git_Gcloud_Help.md)  
 
-[EASYSYSTEMBuilder Developer Help](./EASYSYSTEMBuilder_Code_Help.md)  
+[General Problems Help](./General_Problems_Help.md)  
 
-[EASYTools 3rdFree Addons](./EASYTools_3rdFreeAddons.MD)  
+[Solutions Change Log](./SolutionsChangeLog.MD)  
 
-[FIY Reporting](./FIYReporting.md)  
+[Price List](./PriceList.MD)  
 
-[OS Git Gcloud Docker](./OS_System_Git_Gcloud_Help.md)  
+    ```  
+    
+---
+
+### GroupWare Solutions - EASY-DATA-Center  
+
+    ```markdown  
+        
+[EASYDATACenter Developer Help](./EASYDATACENTER_Code_Help.MD)  
 
 [Databases](./DATABASES.md)  
 
 [Solutions Visions & Ideas](./SolutionsVisions&Ideas.MD)  
 
-[Signpost - README.MD](./README.md)  
+[EASYDATACenter Full Code Help](./FullCodeInfo/EASYDATACenterFullCodeDocs.md)  
 
     ```  
-
-
+    
 ---
 
-### GroupWare Solutions - EASY-DATA-Center & EASY-SYSTEM-Builder   
+### GroupWare Solutions - EASY-SYSTEM-Builder 
 
-        ```markdown  
+    ```markdown  
         
-[EASYDATACENTER Developer Help](./EASYDATACENTER_Code_Help.MD)  
-
 [EASYSYSTEMBuilder Developer Help](./EASYSYSTEMBuilder_Code_Help.md)  
+        
+[Core Structure Definition](./CoreStructureDefinition.md)  
 
 [EASYTools 3rdFree Addons](./EASYTools_3rdFreeAddons.MD)  
 
 [FIY Reporting](./FIYReporting.md)  
 
-[OS Git Gcloud Docker](./OS_System_Git_Gcloud_Help.md)  
+[EASYSYSTEMBuilder Full Code Help](./FullCodeInfo/EASYSYSTEMBuilderFullCodeDocs.md)  
 
-[Databases](./DATABASES.md)  
+    ```   
+    
+---
 
-[Solutions Visions & Ideas](./SolutionsVisions&Ideas.MD)  
+### GroupWare Solutions - README 
+
+   ```markdown  
 
 [Signpost - README.MD](./README.md)  
 
     ```  
-
-
----
+    
+--- 
