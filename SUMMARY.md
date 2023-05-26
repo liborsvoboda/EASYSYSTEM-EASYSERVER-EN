@@ -172,6 +172,9 @@ Generated Help file for Windows systems, using the DOXYGEN program.
 The program can be used for any help file logic and is completely free
 If there is more interest, instructions will appear here
 
+```markdown  
+[Solutions Visions & Ideas](./OS_System_Git_Gcloud_Help.md)  
+```  
 ---
  
 ## Planned development for 1 year
@@ -180,12 +183,20 @@ Planned expansions that will be above the 2023 order cap
 In the event of greater interest, the development will be extremely accelerated and everyone will benefit
 Available agendas.
 
+```markdown  
+[Solutions Visions & Ideas](./SolutionsVisions&Ideas.MD)  
+```  
 ---
 
 
 
 ## Signpost - README.MD
 ***Easy intuitive development***
+
+
+```markdown  
+[Signpost - README.MD](./README.md)  
+```  
 
 More information, shared agendas, code samples, DB objects and databases
 and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-EN
