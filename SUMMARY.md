@@ -2,25 +2,25 @@
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 EASY SYSTEM Builder & EASY DATA Center is the perfect solution for:
-* Fast MS Modern system with 3-layer technology right from the start
-* Standalone cross-platform backend server for websites, systems, etc. with REST API/WebSocket
-* For any simple development of any HW/SW DATA/Control system and much more
+> Fast MS Modern system with 3-layer technology right from the start
+> Standalone cross-platform backend server for websites, systems, etc. with REST API/WebSocket
+> For any simple development of any HW/SW DATA/Control system and much more
 
 
 
 The basic logic of the solution includes 2 main separate projects:
 
-* WPF FRONTEND system processor for WINDOWS XP+ = User application - FRONTEND
-* ASP NET CORE 6 (LTS) UNIVERSAL MULTIPLATFORM BACKEND SERVER for demanding systems
+> WPF FRONTEND system processor for WINDOWS XP+ = User application - FRONTEND
+> ASP NET CORE 6 (LTS) UNIVERSAL MULTIPLATFORM BACKEND SERVER for demanding systems
 
   and are intended for:
 
-* for companies with an IT worker
-* for IT developers
-* for DataCenter
-* for secondary schools
-* for the second grade of elementary school
-* for do-it-yourSelfers
+> for companies with an IT worker
+> for IT developers
+> for DataCenter
+> for secondary schools
+> for the second grade of elementary school
+> for do-it-yourSelfers
 
 **The possibilities far exceed the normal requirements of companies**
 
@@ -36,27 +36,27 @@ Processing difficulty has been moved to the core of the system, and if you follo
 
 ## System Philosophy, Structures of systems and their division
 ***Click is way How to Develop Robust System*** - Is it possible? Yes
-* The solution was built on existing standards for 3-Layers SW Technology without exceptions
+> The solution was built on existing standards for 3-Layers SW Technology without exceptions
 
-* And there came a necessary exception - not just a unique rule - So List or Settings?
+> And there came a necessary exception - not just a unique rule - So List or Settings?
 
-* LOW/NO code Knowledge is a Prerequisite for developing a maximum global system rule core sufficient to create a Custom System
+> LOW/NO code Knowledge is a Prerequisite for developing a maximum global system rule core sufficient to create a Custom System
   
-* In the Database Management Software, you need to click on the database model
-* and all the others are just copying parts of the automatically generated structure from the databases
-* simple connection with prepared TABLE/API/FORM templates and
-* Click again on the XAML graphical form for a new table (for example the invoice header table)
-* Read Logis, Designing ideal systems and developing practice
+> In the Database Management Software, you need to click on the database model
+> and all the others are just copying parts of the automatically generated structure from the databases
+> simple connection with prepared TABLE/API/FORM templates and
+> Click again on the XAML graphical form for a new table (for example the invoice header table)
+> Read Logis, Designing ideal systems and developing practice
 
 ---
 
 ## Implemented system logic and Development Procedure / Instructions
 ***Initial conditions of correct development - right at the beginning***
 
-* The system has fixed rules for object names for automatic background work
+> The system has fixed rules for object names for automatic background work
 as a standardized model.
-* And that is the magic of the system.
-* Read at least: 'What you need to know to start development' and follow the mentioned few rules.
+> And that is the magic of the system.
+> Read at least: 'What you need to know to start development' and follow the mentioned few rules.
 
 **A couple of rules actually mean 2: the name of the table already in the Database and the namespace 'Pages' for Agendas**
 
@@ -72,17 +72,17 @@ i.e. also only ready for Copying.
 you have written
 Read the model and view the templates. If they are clear to you, you can develop.
 
-* The logic is already set from the Database. So if you start with the Table Template, you've won.
-* The result is absolutely clean, fast code where every process is centralized by the right engine.
-* If the Open community takes off, there will be more agendas for free.
+> The logic is already set from the Database. So if you start with the Table Template, you've won.
+> The result is absolutely clean, fast code where every process is centralized by the right engine.
+> If the Open community takes off, there will be more agendas for free.
   
-* Example: Database table format: ExampleTableList
+> Example: Database table format: ExampleTableList
    the end of the Table name must contain the word "Sheet"
    
-* And then you automatically copy these rules to the entire system
-* A simple introduction is ready for Start. For Development immediately
+> And then you automatically copy these rules to the entire system
+> A simple introduction is ready for Start. For Development immediately
 
-* The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
+> The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
 nothing but one big copy.  
     
 ---
