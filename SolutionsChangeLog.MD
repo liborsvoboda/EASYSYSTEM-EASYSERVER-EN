@@ -9,14 +9,6 @@
     Each changes IN EB/SP can be deployed to the seccond program
     Each changes IN ED/SD can be deployed to the seccond program
 
-Project/Program Instators are for absolute simple Installation with all Dependencies
-Documentation And Software for Testing you find on  
-
-[https://groupware-solution.eu/webdav/Marketing/](https://groupware-solution.eu/webdav/Marketing/ "")  
-login: marketing/marketing
-
-
-    ALL Aplications Prepared for Simple Instalation / Buy in more installation Types - by user friendly Installators and License Server
 
 ### Applicaton Clones FE + BE
     LicenseSrv    -  MultiOS License Server with listen API GET/POST server / generate 

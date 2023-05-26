@@ -22,8 +22,9 @@ The basic logic of the solution includes 2 main separate projects:
 * for the second grade of elementary school
 * for do-it-yourSelfers
 
-> **The possibilities far exceed the normal requirements of companies**
-> **No exaggeration The challenge for these solutions to push the limits would be automatic air traffic control** = So add AddOns
+**The possibilities far exceed the normal requirements of companies**
+
+**No exaggeration The challenge for these solutions to push the limits would be automatic air traffic control** = So add AddOns
 
 
 **You can confirm this by reading the Information for Starting Development, which is a must
@@ -52,14 +53,14 @@ Processing difficulty has been moved to the core of the system, and if you follo
 ## Implemented system logic and Development Procedure / Instructions
 ***Initial conditions of correct development - right at the beginning***
 
-> The system has fixed rules for object names for automatic background work
+* The system has fixed rules for object names for automatic background work
 as a standardized model.
-> And that is the magic of the system.
-> Read at least: 'What you need to know to start development' and follow the mentioned few rules.
+* And that is the magic of the system.
+* Read at least: 'What you need to know to start development' and follow the mentioned few rules.
 
 **A couple of rules actually mean 2: the name of the table already in the Database and the namespace 'Pages' for Agendas**
 
-**It's that simple. You will use Database management for Table Development
+It's that simple. You will use Database management for Table Development
 MSSQLMS or for MYSQL for example HEIDYSQL and you click on the table.
 Then you copy the Class 'CLASS' table to the Frontend
 and just click the XAML Form in the Designer again. Then Add to menu and Dictionary and you're done.**
@@ -71,18 +72,18 @@ i.e. also only ready for Copying.
 you have written
 Read the model and view the templates. If they are clear to you, you can develop.
 
-> The logic is already set from the Database. So if you start with the Table Template, you've won.
-> The result is absolutely clean, fast code where every process is centralized by the right engine.
-> If the Open community takes off, there will be more agendas for free.
+* The logic is already set from the Database. So if you start with the Table Template, you've won.
+* The result is absolutely clean, fast code where every process is centralized by the right engine.
+* If the Open community takes off, there will be more agendas for free.
   
-> Example: Database table format: ExampleTableList
+* Example: Database table format: ExampleTableList
    the end of the Table name must contain the word "Sheet"
    
-> And then you automatically copy these rules to the entire system
-> A simple introduction is ready for Start. For Development immediately
+* And then you automatically copy these rules to the entire system
+* A simple introduction is ready for Start. For Development immediately
 
-> The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
-nothing but one big copy.
+* The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
+nothing but one big copy.  
     
 ```
 [Backend Server - Best Way for ANY Using](./EASYDATACenterProject-ASPNETCORE6/EF6PerfectWay.MD)   
@@ -192,7 +193,7 @@ Available agendas.
 ***Easy intuitive development***
 
 More information, shared agendas, code samples, DB objects and databases
-and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-CZ
+and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-EN
 
 ---
 
