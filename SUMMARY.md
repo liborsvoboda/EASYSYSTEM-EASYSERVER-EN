@@ -190,30 +190,3 @@ Available agendas.
 More information, shared agendas, code samples, DB objects and databases
 and many more can be found directly on GitHub EASYSYSTEM-EASYSERVER-EN
 
----
-
-* Info Global Server Running: [https://Kliknetezde.Cz:5000/](https://Kliknetezde.Cz:5000/)
-* Generators & Client Support is Preparing: [https://Kliknetezde.Cz:5000/DashBoard](https://Kliknetezde.Cz:5000/DashBoard)  
-* Youtube: [https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb](https://www.youtube.com/playlist?list=PLmE7gP9LTBimNJQ444ypG8HVce23fa2Hb)
-* Facebook: [https://www.facebook.com/GroupWareSolution](https://www.facebook.com/GroupWareSolution)
-* LinkedIn: [https://www.linkedin.com/in/libor-svoboda-7b96014a/](https://www.linkedin.com/in/libor-svoboda-7b96014a/)
-* Eshop: [https://GroupWare-Solutions.Eu](https://GroupWare-Solutions.Eu)
-* WebPages: [https://GroupWare-Solution.Eu](https://GroupWare-Solution.Eu)
-* Online Application for testing: [Https://KlikneteZde.Cz](Https://KlikneteZde.Cz)
-* GitHub Complete Information and Help: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN) 
-
-**Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
-
----
-## Company contact for suppliers   
-
-**Email:**
-- Libor.Svoboda@GroupWare-Solution.eu  
-- Libor.Svoboda@KlikneteZde.Cz
-
-**Address:**  
-Street: Žlutava 173  
-City: Žlutava  
-PostCode: 761 63  
-State: Czech Republic  
-Phone: 00420 724 986 873  
