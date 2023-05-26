@@ -32,7 +32,7 @@ teach everyone with a little interest.**
 
 Processing difficulty has been moved to the core of the system, and if you follow the simple conditions of creation, you will soon fulfill the password: **NEW AGENDA EVERY DAY**
 
----
+
 
 ## System Philosophy, Structures of systems and their division
 ***Click is way How to Develop Robust System*** - Is it possible? Yes
@@ -85,7 +85,7 @@ Read the model and view the templates. If they are clear to you, you can develop
 > The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
 nothing but one big copy.  
     
----
+
 ## Backend UNIVERSAL Super Server -
 
 ***Easy intuitive development*** - is a universal Backend Server for every application with standard RESTFULL/SOCKET communication. (WSDL will be supported within 1 year)
@@ -101,7 +101,7 @@ Backend server development depends on the knowledge of creating database tables/
        
 The server therefore only ensures communication, variability according to the most modern standards, which in turn gives you the ability to connect any systems at the data level in the base itself, minimize demands, maximize the correctness of the connection, offer use for different clients at the same time with support for all databases commonly used today
         
----
+
 
 ## Frontend Application - User Friendly is in our hands - horror or fairy tale?
 ***Easy intuitive development*** - additional upgrades intentionally filled
@@ -133,12 +133,16 @@ DATAView / DATADetail / DATAView with SubDATAview / DATAView with SubFullDataDet
 1. To build ANY information / multimedia / control / flow / reporting and other systems
 ```
 
----
+
 ## What you need to know for proper development
 Here is a list of documents to read and note the rules to follow for
 seamless system development. In the help, the entire model is described for the possibility of any further development
 
----
+```markdown  
+[EASYDATACENTER Full Code Help](./EASYDATACENTER_Code_Help.MD)  
+[EASYSYSTEMBuilder Full Code Help](./_Code_Help.md)  
+``` 
+
 
 ## EASYTOOLS & Implementation of WPF Add-ons - Direct Help - FRONTEND
 ***Easy intuitive development***
@@ -146,12 +150,18 @@ seamless system development. In the help, the entire model is described for the 
      They are completely free to download (including every license pack)
      Open Source community to include more than 1000 tools in the system by community
 
----
+```markdown  
+[EASYTools 3rdFree Addons](./EASYTools_3rdFreeAddons.MD)  
+```  
+
 
 ## Press Releases and Reporting - Direct Help - FRONTEND
 FreeWare Full Report Designer and Viewer for printing all types of documents / barcodes, EAN, QR
 
----
+```markdown  
+[FIY Reporting](./FIYReporting.md)  
+```  
+
 
 ## OS - Operating systems - Direct help - BACKEND Technology
 ***Easy intuitive development***
@@ -159,12 +169,18 @@ In the folder you will also find tools for installing windows services.
 The Backend project itself is set up so that it can be run as an application or installed
 as a Linux / Windows / GCloud / Docker service
 
----
+```markdown  
+[OS Git Gcloud Docker](./OS_System_Git_Gcloud_Help.md)  
+```  
+
 
 ## DATABASE - Direct help - BACKEND Technology
 ***Easy intuitive development***
 
----
+```markdown  
+[Databases](./DATABASES.md)  
+```
+
  
 ## Windows HELP and Documentation - Direct help
 ***Easy intuitive development***
@@ -173,9 +189,9 @@ The program can be used for any help file logic and is completely free
 If there is more interest, instructions will appear here
 
 ```markdown  
-[Solutions Visions & Ideas](./OS_System_Git_Gcloud_Help.md)  
+[OS Git Gcloud Docker](./OS_System_Git_Gcloud_Help.md)  
 ```  
----
+
  
 ## Planned development for 1 year
 ***Easy intuitive development***
@@ -186,7 +202,7 @@ Available agendas.
 ```markdown  
 [Solutions Visions & Ideas](./SolutionsVisions&Ideas.MD)  
 ```  
----
+
 
 
 
