@@ -69,7 +69,7 @@ Use File: install.bat
 * Can run from System Scheduler
 * Can Run from SQL command
 ---
-## Backend WebPages Automatic Controller from Pages Sturcure
+## Backend WebPages Automatic Controller from Pages Structure
 * Enable Razor WebPages Engine
 * Create new file 'cshtml' in folder ServerCorePages
 * Page is automatic included to Controller !must we different than API URLS
