@@ -85,11 +85,6 @@ Read the model and view the templates. If they are clear to you, you can develop
 * The easiest way is to copy existing objects of the same level and you will automatically take over the correct settings. You will soon find out that most of the systems are not
 nothing but one big copy.  
     
-```
-[Backend Server - Best Way for ANY Using](./EASYDATACenterProject-ASPNETCORE6/EF6PerfectWay.MD)   
-[Solution Logical Core Structure Manual](./EASYSYSTEMBuilderProject-WPFNET4.5+/EASYBuilderProjectCoreDescription/README.MD)    
-```
-
 ---
 ## Backend UNIVERSAL Super Server -
 
