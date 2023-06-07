@@ -1,4 +1,4 @@
-## EASYBuilder Description SYSTEM CORE
+### EASYBuilder Description SYSTEM CORE
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 A full detailed description of the system core for easy development of any system with full support for automated functions, methods to make any of your applications work properly
@@ -8,7 +8,7 @@ A full detailed description of the system core for easy development of any syste
 * complete information about the basic function of the system
 
 ----
-##Projects Documentation
+### Projects Documentation
 Used automatic tools
 * Generating MD from XML Documentation from code
 
@@ -19,7 +19,7 @@ Generating MD from XML Documentation from code
 <DocumentationMarkdown>$(MSBuildProjectDirectory)\GlobalNET.md</DocumentationMarkdown>
 ```
  
-## DECLARED SYSTEM CONDITIONS FOR DEVELOP NEW AGENDA
+### DECLARED SYSTEM CONDITIONS FOR DEVELOP NEW AGENDA
 Basic Info what you minimal need for start Developing of new Agendas
 
 1. APP Initialization [INFO]
@@ -77,7 +77,7 @@ NOW Build and YOUR new Agenda is IN App Menu and After click is opened
 **THIS IS ALL INFORMATIONS FOR SUCCESS DEVELOPING**
 ---
 
-## SHORT SYSTEM DESCRIPTION
+### SHORT SYSTEM DESCRIPTION
 
 	System is Fully dynamic Controlled For All menuInserted Pages/Agendas 
 	(Insert new Page/Agenda to menu + Translate for implement to full system only)
@@ -90,7 +90,7 @@ NOW Build and YOUR new Agenda is IN App Menu and After click is opened
 	FOR WINDOWS MODERN SYSTEMS/TERMINALS/ETC ON START (WEB FORMAT IS SUPPORTED BY TECHNOLOGY WILL BE DONE IN YEAR FUTURE
 
 ---
-## MAINWINDOW Central SYSTEM Control Manual
+### MAINWINDOW Central SYSTEM Control Manual
 This is Core central point (MainWindow.xaml/cs) for full system
 Here are Defined All join for Central Control for All parts of System
  
@@ -104,16 +104,12 @@ Here are Defined All join for Central Control for All parts of System
 - in Xaml are declared all shared input/Controls/ETC for Application  
   App Update, Tools, Theme, Menus, Report Ctrl, Pages Controls, Graphics, ProgressRing, TabPages Types, 
 
-  
-
-
-
-## IMPORTANT METHOD LIST SYSTEM CORE
 
 ---
-**CORE SYSTEM METHODS - OLDER,Was modernized**
+### CORE SYSTEM METHODS - OLDER,Was modernized**
 - Initialize - Initiate Theme/Color/App menu/Load Config/Show Login   
- **Here is Translate Menu Items**
+
+### Here is Translate Menu Items**
   
 - Timer10sec_Elapsed - Auto Backend Timer cycling by Config [default 5sec]
     - check if Backend is Accesible - Server status Control
@@ -125,7 +121,7 @@ Here are Defined All join for Central Control for All parts of System
 - SetServiceStop - connect/disconnect menuItems Pages on Backend Service Status
 
 ---
-**DATALIST GLOBAL METHODS - OLDER,Was modernized**
+### DATALIST GLOBAL METHODS - OLDER,Was modernized**
 - cb_FilterDropDownClosed - Reload Datalist with filtering
 - Mi_filter_Click - Generate and show advanced filter (for SQL conditioning): 
 - Cb_PrintReportsSelected - save filter to DB, open selected Report
@@ -133,7 +129,7 @@ Here are Defined All join for Central Control for All parts of System
   **!!NEW AGENDA MUST BE DEFINED ONLY HERE.**
  
 
-## INFO METHOD LIST SYSTEM CORE NOT NEEDED CHANGES - OLDER,Was modernized
+###  INFO METHOD LIST SYSTEM CORE NOT NEEDED CHANGES - OLDER,Was modernized
 - Btn_about_click - Show About Info  
 - WinMain_KeyDown - Global Control for Keyboard press ,implemented F1/ALT+Q
 
@@ -150,7 +146,7 @@ Here are Defined All join for Central Control for All parts of System
 - ChangeMenuView - Specific for Version with more menu types. Show/Hide used menu type
 
 
-**System Core Code Rules**
+### System Core Code Rules
 ```cs
 
 /// <summary>
@@ -248,7 +244,7 @@ private async void UsedSpecificMethodsForCustomizedWorking()
 
     #region Other Help Global Definitions and Methods
     ///Load Parameter From Table Parameters text is Parameter name
-    var res = SystemFunctions.ParameterCheck("someParameterName").Correct ? int.Parse(SystemFunctions.ParameterCheck("someParameterName").Value) : 50;
+    var res = ServerCoreFunctions.ParameterCheck("someParameterName").Correct ? int.Parse(ServerCoreFunctions.ParameterCheck("someParameterName").Value) : 50;
 
     ///Set ComboBox Item By myValue (from selected record or another)
     int index = 0; ComboBox cb_defaultLanguage = new ComboBox();
@@ -285,7 +281,7 @@ private async void BtnApiTest_Click(object sender, RoutedEventArgs e)
 #endregion
 ```
 ---
-## PAGE/AGENDA STANDARTIZED DEFINITION FOR CREATE NEW ANY SYSTEM STANDARD AGENGA
+### PAGE/AGENDA STANDARTIZED DEFINITION FOR CREATE NEW ANY SYSTEM STANDARD AGENGA
 
 	AGENDA (Page) IS BUILDED FROM STANDARTIZED METHODS FOR FULL CONTROL OF EACH STANDARD Agenda Page
 		   Each FULL agenga has these Methods for work with SYSTEM CORE
@@ -302,8 +298,8 @@ private async void BtnApiTest_Click(object sender, RoutedEventArgs e)
 		Method EditRecord(true)     - used by COPY Button    - Open detail form for create copied Record (with ID=0)
 		Method DeleteRecord         - used by DELETE Button  - Call delete API for selected record in datalist (DB Delete)
 
-		Method Filter               - SEARCH Textox - SIMPLE SEARCH in all defined columns in PAGE code - Method Filter
-		Method DgListView_Translate - Translate Datalist colum - translate column names by Xaml Language Dictionaries
+		Method Filter               - SEARCH Textbox - SIMPLE SEARCH in all defined columns in PAGE code - Method Filter
+		Method DgListView_Translate - Translate Datalist column - translate column names by Xaml Language Dictionaries
 		Method DgListView_MouseDoubleClick - Select and Open selected Record Detail
 		Method DgListView_SelectionChanged - Select Record For control buttons enabling, show Report with join on Id
 
@@ -348,11 +344,11 @@ private async void BtnApiTest_Click(object sender, RoutedEventArgs e)
 	
 ----
 
-## PREPARED TEMPLATES FOR FAST DEVELOPING - Older was Modernized
+###  PREPARED TEMPLATES FOR FAST DEVELOPING - Older was Modernized  
 SYSTEM TEMPLATES FOR MAKE ANY TOUCH/IS/ETC. SYSTEM
 
 
-**System HAS 4 Standard Data Form Types in Main Structure (System Templates)**  		
+### System HAS 4 Standard Data Form Types in Main Structure (System Templates)		
 						   
     Implemented Forms for build Robust Any System  
 	   TemplateListViewPage  - show DATALIST ONLY, used in Login history list
@@ -363,7 +359,7 @@ SYSTEM TEMPLATES FOR MAKE ANY TOUCH/IS/ETC. SYSTEM
 	   TemplateListPageWithSubPage - show DATALIST WITH DETAIL FORM AND SUB TABLE DATAVIEW + FORM 
 	                                 used in invoice, order for work 2Tables HEADER/Items in One time
 
-**System HAS 3 Form Types in Main Structure (All are in Templates)**  
+### System HAS 3 Form Types in Main Structure (All are in Templates)    
 >DATALIST ONLY               - **TemplateListViewPage**   
 	   Show Datalist only (Login history for example, views, etc..)
 	   
@@ -373,7 +369,7 @@ SYSTEM TEMPLATES FOR MAKE ANY TOUCH/IS/ETC. SYSTEM
 >SETTING                     - **TemplateSettingsPage**       
 Customized Forms with unlimited posibilities,(Setting Form, special Form, special Page, Video, 3D, etc)
 
-**In System are implemented multimedia templates (MultiMedia Templates)** 
+### In System are implemented multimedia templates (MultiMedia Templates)   
 
     Implemented Special MultiMedia Forms
         TemplateDocumentViewPage - XPS,PDF,TXT,and more format direct viewer/Print
@@ -384,7 +380,7 @@ Customized Forms with unlimited posibilities,(Setting Form, special Form, specia
         GITHUB WPF TOOLS FOR SYSTEM IS / OS, HW can possible to implement for FREE
 ---
 
-## API communication - 4 TYPES is enough
+### API communication - 4 TYPES is enough
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 It is so. INSERT/UPDATE/DETETE/SELECT are the mentioned types which are enough
@@ -394,7 +390,7 @@ set up for this as a standardized automatic part of the kernel.
 
 System kernel code dump, Where you just always add the address and don't care about anything else
 
-**System APIAddresList - all calls in one place**
+### System APIAddresList - all calls in one place  
 
 ```cs
     /// <summary>
@@ -422,7 +418,7 @@ System kernel code dump, Where you just always add the address and don't care ab
     }
 ```
 
-**4 API Calls - SYSTEM Core module**
+### 4 API Calls - SYSTEM Core module  
 
 ```cs
     class ApiCommunication
@@ -521,7 +517,7 @@ System kernel code dump, Where you just always add the address and don't care ab
 ```
 ----
 
-## EASYBuilder Premade Templates
+### EASYBuilder Premade Templates
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 Pre-prepared templates are used to easily create a new agenda.
@@ -532,7 +528,7 @@ And you simply click on the graphic builder, which is part of Visual Studio. And
 Here is a list of prepared templates in the system for more than n IS SYSTEM
 
 ---
-**SystemTemplates - Media Templates --Older was modernized**
+### SystemTemplates - Media Templates --Older was modernized  
 * TemplateListViewPage - Displays only the DataList. For example access history, Detailed form is not even needed
 
 * TemplateListPage - displays the DataList and the Detailed form both for displaying the list and editing the record. That is, the most common template where you just edit the fields according to the table.
@@ -542,24 +538,476 @@ Here is a list of prepared templates in the system for more than n IS SYSTEM
 * TemplateListPageWithSubPage - displays a DataList and a Detail Form + another DataList with a Detail Item Form. For example Invoice - Header + Items. And with these templates you can write, for example, the entire SAP.
 
 ---
-**MultiMediaTemplates - Media Templates --Older was modernized**
+### MultiMediaTemplates - Media Templates --Older was modernized  
 > TemplateVideoPage - Video player  
 > TemplateSTLPage - STL representation of a 3D object   
 > TemplateDocumentViewPage - Web browser that displays most file types  
    PDF, Docx, TXT, PNG, JPG, etc.
 
 ---
-**CustomTemplates - Custom templates - Just slanted forms after all**
+### CustomTemplates - Custom templates - Just slanted forms after all   
 > TemplateSettingsPage - sample template for creating a unique form
 These types, which you can click on in Visual Studio in the case of necessity, will reveal all unique types of forms when he wants anything atypical
 
-**Shared Agendas - Real Creation**
+### Shared Agendas - Real Creation  
 In the SharedAgendas folder you will find approx. 50 Agendas - all forms already created forms for
 immediate use or as an inspiration for the creation of new agendas.
 
-**Code Examples**  
+### Code Examples   
 [https://learn.microsoft.com/cs-cz/samples/browse/?terms=xaml](https://learn.microsoft.com/cs-cz/samples/browse/?terms=xaml "")  
 
 ---
 
+### Literature  
+
+https://www.c-sharpcorner.com/article/what-is-power-bi-report-builder-and-how-to-design-paginated-report-using-power-b/
+https://github.com/majorsilence/My-FyiReporting/releases
+https://mahapps.com/api/MahApps.Metro.Controls/
+https://helix-toolkit.github.io/
+https://www.c-sharpcorner.com/UploadFile/mahesh/viewing-word-documents-in-wpf/
+https://techcohere.com/post/Create-PDF-File-From-WPF-Window-using-iTextsharp-1001
+https://www.c-sharpcorner.com/UploadFile/mahesh/viewing-word-documents-in-wpf/
+https://github.com/xceedsoftware/wpftoolkit
+https://www.tutorialspoint.com/wpf/wpf_3d_graphics.htm
+
+Number Formats (For Parameters)
+https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
+Manual Builder
+https://github.com/EWSoftware/SHFB/releases 
+https://github.com/psoares33/FyiReporting-Docs/wiki
+
+---
+
+### all method in MainWindow from Agenda Page Example  
+
+```cs
+((SchedulerPage)((MainWindowViewModel)DataContext).TabContents[0].Content).LoadScheduledTask();
+```
+---
+
+### Convert Project to ASPNETCORE project  
+
+https://learn.microsoft.com/cs-cz/dotnet/core/porting/upgrade-assistant-overview?WT.mc_id=dotnet-35129-website
+dotnet tool install -g --add-source "https://api.nuget.org/v3/index.json" --ignore-failed-sources upgrade-assistant
+upgrade-assistant upgrade <Path to csproj or sln to upgrade> převod na web
+---
+
+### Connection string Example  
+```cs
+Server=192.168.1.35,1433;Database=db;User ID=user;Password=pw;
+Server=SQLSRV;DataBase=db;Trusted_Connection=True;Connect Timeout=30;
+```
+
+---
+
+### Print example from CMD with parameters  
+
+"RdlReader.exe" "C:\WorkListPrint.rdl" -p "&Search=%%&Id=0"
+
+Report has dataset and you can insert field over right mouse/ insert / object /
+
+Expressions
+PageBreak ={PersonalNumber} - new page by  each personalNumber
+
+functions in C# not MSSQL
+
+using ="Filter:" + Replace({?Search}, "%", "")  - Search is param, replace %%
+
+for run report mut be set Default values for parameters
+=Fields!OperationNumber.Value + " " + {Note}
+=Sum({Amount})
+---
+
+### Call from System Thread  
+```cs
+volani funkce ze stejneho vlakna
+this.Invoke(() => { if (ServiceStatus != Resources["running"].ToString()) reloadScheduledTasks(); });
+```
+
+---
+
+### Set Collor Icon programmaticaly   
+```cs
+Application.Current.MainWindow.Icon = IconMaker.Icon(Colors.White);
+```
+
+
+---
+
+### Remove opened Page programatically  
+```cs
+MetroWindow wnd = (MetroWindow)App.Current.MainWindow;
+TabablzControl tc = (TabablzControl)wnd.FindName("InitialTabablzControl");
+TabContent itc0 = (TabContent)tc.SelectedItem;
+tc.RemoveFromSource(itc0);
+```
+
+---
+
+### rogram Help - Will be implemented  
+```cs
+Adding Help
+#region Help Added
+        private DependencyObject CurrentHelpDO { get; set; }
+        private Popup CurrentHelpPopup { get; set; }
+        private bool HelpActive { get; set; }
+        private MouseEventHandler _helpHandler = null;
+        static bool isHelpMode = false;
+#endregion
+
+private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    if (isHelpMode && 1 == 0)
+    {
+        e.Handled = true;
+        isHelpMode = false;
+        Mouse.OverrideCursor = null;
+
+        if (Help.MyHelpCommand.CanExecute(null, this))
+        {
+            Help.MyHelpCommand.Execute(null, this);
+        }
+    }
+}
+
+private void winMain_MouseMove(object sender, MouseEventArgs e)
+{
+    HitTestResult hitTestResult = VisualTreeHelper.HitTest(((Visual)sender), e.GetPosition(this));
+
+    if (hitTestResult.VisualHit != null && CurrentHelpDO != hitTestResult.VisualHit)
+    {
+        DependencyObject checkHelpDO = hitTestResult.VisualHit;
+        string helpText = AutomationProperties.GetHelpText(checkHelpDO);
+
+        while (String.IsNullOrEmpty(helpText) && checkHelpDO != null && checkHelpDO != mainWindow)
+        {
+            checkHelpDO = VisualTreeHelper.GetParent(checkHelpDO);
+            helpText = AutomationProperties.GetHelpText(checkHelpDO);
+        }
+
+        if (String.IsNullOrEmpty(helpText) && CurrentHelpPopup != null)
+        {
+            CurrentHelpPopup.IsOpen = false;
+            CurrentHelpDO = null;
+        }
+        else if (!String.IsNullOrEmpty(helpText) && CurrentHelpDO != checkHelpDO)
+        {
+            CurrentHelpDO = checkHelpDO;
+            if (CurrentHelpPopup != null)
+            {
+                CurrentHelpPopup.IsOpen = false;
+            }
+
+            CurrentHelpPopup = new Popup()
+            {
+                PopupAnimation = PopupAnimation.Scroll,
+                PlacementTarget = (UIElement)hitTestResult.VisualHit,
+                IsOpen = true,
+                Child = new Border()
+                {
+                    CornerRadius = new CornerRadius(10),
+                    BorderBrush = new SolidColorBrush(Colors.Goldenrod),
+                    BorderThickness = new Thickness(2),
+                    Background = new SolidColorBrush(Colors.LightYellow),
+                    Child = new TextBlock()
+                    {
+                        Margin = new Thickness(10),
+                        Text = helpText.Replace("\\r\\n", "\r\n"),
+                        FontSize = 14,
+                        FontWeight = FontWeights.Normal
+                    }
+                }
+            };
+            CurrentHelpPopup.IsOpen = true;
+        }
+    }
+}
+
+private void btnHelp_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+{
+    if (isHelpMode)
+    {
+        isHelpMode = false;
+        Mouse.OverrideCursor = null;
+    }
+}
+
+private void btn_LaunchHelp_Click(object sender, RoutedEventArgs e)
+{
+    System.Windows.Forms.Help.ShowHelp(null, "SIMTERM.chm");
+}
+
+private void ToggleHelp()
+{
+    CurrentHelpDO = null;
+    if (CurrentHelpPopup != null)
+    {
+        CurrentHelpPopup.IsOpen = false;
+    }
+
+    HelpActive = !HelpActive;
+
+    if (_helpHandler == null)
+    {
+        _helpHandler = new MouseEventHandler(winMain_MouseMove);
+    }
+
+    if (HelpActive)
+    {
+        mainWindow.MouseMove += _helpHandler;
+    }
+    else
+    {
+        mainWindow.MouseMove -= _helpHandler;
+    }
+    ToggleHelp(mainWindow);
+}
+
+private void ToggleHelp(DependencyObject dependObj)
+{
+    for (int x = 0; x < VisualTreeHelper.GetChildrenCount(dependObj); x++)
+    {
+        DependencyObject child = VisualTreeHelper.GetChild(dependObj, x);
+        ToggleHelp(child);
+    }
+
+    if (dependObj is UIElement)
+    {
+        UIElement element = (UIElement)dependObj;
+
+        if (HelpActive)
+        {
+            string helpText = AutomationProperties.GetHelpText(element);
+
+            if (!String.IsNullOrEmpty(helpText))
+            {
+            }
+        }
+    }
+}
+```
+
+---
+
+### Developing Page Code Help  
+```cs
+/// <summary>
+    /// Library with standardize Definitions and Methods For Develop Any System
+    /// </summary>
+    public class PageTemplatesCodeHelp {
+
+        #region MyReStandartized Definitions
+
+        /// <summary>
+        /// Define Collection For ComboBox Example
+        /// </summary>
+        public ObservableCollection<Language> Languages = new ObservableCollection<Language>() {
+                                                                new Language() { Name = "System", Value = "system" },
+                                                                new Language() { Name = "Czech", Value = "cs-CZ" },
+                                                             };
+
+        #endregion MyReStandartized Definitions
+
+        /// <summary>
+        /// Special Method for input limitation as number only
+        /// Its only for help
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e) {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        /// <summary>
+        /// Example of Load System Parameters for Page
+        /// Add Call this method Before LoadDatalist and Tilt Documents
+        /// LoadParameters() will be later translating Detail Fields
+        /// </summary>
+        private async void LoadParameters() {
+            string itemVatPriceFormat = await DataOperations.ParameterCheck("ItemVatPriceFormat");
+            string documentVatPriceFormat = await DataOperations.ParameterCheck("DocumentVatPriceFormat");
+            int intValue = int.Parse(await DataOperations.ParameterCheck("DocumentRowHeight"));
+        }
+
+        /// <summary>
+        /// Global Application Defined API Communication Types for Centralized using
+        /// </summary>
+        private async void DefinedAllAplicationApiComunicationTypes() {
+            ///ApiUrls variable is List With All API calls
+
+            ///DBResultMessage is Class for Global using of All API with all information of Request result
+            DBResultMessage dBResult;
+
+            /// Serialize Dataset for API sending INSERT/UPDATE
+            TemplateClassList myRecord = new TemplateClassList();
+            string json = JsonConvert.SerializeObject(myRecord);
+            StringContent httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+            ///API for load/Select Data
+            await ApiCommunication.GetApiRequest<List<TemplateClassList>>(ApiUrls.GlobalNETTemplateClassList, null, App.UserData.Authentification.Token);
+
+            ///API for Data Insert
+            dBResult = await ApiCommunication.PutApiRequest(ApiUrls.GlobalNETTemplateClassList, httpContent, null, App.UserData.Authentification.Token);
+
+            ///API for Data Update
+            dBResult = await ApiCommunication.PostApiRequest(ApiUrls.GlobalNETTemplateClassList, httpContent, null, App.UserData.Authentification.Token);
+
+            ///API for Delete Data
+            dBResult = await ApiCommunication.DeleteApiRequest(ApiUrls.GlobalNETTemplateClassList, "someId", App.UserData.Authentification.Token);
+        }
+```
+
+---
+
+### Developing Global MainWindow Code Help  
+```cs
+// <summary>
+        /// Global Application available Methods for All Pages for Centralized using
+        /// </summary>
+        private async void DefinedGlobalMainWindowMethodsForAllPages() {
+            ///Application Restart
+            App.AppRestart();
+
+            ///ProgresRing for Wait indication
+            MainWindow.ProgressRing = Visibility.Hidden;
+
+            ///Show Info message
+            await MainWindow.ShowMessage(false, "Resources[\"dictionaryWord\"].ToString()");
+
+            ///Show Confirm Dialog
+            MessageDialogResult result = await MainWindow.ShowMessage(false, "Resources[\"dictionaryWord\"].ToString()" + " ", true);
+            if (result == MessageDialogResult.Affirmative) { }
+
+            ///Method For Sett Language of Each Page
+            Language defaultLanguage = JsonConvert.DeserializeObject<Language>(App.Setting.DefaultLanguage);
+            ///_ = SystemOperations.SetLanguageDictionary(Resources, defaultLanguage.Value);
+        }
+
+        /// <summary>
+        /// Global Specific Methods For Customized Working
+        /// </summary>
+        private async void UsedSpecificMethodsForCustomizedWorking() {
+
+            #region Other Help Global Definitions and Methods
+
+            ///Load Parameter From Table Parameters text is Parameter name
+            var res = int.Parse(await DataOperations.ParameterCheck("someParameterName"));
+
+            ///Set ComboBox Item By myValue (from selected record or another)
+            int index = 0; ComboBox cb_defaultLanguage = new ComboBox();
+            cb_defaultLanguage.Items.SourceCollection.Cast<Language>().ToList().ForEach(language => { if (language.Name == "myvalue") { cb_defaultLanguage.SelectedIndex = index; } index++; });
+
+            ///Open File Dialog
+            OpenFileDialog dlg = new OpenFileDialog
+            { DefaultExt = ".exe", Filter = "Exe files |*.exe", Title = "Resources[\"fileOpenDescription\"].ToString()" };
+            if (dlg.ShowDialog() == true) { }
+
+            #endregion Other Help Global Definitions and Methods
+        }
+```
+
+---
+
+### Customizing Page Code Help  
+```cs
+ /// <summary>
+        /// Customized GET Call
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void BtnApiTest_Click(object sender, RoutedEventArgs e) {
+            using (HttpClient httpClient = new HttpClient())
+            {
+                try
+                {
+                    string json = await httpClient.GetStringAsync("someUrl");
+                    await MainWindow.ShowMessage(false, json);
+                }
+                catch (Exception ex) { await MainWindow.ShowMessage(true, "Exception Error : " + ex.StackTrace); }
+            }
+        }
+```
+
+---
+
+### Classlist Type Examples - Recommended
+```cs
+ /// <summary>
+    /// Typical Table schema for API which you copy from Generated Model in API Server
+    /// On API server is Automatically generated by Scaffold command
+    /// Class is Same as API result
+    /// Example Load Data: listVariable = await ApiCommunication.GetApiRequest<List<TemplateClassList>>(ApiUrls.GlobalNETTemplateClassList, null, App.UserData.Authentification.Token);
+    /// </summary>
+    public partial class ExampleClassList {
+        public int Id { get; set; } = 0;
+        public string SystemName { get; set; } = null;
+        public string Description { get; set; } = null;
+        public int UserId { get; set; }
+        public bool Active { get; set; }
+        public DateTime TimeStamp { get; set; }
+    }
+
+    /// <summary>
+    /// Extend API Class with Custom Column in One dataset
+    /// !!!SYSTEM CONDITION: Name must contain "Extended" 
+    /// !!!FOR NULL SET IN THE JOING FIELDS BEFORE SEND OVER API
+    /// 
+    /// Move the fields with SAME NAME as Joined Table on API to ExtendedClass
+    /// Will be set to 'null' Before API send
+    /// 
+    /// Using: for Translation, Info about joined table, etc
+    /// It must be cleaned by operation "NullSetInExtensionFields" before Database operation 
+    /// for disable join control on API for valid independent table
+    /// Other is valid join key for other Tables
+    /// </summary>
+    public partial class ExtendedExampleClassList : TemplateClassList {
+
+        public string Currency { get; set; }  // its join to table Currency
+        public string TotalCurrency { get; set; }
+
+
+        public ExtendedExampleClassList() { }
+        public ExtendedExampleClassList(ItemList ch) {
+            foreach (var prop in ch.GetType().GetProperties())
+            { this.GetType().GetProperty(prop.Name).SetValue(this, prop.GetValue(ch, null), null); }
+        }
+    }
+
+
+    /// <summary>
+    /// WARNING: If you Add the field with Same Name as joined table in Database Model
+    /// you must set this field as 'null' before send Insert / Update
+    /// in HttpContent must Be as 'null' value other is taken as Data Join by API Server
+    ///
+    /// SIMPLE USING
+    /// API Class is extended on root level by custom fields
+    /// Example Load Data and Fill custom Fields:
+    ///
+    /// listVariable = await ApiCommunication.GetApiRequest<List<TemplateClassList>>(ApiUrls.GlobalNETTemplateClassList, null, App.UserData.Authentification.Token);
+    /// listVariable.ForEach(async rec => { rec.Translation = await DBOperations.DBTranslation(rec.SystemName); });
+    /// </summary>
+    public partial class ExampleClassListWithLocalTranslation {
+        public int Id { get; set; } = 0;
+        public string SystemName { get; set; } = null;
+        public string Description { get; set; } = null;
+        public int UserId { get; set; }
+        public bool Active { get; set; }
+        public DateTime TimeStamp { get; set; }
+
+        public string Translation { get; set; } = null;
+    }
+
+```
+
+---
+
+
+### MarkDown Template Help  
+```cs
+
+```
+
+---
 

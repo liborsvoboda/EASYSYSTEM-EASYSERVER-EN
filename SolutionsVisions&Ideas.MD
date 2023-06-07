@@ -1,7 +1,7 @@
 ### LOW/NO/FULL code EXTREMELY EASY TO DEVELOP ANY SYSTEM
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
-#### The development of FRONTEND as an entire IS system as you do not know it - only 3 choices are enough
+### The development of FRONTEND as an entire IS system as you do not know it - only 3 choices are enough
 
      Logic - everything in the database is a LIST (list of invoices)
 -> This may or may not have a DETAIL (list of items)
@@ -10,7 +10,7 @@
 And the result can be a system that SAP or anyone else can only dream of.
 Almost like tennis, you can publish one table after another, and by evening you have a small system.
 
-## DEFINITION OF 3 layer SYSTEM and necessary components
+### DEFINITION OF 3 layer SYSTEM and necessary components
 > Database - place for DATA
 > Backend Server - A service that securely conveys data to applications
 > Frontend/User Application - A nice application to easily work with data
@@ -20,7 +20,8 @@ Almost like tennis, you can publish one table after another, and by evening you 
 
 
 ---
-**Development in EASYDATACenter** UNIVERS RESTFULL/SOCKET BACKEND SERVER in three user steps
+
+### Development in EASYDATACenter UNIVERS RESTFULL/SOCKET BACKEND SERVER in three user steps
 
 * Create any database Table. Use the TemplateList Template
         and just insert your boxes into it. Remember Indexes, Foreign Keys, or look at already existing tables or consult with me. It IS for a few minutes
@@ -36,7 +37,8 @@ Almost like tennis, you can publish one table after another, and by evening you 
 
 
 ---
-**Development in EASYBuilder** Modern WINDOWS XP+ thin application or system in three user steps
+
+### Development in EASYBuilder Modern WINDOWS XP+ thin application or system in three user steps
 
 * You copy the table definition from the model created in the BACKEND project to the FRONTEND project
     COPY Class from BE Model -> PASTE into FE application -> add new APIURL
@@ -51,7 +53,8 @@ Almost like tennis, you can publish one table after another, and by evening you 
 
 
 ---
-**Development of Press Reports in FYIREPORTING**
+
+### evelopment of Press Reports in FYIREPORTING  
 
 * You simply copy the existing DATALIST/DETAIL report and open it in the editor
     Rename to the new name of your table.
@@ -67,7 +70,8 @@ Almost like tennis, you can publish one table after another, and by evening you 
 **END OF KNOWLEDGE REQUIRED FOR SYSTEM DEVELOPMENT**  
 
 ---
-## Basic listing of almost unlimited skill application
+
+### Basic listing of almost unlimited skill application
 * Prepared with common agendas  
 * Operation possible on WINDOWS XP, 7, 8, 10, 11  
 * C# WFP, XAML, Drag&Drop technology  
@@ -89,14 +93,14 @@ Almost like tennis, you can publish one table after another, and by evening you 
 * development of any customized system from 20,000 CZK. System already prepared as a template for any more than just IS SYSTEM
 * the possibility of creating any INFORMATION OR CONTROL, MONITORING, REPORTING system, and so on
 ---
-## EASYTOOLS IMPLEMENTED ADD-ONS
+### EASYTOOLS IMPLEMENTED ADD-ONS
 * AddOns for touch panels, controls, data types, forms, media, documents, 3D,
 * They are completely free to download (including every license pack)
 * Open Source community to include more than 1000 tools in the system by community
 
 ---
 
-## BUILT SYSTEMS IN 14 DAYS
+### BUILT SYSTEMS IN 14 DAYS
 1. **LicenseSrv**
 MultiOS license server with listening API GET/POST server / generation of unlimited static/dynamic CODES and management client
 1. **GUIDES** Windows XP+ Implementation Production Guides for Production Companies For office / touch panels with unlimited clients and printing options
@@ -105,11 +109,11 @@ MultiOS license server with listening API GET/POST server / generation of unlimi
 
 
 ---
-## SOLUTION - WHERE TO FIND COMPLETE INFORMATION
+### SOLUTION - WHERE TO FIND COMPLETE INFORMATION
 All documentation, license, case study, price list, media, developer information, help, manuals, technology information, installation, images, videos, downloads, etc. can be found here or:
 
 ---
-## PROJECT IMPLEMENTATION CASE STUDY PROJECTS USING IDEAS
+### PROJECT IMPLEMENTATION CASE STUDY PROJECTS USING IDEAS
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 * The first use of this solution was a big change in a manufacturing company For 1000 workers, but it was only four days work for the IT department  
 * Implementation of production guides as a task for 4 days CZ In Case Studies  
@@ -117,21 +121,16 @@ All documentation, license, case study, price list, media, developer information
 * Creation of the ShoPingER Invoicing System with a large overlap in 14 days]  
 * All Windows Applications are available to try online in the Application ShowRoom [https://KlikneteZde.Cz](https://KlikneteZde.Cz "")
 
-
-
-
-
-
-
 ---
 
-## EASYDATACenter - Backend Server Development Plan
+### EASYDATACenter - Backend Server Development Plan
 
 - Create Backend Server Generator
 - Create Full Customer Support with Project Managements
 
 ---
-## EASYBuilder - WPF Fronted System Builder Development Plan
+
+### EASYBuilder - WPF Fronted System Builder Development Plan
 
 - Publish XAML Generator Graphical Tool with Templates Support
 - implement Global Context menu for all DataLists with Count of API record request setting, 
@@ -140,6 +139,25 @@ All documentation, license, case study, price list, media, developer information
 - Create SYSTEM Generator
 - Create Metro4 Full compatible WEB SYSTEM Variant
 - Implement FastReport Tool (Replace FYI Reporting)
+
+---
+
+### Recommended Practices
+
+Using References of Variables or Classes - Maximum Saving Memory Performance
+- For All processes which is modified by One Person in One Time - Typical System Using
+
+In simple explanation and absolut ideally working with Data - Maximum Clean Code
+Data flow modify one Variable or Class on Way Over More Sequenced Methods
+
+- From API List Logic You working only With Primary API Dataset and few sets of Dials
+- For standard Using its best way For Maximum clean code without Exeption
+
+Is calculating that you Have Full or Extended Dataset for API everytime
+	- Point For Data loading  "'SetRecord' Method" - load data from model to Dataset Variable
+	- Some Operations where you can change data values
+	- Point For Recapitulate full Dataset and Save 
+	- 
 
 ---
 
@@ -156,7 +174,8 @@ All documentation, license, case study, price list, media, developer information
 **Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
 
 ---
-## Company contact for suppliers   
+
+### Company contact for suppliers   
 
 **Email:**
 - Libor.Svoboda@GroupWare-Solution.eu  

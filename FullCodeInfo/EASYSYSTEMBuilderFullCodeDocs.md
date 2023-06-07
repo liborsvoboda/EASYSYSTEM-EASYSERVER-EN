@@ -10,8 +10,8 @@
 - [ApiUrls](#T-GlobalNET-Api-ApiUrls 'GlobalNET.Api.ApiUrls')
 - [App](#T-GlobalNET-App 'GlobalNET.App')
   - [#ctor()](#M-GlobalNET-App-#ctor 'GlobalNET.App.#ctor')
+  - [SystemRuntimeData](#F-GlobalNET-App-SystemRuntimeData 'GlobalNET.App.SystemRuntimeData')
   - [TiltReceiptDoc](#F-GlobalNET-App-TiltReceiptDoc 'GlobalNET.App.TiltReceiptDoc')
-  - [log](#F-GlobalNET-App-log 'GlobalNET.App.log')
   - [AppQuitRequest(silent)](#M-GlobalNET-App-AppQuitRequest-System-Boolean- 'GlobalNET.App.AppQuitRequest(System.Boolean)')
   - [AppRestart()](#M-GlobalNET-App-AppRestart 'GlobalNET.App.AppRestart')
   - [ApplicationLogging(ex,customMessage)](#M-GlobalNET-App-ApplicationLogging-System-Exception,System-String- 'GlobalNET.App.ApplicationLogging(System.Exception,System.String)')
@@ -39,10 +39,11 @@
 - [CurrencyListPage](#T-GlobalNET-Pages-CurrencyListPage 'GlobalNET.Pages.CurrencyListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-CurrencyListPage-InitializeComponent 'GlobalNET.Pages.CurrencyListPage.InitializeComponent')
 - [DBOperations](#T-GlobalNET-GlobalOperations-DBOperations 'GlobalNET.GlobalOperations.DBOperations')
-  - [DBTranslation(systemName,comaList,lang)](#M-GlobalNET-GlobalOperations-DBOperations-DBTranslation-System-String,System-Boolean,System-String- 'GlobalNET.GlobalOperations.DBOperations.DBTranslation(System.String,System.Boolean,System.String)')
+  - [DBTranslation(systemName,notCreateNew,comaList,lang)](#M-GlobalNET-GlobalOperations-DBOperations-DBTranslation-System-String,System-Boolean,System-Boolean,System-String- 'GlobalNET.GlobalOperations.DBOperations.DBTranslation(System.String,System.Boolean,System.Boolean,System.String)')
   - [LoadOrRefreshUserData()](#M-GlobalNET-GlobalOperations-DBOperations-LoadOrRefreshUserData 'GlobalNET.GlobalOperations.DBOperations.LoadOrRefreshUserData')
   - [LoadStartupDBData()](#M-GlobalNET-GlobalOperations-DBOperations-LoadStartupDBData 'GlobalNET.GlobalOperations.DBOperations.LoadStartupDBData')
   - [SaveSystemFailMessage(message)](#M-GlobalNET-GlobalOperations-DBOperations-SaveSystemFailMessage-System-String,System-String- 'GlobalNET.GlobalOperations.DBOperations.SaveSystemFailMessage(System.String,System.String)')
+  - [SetNonUserDataOnSuccessStartUp()](#M-GlobalNET-GlobalOperations-DBOperations-SetNonUserDataOnSuccessStartUp 'GlobalNET.GlobalOperations.DBOperations.SetNonUserDataOnSuccessStartUp')
 - [DBResultMessage](#T-GlobalNET-Api-DBResultMessage 'GlobalNET.Api.DBResultMessage')
 - [DataOperations](#T-GlobalNET-GlobalOperations-DataOperations 'GlobalNET.GlobalOperations.DataOperations')
   - [GetTranslatedApiList(listOnly,omitApiList)](#M-GlobalNET-GlobalOperations-DataOperations-GetTranslatedApiList-System-Boolean,System-Collections-Generic-List{System-String}- 'GlobalNET.GlobalOperations.DataOperations.GetTranslatedApiList(System.Boolean,System.Collections.Generic.List{System.String})')
@@ -58,7 +59,6 @@
   - [InitializeComponent()](#M-GlobalNET-Pages-DocumentationPage-InitializeComponent 'GlobalNET.Pages.DocumentationPage.InitializeComponent')
 - [ExchangeRateListPage](#T-GlobalNET-Pages-ExchangeRateListPage 'GlobalNET.Pages.ExchangeRateListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ExchangeRateListPage-InitializeComponent 'GlobalNET.Pages.ExchangeRateListPage.InitializeComponent')
-- [ExtendedExampleClassList](#T-GlobalNET-Classes-ExtendedExampleClassList 'GlobalNET.Classes.ExtendedExampleClassList')
 - [FileOperations](#T-GlobalNET-GlobalOperations-FileOperations 'GlobalNET.GlobalOperations.FileOperations')
   - [CopyFiles(sourcePath,destinationPath)](#M-GlobalNET-GlobalOperations-FileOperations-CopyFiles-System-String,System-String- 'GlobalNET.GlobalOperations.FileOperations.CopyFiles(System.String,System.String)')
   - [CreateFile(file)](#M-GlobalNET-GlobalOperations-FileOperations-CreateFile-System-String- 'GlobalNET.GlobalOperations.FileOperations.CreateFile(System.String)')
@@ -72,12 +72,15 @@
   - [CreateInstance()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-CreateInstance-System-Type,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)')
   - [GetPropertyValue()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-GetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)')
   - [SetPropertyValue()](#M-XamlGeneratedNamespace-GeneratedInternalTypeHelper-SetPropertyValue-System-Reflection-PropertyInfo,System-Object,System-Object,System-Globalization-CultureInfo- 'XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)')
+- [GlobalRuntimeMonitor](#T-GlobalNET-GlobalClasses-GlobalRuntimeMonitor 'GlobalNET.GlobalClasses.GlobalRuntimeMonitor')
 - [GraphsPage](#T-GlobalNET-Pages-GraphsPage 'GlobalNET.Pages.GraphsPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-GraphsPage-InitializeComponent 'GlobalNET.Pages.GraphsPage.InitializeComponent')
 - [GroupListPage](#T-GlobalNET-Pages-GroupListPage 'GlobalNET.Pages.GroupListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-GroupListPage-InitializeComponent 'GlobalNET.Pages.GroupListPage.InitializeComponent')
 - [HardwareOperations](#T-GlobalNET-GlobalOperations-HardwareOperations 'GlobalNET.GlobalOperations.HardwareOperations')
   - [ApplicationKeyboardMaping(sender,e)](#M-GlobalNET-GlobalOperations-HardwareOperations-ApplicationKeyboardMaping-System-Windows-Input-KeyEventArgs- 'GlobalNET.GlobalOperations.HardwareOperations.ApplicationKeyboardMaping(System.Windows.Input.KeyEventArgs)')
+- [IconMaker](#T-GlobalNET-GlobalGenerators-IconMaker 'GlobalNET.GlobalGenerators.IconMaker')
+  - [Icon(color,iconPath)](#M-GlobalNET-GlobalGenerators-IconMaker-Icon-System-Windows-Media-Color,System-String- 'GlobalNET.GlobalGenerators.IconMaker.Icon(System.Windows.Media.Color,System.String)')
 - [IgnoredExceptionListPage](#T-GlobalNET-Pages-IgnoredExceptionListPage 'GlobalNET.Pages.IgnoredExceptionListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-IgnoredExceptionListPage-InitializeComponent 'GlobalNET.Pages.IgnoredExceptionListPage.InitializeComponent')
 - [ImageGalleryListPage](#T-GlobalNET-Pages-ImageGalleryListPage 'GlobalNET.Pages.ImageGalleryListPage')
@@ -111,14 +114,17 @@
   - [DgRefresh](#P-GlobalNET-MainWindow-DgRefresh 'GlobalNET.MainWindow.DgRefresh')
   - [DownloadShow](#P-GlobalNET-MainWindow-DownloadShow 'GlobalNET.MainWindow.DownloadShow')
   - [DownloadStatus](#P-GlobalNET-MainWindow-DownloadStatus 'GlobalNET.MainWindow.DownloadStatus')
+  - [OperationRunning](#P-GlobalNET-MainWindow-OperationRunning 'GlobalNET.MainWindow.OperationRunning')
   - [ProgressRing](#P-GlobalNET-MainWindow-ProgressRing 'GlobalNET.MainWindow.ProgressRing')
   - [RunReleaseMode](#P-GlobalNET-MainWindow-RunReleaseMode 'GlobalNET.MainWindow.RunReleaseMode')
+  - [ServerLoggerSource](#P-GlobalNET-MainWindow-ServerLoggerSource 'GlobalNET.MainWindow.ServerLoggerSource')
   - [ServiceRunning](#P-GlobalNET-MainWindow-ServiceRunning 'GlobalNET.MainWindow.ServiceRunning')
   - [ServiceStatus](#P-GlobalNET-MainWindow-ServiceStatus 'GlobalNET.MainWindow.ServiceStatus')
+  - [ShowSystemLogger](#P-GlobalNET-MainWindow-ShowSystemLogger 'GlobalNET.MainWindow.ShowSystemLogger')
   - [SystemLogger](#P-GlobalNET-MainWindow-SystemLogger 'GlobalNET.MainWindow.SystemLogger')
   - [UserLogged](#P-GlobalNET-MainWindow-UserLogged 'GlobalNET.MainWindow.UserLogged')
   - [VncRunning](#P-GlobalNET-MainWindow-VncRunning 'GlobalNET.MainWindow.VncRunning')
-  - [AddOrRemoveTab(headerName,tabPage)](#M-GlobalNET-MainWindow-AddOrRemoveTab-System-String,System-Object,System-String- 'GlobalNET.MainWindow.AddOrRemoveTab(System.String,System.Object,System.String)')
+  - [AddOrRemoveTab(headerName,tabPage,tagText)](#M-GlobalNET-MainWindow-AddOrRemoveTab-System-String,System-Object,System-String- 'GlobalNET.MainWindow.AddOrRemoveTab(System.String,System.Object,System.String)')
   - [BtnKeyboardClick(sender,e)](#M-GlobalNET-MainWindow-BtnKeyboardClick-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.BtnKeyboardClick(System.Object,System.Windows.RoutedEventArgs)')
   - [BtnShowLoggerClick(sender,e)](#M-GlobalNET-MainWindow-BtnShowLoggerClick-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.BtnShowLoggerClick(System.Object,System.Windows.RoutedEventArgs)')
   - [Btn_LaunchHelp_Click(sender,e)](#M-GlobalNET-MainWindow-Btn_LaunchHelp_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.MainWindow.Btn_LaunchHelp_Click(System.Object,System.Windows.RoutedEventArgs)')
@@ -142,7 +148,9 @@
   - [ShowLoginDialog()](#M-GlobalNET-MainWindow-ShowLoginDialog 'GlobalNET.MainWindow.ShowLoginDialog')
   - [ShowMessage(error,message,confirm)](#M-GlobalNET-MainWindow-ShowMessage-System-Boolean,System-String,System-Boolean- 'GlobalNET.MainWindow.ShowMessage(System.Boolean,System.String,System.Boolean)')
   - [StringToFilter(filterBox,advancedFilter)](#M-GlobalNET-MainWindow-StringToFilter-System-Windows-Controls-ComboBox,System-String- 'GlobalNET.MainWindow.StringToFilter(System.Windows.Controls.ComboBox,System.String)')
+  - [SystemLoggerSourceChanged_Click(sender,e)](#M-GlobalNET-MainWindow-SystemLoggerSourceChanged_Click-System-Object,System-EventArgs- 'GlobalNET.MainWindow.SystemLoggerSourceChanged_Click(System.Object,System.EventArgs)')
   - [SystemTimerController(sender,e)](#M-GlobalNET-MainWindow-SystemTimerController-System-Object,System-Timers-ElapsedEventArgs- 'GlobalNET.MainWindow.SystemTimerController(System.Object,System.Timers.ElapsedEventArgs)')
+  - [TabPanelOnSelectionChange(sender,e)](#M-GlobalNET-MainWindow-TabPanelOnSelectionChange-System-Object,System-Windows-Controls-SelectionChangedEventArgs- 'GlobalNET.MainWindow.TabPanelOnSelectionChange(System.Object,System.Windows.Controls.SelectionChangedEventArgs)')
   - [TiltOpenForm(translateHeader)](#M-GlobalNET-MainWindow-TiltOpenForm-System-String- 'GlobalNET.MainWindow.TiltOpenForm(System.String)')
 - [MathTypeOperations](#T-GlobalNET-GlobalOperations-MathTypeOperations 'GlobalNET.GlobalOperations.MathTypeOperations')
   - [CheckTypeValue()](#M-GlobalNET-GlobalOperations-MathTypeOperations-CheckTypeValue-System-String,System-String- 'GlobalNET.GlobalOperations.MathTypeOperations.CheckTypeValue(System.String,System.String)')
@@ -167,14 +175,6 @@
   - [InitializeComponent()](#M-GlobalNET-Pages-OutgoingInvoiceListPage-InitializeComponent 'GlobalNET.Pages.OutgoingInvoiceListPage.InitializeComponent')
 - [OutgoingOrderListPage](#T-GlobalNET-Pages-OutgoingOrderListPage 'GlobalNET.Pages.OutgoingOrderListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-OutgoingOrderListPage-InitializeComponent 'GlobalNET.Pages.OutgoingOrderListPage.InitializeComponent')
-- [PageTemplatesCodeHelp](#T-GlobalNET-Templates-PageTemplatesCodeHelp 'GlobalNET.Templates.PageTemplatesCodeHelp')
-  - [Languages](#F-GlobalNET-Templates-PageTemplatesCodeHelp-Languages 'GlobalNET.Templates.PageTemplatesCodeHelp.Languages')
-  - [BtnApiTest_Click(sender,e)](#M-GlobalNET-Templates-PageTemplatesCodeHelp-BtnApiTest_Click-System-Object,System-Windows-RoutedEventArgs- 'GlobalNET.Templates.PageTemplatesCodeHelp.BtnApiTest_Click(System.Object,System.Windows.RoutedEventArgs)')
-  - [DefinedAllAplicationApiComunicationTypes()](#M-GlobalNET-Templates-PageTemplatesCodeHelp-DefinedAllAplicationApiComunicationTypes 'GlobalNET.Templates.PageTemplatesCodeHelp.DefinedAllAplicationApiComunicationTypes')
-  - [DefinedGlobalMainWindowMethodsForAllPages()](#M-GlobalNET-Templates-PageTemplatesCodeHelp-DefinedGlobalMainWindowMethodsForAllPages 'GlobalNET.Templates.PageTemplatesCodeHelp.DefinedGlobalMainWindowMethodsForAllPages')
-  - [LoadParameters()](#M-GlobalNET-Templates-PageTemplatesCodeHelp-LoadParameters 'GlobalNET.Templates.PageTemplatesCodeHelp.LoadParameters')
-  - [NumberValidationTextBox(sender,e)](#M-GlobalNET-Templates-PageTemplatesCodeHelp-NumberValidationTextBox-System-Object,System-Windows-Input-TextCompositionEventArgs- 'GlobalNET.Templates.PageTemplatesCodeHelp.NumberValidationTextBox(System.Object,System.Windows.Input.TextCompositionEventArgs)')
-  - [UsedSpecificMethodsForCustomizedWorking()](#M-GlobalNET-Templates-PageTemplatesCodeHelp-UsedSpecificMethodsForCustomizedWorking 'GlobalNET.Templates.PageTemplatesCodeHelp.UsedSpecificMethodsForCustomizedWorking')
 - [ParameterListPage](#T-GlobalNET-Pages-ParameterListPage 'GlobalNET.Pages.ParameterListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ParameterListPage-InitializeComponent 'GlobalNET.Pages.ParameterListPage.InitializeComponent')
 - [PartListPage](#T-GlobalNET-Pages-PartListPage 'GlobalNET.Pages.PartListPage')
@@ -192,11 +192,10 @@
 - [ReportQueueListPage](#T-GlobalNET-Pages-ReportQueueListPage 'GlobalNET.Pages.ReportQueueListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ReportQueueListPage-InitializeComponent 'GlobalNET.Pages.ReportQueueListPage.InitializeComponent')
 - [ReportSelection](#T-GlobalNET-Classes-ReportSelection 'GlobalNET.Classes.ReportSelection')
-- [Resources](#T-GlobalNET-SystemConfiguration-Resources 'GlobalNET.SystemConfiguration.Resources')
-  - [Culture](#P-GlobalNET-SystemConfiguration-Resources-Culture 'GlobalNET.SystemConfiguration.Resources.Culture')
-  - [ResourceManager](#P-GlobalNET-SystemConfiguration-Resources-ResourceManager 'GlobalNET.SystemConfiguration.Resources.ResourceManager')
-  - [no_photo](#P-GlobalNET-SystemConfiguration-Resources-no_photo 'GlobalNET.SystemConfiguration.Resources.no_photo')
-- [RunningMode](#T-GlobalNET-GlobalClasses-RunningMode 'GlobalNET.GlobalClasses.RunningMode')
+- [Resources](#T-GlobalNET-Properties-Resources 'GlobalNET.Properties.Resources')
+  - [Culture](#P-GlobalNET-Properties-Resources-Culture 'GlobalNET.Properties.Resources.Culture')
+  - [ResourceManager](#P-GlobalNET-Properties-Resources-ResourceManager 'GlobalNET.Properties.Resources.ResourceManager')
+  - [no_photo](#P-GlobalNET-Properties-Resources-no_photo 'GlobalNET.Properties.Resources.no_photo')
 - [ScreenSaverPage](#T-GlobalNET-Pages-ScreenSaverPage 'GlobalNET.Pages.ScreenSaverPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-ScreenSaverPage-InitializeComponent 'GlobalNET.Pages.ScreenSaverPage.InitializeComponent')
 - [ServerSettingKeys](#T-GlobalNET-Classes-ServerSettingKeys 'GlobalNET.Classes.ServerSettingKeys')
@@ -204,16 +203,28 @@
   - [InitializeComponent()](#M-GlobalNET-Pages-ServerSettingPage-InitializeComponent 'GlobalNET.Pages.ServerSettingPage.InitializeComponent')
 - [SupportPage](#T-GlobalNET-Pages-SupportPage 'GlobalNET.Pages.SupportPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-SupportPage-InitializeComponent 'GlobalNET.Pages.SupportPage.InitializeComponent')
+- [SvgIconListPage](#T-GlobalNET-Pages-SvgIconListPage 'GlobalNET.Pages.SvgIconListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-SvgIconListPage-InitializeComponent 'GlobalNET.Pages.SvgIconListPage.InitializeComponent')
 - [SystemFailListPage](#T-GlobalNET-Pages-SystemFailListPage 'GlobalNET.Pages.SystemFailListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-SystemFailListPage-InitializeComponent 'GlobalNET.Pages.SystemFailListPage.InitializeComponent')
+- [SystemLoggerHelper](#T-GlobalNET-SystemHelper-SystemLoggerHelper 'GlobalNET.SystemHelper.SystemLoggerHelper')
+  - [DisposeSystemLoggerWebSocketMonitor()](#M-GlobalNET-SystemHelper-SystemLoggerHelper-DisposeSystemLoggerWebSocketMonitor 'GlobalNET.SystemHelper.SystemLoggerHelper.DisposeSystemLoggerWebSocketMonitor')
+  - [SystemLoggerWebSocketMonitorOnOff()](#M-GlobalNET-SystemHelper-SystemLoggerHelper-SystemLoggerWebSocketMonitorOnOff 'GlobalNET.SystemHelper.SystemLoggerHelper.SystemLoggerWebSocketMonitorOnOff')
+- [SystemLoggerWebSocketClass](#T-GlobalNET-SystemHelper-SystemLoggerWebSocketClass 'GlobalNET.SystemHelper.SystemLoggerWebSocketClass')
 - [SystemOperations](#T-GlobalNET-GlobalOperations-SystemOperations 'GlobalNET.GlobalOperations.SystemOperations')
   - [FilterToString(filterBox)](#M-GlobalNET-GlobalOperations-SystemOperations-FilterToString-System-Windows-Controls-ComboBox- 'GlobalNET.GlobalOperations.SystemOperations.FilterToString(System.Windows.Controls.ComboBox)')
   - [GetExceptionMessages(exception,msgCount)](#M-GlobalNET-GlobalOperations-SystemOperations-GetExceptionMessages-System-Exception,System-Int32- 'GlobalNET.GlobalOperations.SystemOperations.GetExceptionMessages(System.Exception,System.Int32)')
   - [GetExceptionMessagesAll(exception,msgCount)](#M-GlobalNET-GlobalOperations-SystemOperations-GetExceptionMessagesAll-System-Exception,System-Int32- 'GlobalNET.GlobalOperations.SystemOperations.GetExceptionMessagesAll(System.Exception,System.Int32)')
   - [IncreaseFileVersionBuild()](#M-GlobalNET-GlobalOperations-SystemOperations-IncreaseFileVersionBuild 'GlobalNET.GlobalOperations.SystemOperations.IncreaseFileVersionBuild')
+  - [RandomString(length)](#M-GlobalNET-GlobalOperations-SystemOperations-RandomString-System-Int32- 'GlobalNET.GlobalOperations.SystemOperations.RandomString(System.Int32)')
   - [RemoveAppNamespaceFromString(stringForRemoveNamespace)](#M-GlobalNET-GlobalOperations-SystemOperations-RemoveAppNamespaceFromString-System-String- 'GlobalNET.GlobalOperations.SystemOperations.RemoveAppNamespaceFromString(System.String)')
   - [SendMailWithMailTo(address,subject,body,attach)](#M-GlobalNET-GlobalOperations-SystemOperations-SendMailWithMailTo-System-String,System-String,System-String,System-String- 'GlobalNET.GlobalOperations.SystemOperations.SendMailWithMailTo(System.String,System.String,System.String,System.String)')
+  - [SendMailWithServerSetting(message)](#M-GlobalNET-GlobalOperations-SystemOperations-SendMailWithServerSetting-System-String- 'GlobalNET.GlobalOperations.SystemOperations.SendMailWithServerSetting(System.String)')
   - [SetLanguageDictionary(Resources,languageDefault)](#M-GlobalNET-GlobalOperations-SystemOperations-SetLanguageDictionary-System-Windows-ResourceDictionary,System-String- 'GlobalNET.GlobalOperations.SystemOperations.SetLanguageDictionary(System.Windows.ResourceDictionary,System.String)')
+  - [StartExternalProccess(fullFilePath,startupPath,arguments)](#M-GlobalNET-GlobalOperations-SystemOperations-StartExternalProccess-System-String,System-String,System-String,System-String- 'GlobalNET.GlobalOperations.SystemOperations.StartExternalProccess(System.String,System.String,System.String,System.String)')
+- [SystemStatuses](#T-GlobalNET-GlobalClasses-SystemStatuses 'GlobalNET.GlobalClasses.SystemStatuses')
+- [SystemWindowDataModel](#T-GlobalNET-SystemStructure-SystemWindowDataModel 'GlobalNET.SystemStructure.SystemWindowDataModel')
+  - [#ctor()](#M-GlobalNET-SystemStructure-SystemWindowDataModel-#ctor 'GlobalNET.SystemStructure.SystemWindowDataModel.#ctor')
 - [TemplateClassListPage](#T-GlobalNET-Pages-TemplateClassListPage 'GlobalNET.Pages.TemplateClassListPage')
   - [#ctor()](#M-GlobalNET-Pages-TemplateClassListPage-#ctor 'GlobalNET.Pages.TemplateClassListPage.#ctor')
   - [dataViewSupport](#F-GlobalNET-Pages-TemplateClassListPage-dataViewSupport 'GlobalNET.Pages.TemplateClassListPage.dataViewSupport')
@@ -294,8 +305,10 @@
 - [TerminalPage](#T-GlobalNET-Pages-TerminalPage 'GlobalNET.Pages.TerminalPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-TerminalPage-InitializeComponent 'GlobalNET.Pages.TerminalPage.InitializeComponent')
 - [TiltTargets](#T-GlobalNET-GlobalClasses-TiltTargets 'GlobalNET.GlobalClasses.TiltTargets')
-- [ToolPanelPage](#T-GlobalNET-Pages-ToolPanelPage 'GlobalNET.Pages.ToolPanelPage')
-  - [InitializeComponent()](#M-GlobalNET-Pages-ToolPanelPage-InitializeComponent 'GlobalNET.Pages.ToolPanelPage.InitializeComponent')
+- [ToolPanelDefinitionListPage](#T-GlobalNET-Pages-ToolPanelDefinitionListPage 'GlobalNET.Pages.ToolPanelDefinitionListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-ToolPanelDefinitionListPage-InitializeComponent 'GlobalNET.Pages.ToolPanelDefinitionListPage.InitializeComponent')
+- [ToolPanelListPage](#T-GlobalNET-Pages-ToolPanelListPage 'GlobalNET.Pages.ToolPanelListPage')
+  - [InitializeComponent()](#M-GlobalNET-Pages-ToolPanelListPage-InitializeComponent 'GlobalNET.Pages.ToolPanelListPage.InitializeComponent')
 - [TranslatedApiList](#T-GlobalNET-GlobalClasses-TranslatedApiList 'GlobalNET.GlobalClasses.TranslatedApiList')
 - [UnitListPage](#T-GlobalNET-Pages-UnitListPage 'GlobalNET.Pages.UnitListPage')
   - [InitializeComponent()](#M-GlobalNET-Pages-UnitListPage-InitializeComponent 'GlobalNET.Pages.UnitListPage.InitializeComponent')
@@ -393,6 +406,15 @@ Application Global Exceptions Controls Definitions
 
 This constructor has no parameters.
 
+<a name='F-GlobalNET-App-SystemRuntimeData'></a>
+### SystemRuntimeData `constants`
+
+##### Summary
+
+Global Application Startup Settings
+Central Parameters / Languages / User / Configure
+TODO must centalize to Globall APP class
+
 <a name='F-GlobalNET-App-TiltReceiptDoc'></a>
 ### TiltReceiptDoc `constants`
 
@@ -400,20 +422,12 @@ This constructor has no parameters.
 
 Tilt Document types definitions
 
-<a name='F-GlobalNET-App-log'></a>
-### log `constants`
-
-##### Summary
-
-Global Application Startup Settings
-Central Parameters / Languages / User / Configure
-
 <a name='M-GlobalNET-App-AppQuitRequest-System-Boolean-'></a>
 ### AppQuitRequest(silent) `method`
 
 ##### Summary
 
-System Quit
+System or Quit
 
 ##### Parameters
 
@@ -727,16 +741,14 @@ GlobalNET.GlobalOperations
 Centralised DBFunctions as Load DB Congig, System Dials (Language, Params)
 Another Db functions As Saving System Loging, Language Dictionary Autofiling
 
-<a name='M-GlobalNET-GlobalOperations-DBOperations-DBTranslation-System-String,System-Boolean,System-String-'></a>
-### DBTranslation(systemName,comaList,lang) `method`
+<a name='M-GlobalNET-GlobalOperations-DBOperations-DBTranslation-System-String,System-Boolean,System-Boolean,System-String-'></a>
+### DBTranslation(systemName,notCreateNew,comaList,lang) `method`
 
 ##### Summary
 
-Centralised Method for Translating by DB Dictionary
-Service insert the news words for translate (After translate request)
-to Database Automaticaly with Empty Translate.
-Service return translate if is possible or requested word send back
-CamelCase ignored
+Centralised Method for Translating by DB Dictionary Service insert the news words for
+translate (After translate request) to Database Automaticaly with Empty Translate.
+Service return translate if is possible or requested word send back CamelCase ignored
 
 ##### Returns
 
@@ -747,6 +759,7 @@ CamelCase ignored
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | systemName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+| notCreateNew | [System.Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') |  |
 | comaList | [System.Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') |  |
 | lang | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
@@ -759,6 +772,7 @@ Centralised Method for Refresh All UserData
 params, for correct App running.
 Thinking for remove and new Load
 Actualy limited by DebugingHelpSetting
+Itr user After Succes User Login
 
 ##### Parameters
 
@@ -789,6 +803,19 @@ Write to System Logger
 | ---- | ---- | ----------- |
 | message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
+<a name='M-GlobalNET-GlobalOperations-DBOperations-SetNonUserDataOnSuccessStartUp'></a>
+### SetNonUserDataOnSuccessStartUp() `method`
+
+##### Summary
+
+SYSTEM: Set NonUser Startup Data for Correct Prepare System 
+Its for All Status Possible - NODB,OS,IS,Network,etc.
+For check ANY possible problems out of System
+
+##### Parameters
+
+This method has no parameters.
+
 <a name='T-GlobalNET-Api-DBResultMessage'></a>
 ## DBResultMessage `type`
 
@@ -798,7 +825,8 @@ GlobalNET.Api
 
 ##### Summary
 
-Definition of Result API calls for Insert / Update / Delete
+Global API Definition of Result API calls 
+for All Calling of Insert / Update / Delete
 
 <a name='T-GlobalNET-GlobalOperations-DataOperations'></a>
 ## DataOperations `type`
@@ -984,27 +1012,6 @@ InitializeComponent
 
 This method has no parameters.
 
-<a name='T-GlobalNET-Classes-ExtendedExampleClassList'></a>
-## ExtendedExampleClassList `type`
-
-##### Namespace
-
-GlobalNET.Classes
-
-##### Summary
-
-Extend API Class with Custom Column in One dataset
-!!!SYSTEM CONDITION: Name must contain "Extended" 
-!!!FOR NULL SET IN THE JOING FIELDS BEFORE SEND OVER API
-
-Move the fields with SAME NAME as Joined Table on API to ExtendedClass
-Will be set to 'null' Before API send
-
-Using: for Translation, Info about joined table, etc
-It must be cleaned by operation "NullSetInExtensionFields" before Database operation 
-for disable join control on API for valid independent table
-Other is valid join key for other Tables
-
 <a name='T-GlobalNET-GlobalOperations-FileOperations'></a>
 ## FileOperations `type`
 
@@ -1177,6 +1184,24 @@ SetPropertyValue
 
 This method has no parameters.
 
+<a name='T-GlobalNET-GlobalClasses-GlobalRuntimeMonitor'></a>
+## GlobalRuntimeMonitor `type`
+
+##### Namespace
+
+GlobalNET.GlobalClasses
+
+##### Summary
+
+!!!SYSTEM 
+Global Runtime Monitor Definition For One Point monitoring
+For Processes and each other Definition For optimize
+the System Running
+
+TODO
+- move All Central Definitions Here
+- create Monitor Window for managing
+
 <a name='T-GlobalNET-Pages-GraphsPage'></a>
 ## GraphsPage `type`
 
@@ -1240,6 +1265,36 @@ Application Keyboard controller
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | sender | [System.Windows.Input.KeyEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.KeyEventArgs 'System.Windows.Input.KeyEventArgs') |  |
+
+<a name='T-GlobalNET-GlobalGenerators-IconMaker'></a>
+## IconMaker `type`
+
+##### Namespace
+
+GlobalNET.GlobalGenerators
+
+##### Summary
+
+System Online Icon Generator from custom Path
+Its for working with Icon over Database Dynamically
+
+<a name='M-GlobalNET-GlobalGenerators-IconMaker-Icon-System-Windows-Media-Color,System-String-'></a>
+### Icon(color,iconPath) `method`
+
+##### Summary
+
+Generate Custom Icon from Defined Path
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| color | [System.Windows.Media.Color](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Media.Color 'System.Windows.Media.Color') | The color. |
+| iconPath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The icon path. |
 
 <a name='T-GlobalNET-Pages-IgnoredExceptionListPage'></a>
 ## IgnoredExceptionListPage `type`
@@ -1598,6 +1653,13 @@ Indicator for show Downloading area
 
 Downloading of update status variable
 
+<a name='P-GlobalNET-MainWindow-OperationRunning'></a>
+### OperationRunning `property`
+
+##### Summary
+
+Indicator for mark operation status for any programmatic operations
+
 <a name='P-GlobalNET-MainWindow-ProgressRing'></a>
 ### ProgressRing `property`
 
@@ -1607,6 +1669,14 @@ ProgressRing Visibility indicator
 
 <a name='P-GlobalNET-MainWindow-RunReleaseMode'></a>
 ### RunReleaseMode `property`
+
+<a name='P-GlobalNET-MainWindow-ServerLoggerSource'></a>
+### ServerLoggerSource `property`
+
+##### Summary
+
+System Logger Source Status and Controller
+This is status of Settings System Logger Source
 
 <a name='P-GlobalNET-MainWindow-ServiceRunning'></a>
 ### ServiceRunning `property`
@@ -1621,6 +1691,14 @@ Service Status description
 ##### Summary
 
 Service Status public Variable
+
+<a name='P-GlobalNET-MainWindow-ShowSystemLogger'></a>
+### ShowSystemLogger `property`
+
+##### Summary
+
+System Logger Activator by Setted Parametr
+Can be setted for All Apps or Every User individually
 
 <a name='P-GlobalNET-MainWindow-SystemLogger'></a>
 ### SystemLogger `property`
@@ -1640,7 +1718,7 @@ User Logged Status
 ### VncRunning `property`
 
 <a name='M-GlobalNET-MainWindow-AddOrRemoveTab-System-String,System-Object,System-String-'></a>
-### AddOrRemoveTab(headerName,tabPage) `method`
+### AddOrRemoveTab(headerName,tabPage,tagText) `method`
 
 ##### Summary
 
@@ -1652,6 +1730,7 @@ Tabs Pages control for Insert/Move/Change Pages
 | ---- | ---- | ----------- |
 | headerName | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 | tabPage | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
+| tagText | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
 <a name='M-GlobalNET-MainWindow-BtnKeyboardClick-System-Object,System-Windows-RoutedEventArgs-'></a>
 ### BtnKeyboardClick(sender,e) `method`
@@ -1972,6 +2051,21 @@ Full dynamic build filter on selected page from saved advanced filter
 | filterBox | [System.Windows.Controls.ComboBox](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.ComboBox 'System.Windows.Controls.ComboBox') |  |
 | advancedFilter | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
+<a name='M-GlobalNET-MainWindow-SystemLoggerSourceChanged_Click-System-Object,System-EventArgs-'></a>
+### SystemLoggerSourceChanged_Click(sender,e) `method`
+
+##### Summary
+
+System Logger Source Selector
+Server Logger has Source From Client Settings by WebSocket URL
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | The source of the event. |
+| e | [System.EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') | The [EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') instance containing the event data. |
+
 <a name='M-GlobalNET-MainWindow-SystemTimerController-System-Object,System-Timers-ElapsedEventArgs-'></a>
 ### SystemTimerController(sender,e) `method`
 
@@ -1985,6 +2079,20 @@ Backend System Timer for check server connection
 | ---- | ---- | ----------- |
 | sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
 | e | [System.Timers.ElapsedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Timers.ElapsedEventArgs 'System.Timers.ElapsedEventArgs') |  |
+
+<a name='M-GlobalNET-MainWindow-TabPanelOnSelectionChange-System-Object,System-Windows-Controls-SelectionChangedEventArgs-'></a>
+### TabPanelOnSelectionChange(sender,e) `method`
+
+##### Summary
+
+Tab click selection change reload ID and Pointers for ListView Buttons
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | The sender. |
+| e | [System.Windows.Controls.SelectionChangedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.SelectionChangedEventArgs 'System.Windows.Controls.SelectionChangedEventArgs') | The [SelectionChangedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Controls.SelectionChangedEventArgs 'System.Windows.Controls.SelectionChangedEventArgs') instance containing the event data. |
 
 <a name='M-GlobalNET-MainWindow-TiltOpenForm-System-String-'></a>
 ### TiltOpenForm(translateHeader) `method`
@@ -2285,99 +2393,6 @@ InitializeComponent
 
 This method has no parameters.
 
-<a name='T-GlobalNET-Templates-PageTemplatesCodeHelp'></a>
-## PageTemplatesCodeHelp `type`
-
-##### Namespace
-
-GlobalNET.Templates
-
-##### Summary
-
-Library with standardize Definitions and Methods For Develop Any System
-
-<a name='F-GlobalNET-Templates-PageTemplatesCodeHelp-Languages'></a>
-### Languages `constants`
-
-##### Summary
-
-Define Collection For ComboBox Example
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-BtnApiTest_Click-System-Object,System-Windows-RoutedEventArgs-'></a>
-### BtnApiTest_Click(sender,e) `method`
-
-##### Summary
-
-Customized GET Call
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.RoutedEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.RoutedEventArgs 'System.Windows.RoutedEventArgs') |  |
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-DefinedAllAplicationApiComunicationTypes'></a>
-### DefinedAllAplicationApiComunicationTypes() `method`
-
-##### Summary
-
-Global Application Defined API Communication Types for Centralized using
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-DefinedGlobalMainWindowMethodsForAllPages'></a>
-### DefinedGlobalMainWindowMethodsForAllPages() `method`
-
-##### Summary
-
-Global Application available Methods for All Pages for Centralized using
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-LoadParameters'></a>
-### LoadParameters() `method`
-
-##### Summary
-
-Example of Load System Parameters for Page
-Add Call this method Before LoadDatalist and Tilt Documents
-LoadParameters() will be later translating Detail Fields
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-NumberValidationTextBox-System-Object,System-Windows-Input-TextCompositionEventArgs-'></a>
-### NumberValidationTextBox(sender,e) `method`
-
-##### Summary
-
-Special Method for input limitation as number only
-Its only for help
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') |  |
-| e | [System.Windows.Input.TextCompositionEventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Input.TextCompositionEventArgs 'System.Windows.Input.TextCompositionEventArgs') |  |
-
-<a name='M-GlobalNET-Templates-PageTemplatesCodeHelp-UsedSpecificMethodsForCustomizedWorking'></a>
-### UsedSpecificMethodsForCustomizedWorking() `method`
-
-##### Summary
-
-Global Specific Methods For Customized Working
-
-##### Parameters
-
-This method has no parameters.
-
 <a name='T-GlobalNET-Pages-ParameterListPage'></a>
 ## ParameterListPage `type`
 
@@ -2565,18 +2580,18 @@ GlobalNET.Classes
 
 Report naming support
 
-<a name='T-GlobalNET-SystemConfiguration-Resources'></a>
+<a name='T-GlobalNET-Properties-Resources'></a>
 ## Resources `type`
 
 ##### Namespace
 
-GlobalNET.SystemConfiguration
+GlobalNET.Properties
 
 ##### Summary
 
 Třída prostředků se silnými typy pro vyhledávání lokalizovaných řetězců atp.
 
-<a name='P-GlobalNET-SystemConfiguration-Resources-Culture'></a>
+<a name='P-GlobalNET-Properties-Resources-Culture'></a>
 ### Culture `property`
 
 ##### Summary
@@ -2584,33 +2599,19 @@ Třída prostředků se silnými typy pro vyhledávání lokalizovaných řetěz
 Potlačí vlastnost CurrentUICulture aktuálního vlákna pro všechna
   vyhledání prostředků pomocí třídy prostředků se silnými typy.
 
-<a name='P-GlobalNET-SystemConfiguration-Resources-ResourceManager'></a>
+<a name='P-GlobalNET-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
 
 ##### Summary
 
 Vrací instanci ResourceManager uloženou v mezipaměti použitou touto třídou.
 
-<a name='P-GlobalNET-SystemConfiguration-Resources-no_photo'></a>
+<a name='P-GlobalNET-Properties-Resources-no_photo'></a>
 ### no_photo `property`
 
 ##### Summary
 
 Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
-
-<a name='T-GlobalNET-GlobalClasses-RunningMode'></a>
-## RunningMode `type`
-
-##### Namespace
-
-GlobalNET.GlobalClasses
-
-##### Summary
-
-SYSTEM Running mode
-In debug mode is disabled the System Logger
-Visual Studio Debugger difficult operation has problem
-If you want you can enable SystemLogger by change to: DebugWithSystemLogger
 
 <a name='T-GlobalNET-Pages-ScreenSaverPage'></a>
 ## ScreenSaverPage `type`
@@ -2689,6 +2690,28 @@ InitializeComponent
 
 This method has no parameters.
 
+<a name='T-GlobalNET-Pages-SvgIconListPage'></a>
+## SvgIconListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+SvgIconListPage
+
+<a name='M-GlobalNET-Pages-SvgIconListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
 <a name='T-GlobalNET-Pages-SystemFailListPage'></a>
 ## SystemFailListPage `type`
 
@@ -2710,6 +2733,53 @@ InitializeComponent
 ##### Parameters
 
 This method has no parameters.
+
+<a name='T-GlobalNET-SystemHelper-SystemLoggerHelper'></a>
+## SystemLoggerHelper `type`
+
+##### Namespace
+
+GlobalNET.SystemHelper
+
+##### Summary
+
+System Logger Helper
+Defined Central WebSocket Monitor Controller
+
+<a name='M-GlobalNET-SystemHelper-SystemLoggerHelper-DisposeSystemLoggerWebSocketMonitor'></a>
+### DisposeSystemLoggerWebSocketMonitor() `method`
+
+##### Summary
+
+Disable Server Logger When the System logger is enabled
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-GlobalNET-SystemHelper-SystemLoggerHelper-SystemLoggerWebSocketMonitorOnOff'></a>
+### SystemLoggerWebSocketMonitorOnOff() `method`
+
+##### Summary
+
+Systems the logger web socket monitor on/off.
+Full Control For Server WebSocket Logger
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-SystemHelper-SystemLoggerWebSocketClass'></a>
+## SystemLoggerWebSocketClass `type`
+
+##### Namespace
+
+GlobalNET.SystemHelper
+
+##### Summary
+
+System Logger WebSocket Monitor Controller Class Definition
+For Centralized Using
 
 <a name='T-GlobalNET-GlobalOperations-SystemOperations'></a>
 ## SystemOperations `type`
@@ -2797,6 +2867,23 @@ In Debug is increase last 4 position
 
 This method has no parameters.
 
+<a name='M-GlobalNET-GlobalOperations-SystemOperations-RandomString-System-Int32-'></a>
+### RandomString(length) `method`
+
+##### Summary
+
+Generate Random String with defined length
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| length | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The length. |
+
 <a name='M-GlobalNET-GlobalOperations-SystemOperations-RemoveAppNamespaceFromString-System-String-'></a>
 ### RemoveAppNamespaceFromString(stringForRemoveNamespace) `method`
 
@@ -2829,6 +2916,19 @@ System Mail sending
 | body | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 | attach | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
 
+<a name='M-GlobalNET-GlobalOperations-SystemOperations-SendMailWithServerSetting-System-String-'></a>
+### SendMailWithServerSetting(message) `method`
+
+##### Summary
+
+Email Sender for send Direct Email by Server Configuration for Testing
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| message | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The message. |
+
 <a name='M-GlobalNET-GlobalOperations-SystemOperations-SetLanguageDictionary-System-Windows-ResourceDictionary,System-String-'></a>
 ### SetLanguageDictionary(Resources,languageDefault) `method`
 
@@ -2847,6 +2947,70 @@ Will be replaced by DBDictionary, but for Offline Running must be possible
 | ---- | ---- | ----------- |
 | Resources | [System.Windows.ResourceDictionary](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.ResourceDictionary 'System.Windows.ResourceDictionary') |  |
 | languageDefault | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') |  |
+
+<a name='M-GlobalNET-GlobalOperations-SystemOperations-StartExternalProccess-System-String,System-String,System-String,System-String-'></a>
+### StartExternalProccess(fullFilePath,startupPath,arguments) `method`
+
+##### Summary
+
+System External Process Starter for Conrtalized Using
+Return the processId when is started or null
+
+TODO
+- create process Monitor
+- save the monitored procceses to System Monitor
+- must be refactored actual status
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| fullFilePath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The full file path. |
+| startupPath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The startup path. |
+| arguments | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The arguments. |
+
+<a name='T-GlobalNET-GlobalClasses-SystemStatuses'></a>
+## SystemStatuses `type`
+
+##### Namespace
+
+GlobalNET.GlobalClasses
+
+##### Summary
+
+!!SYSTEM Global Definition for System Statuses
+
+SYSTEM Running mode
+In debug mode is disabled the System Logger
+Visual Studio Debugger difficult operation has problem
+If you want you can enable SystemLogger by change to: DebugWithSystemLogger
+
+Its Used as String EveryWhere
+Its good Soution for Centarized Statuses of System
+Errors Are Saved In SystemLogger or Database
+
+<a name='T-GlobalNET-SystemStructure-SystemWindowDataModel'></a>
+## SystemWindowDataModel `type`
+
+##### Namespace
+
+GlobalNET.SystemStructure
+
+<a name='M-GlobalNET-SystemStructure-SystemWindowDataModel-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Its Solution For MultiInstance Application
+If The InterTab Is Enabled Can be Dragged Tab To the New Application
+
+##### Parameters
+
+This constructor has no parameters.
 
 <a name='T-GlobalNET-Pages-TemplateClassListPage'></a>
 ## TemplateClassListPage `type`
@@ -3933,8 +4097,8 @@ GlobalNET.GlobalClasses
 
 Tilt Document Types Definitions
 
-<a name='T-GlobalNET-Pages-ToolPanelPage'></a>
-## ToolPanelPage `type`
+<a name='T-GlobalNET-Pages-ToolPanelDefinitionListPage'></a>
+## ToolPanelDefinitionListPage `type`
 
 ##### Namespace
 
@@ -3942,9 +4106,31 @@ GlobalNET.Pages
 
 ##### Summary
 
-ToolPanelPage
+ToolPanelDefinitionListPage
 
-<a name='M-GlobalNET-Pages-ToolPanelPage-InitializeComponent'></a>
+<a name='M-GlobalNET-Pages-ToolPanelDefinitionListPage-InitializeComponent'></a>
+### InitializeComponent() `method`
+
+##### Summary
+
+InitializeComponent
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='T-GlobalNET-Pages-ToolPanelListPage'></a>
+## ToolPanelListPage `type`
+
+##### Namespace
+
+GlobalNET.Pages
+
+##### Summary
+
+ToolPanelListPage
+
+<a name='M-GlobalNET-Pages-ToolPanelListPage-InitializeComponent'></a>
 ### InitializeComponent() `method`
 
 ##### Summary

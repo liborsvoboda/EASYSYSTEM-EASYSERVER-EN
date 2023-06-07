@@ -35,7 +35,7 @@ ONLINE EXAMPLE: https://kliknetezde.cz
   Tel: 00420 724986873, email: Libor.Svoboda@GroupWare-Solution.Eu
   
   
-#### UNIVERSAL MODERN BE + MS FE SOLUTION FOR BUILDING ANY 3-layer technological software or its parts
+### UNIVERSAL MODERN BE + MS FE SOLUTION FOR BUILDING ANY 3-layer technological software or its parts
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 
@@ -52,7 +52,7 @@ ONLINE EXAMPLE: https://kliknetezde.cz
 **Complete free projects codes, templates, help, tips, trics, etc: [https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN "")**   
 
 ---
-## GroupWare-Solutions FOR Universal IT World
+### GroupWare-Solutions FOR Universal IT World
 
 [SolutionsVisions&Ideas.MD](SolutionsVisions&Ideas.MD)  
 [AUTO_STEPS_Look_First.md](AUTO_STEPS_Look_First.md)  
@@ -70,7 +70,7 @@ ONLINE EXAMPLE: https://kliknetezde.cz
 
 ---
 
-## EASY-SYSTEM-Builder
+### EASY-SYSTEM-Builder
 Visual Studio project solution EASYSYSTEMBuilder for
 
 **C# WPF Low/no code solution For immediate development of your own SYSTEM:**
@@ -102,7 +102,7 @@ DATAView / DATADetail / DATAView with SubDATAview / DATAView with SubFullDataDet
 
 ---
 
-## EASY-DATA-CENTER
+### EASY-DATA-CENTER
 Visual Studio project solution EASYDATACenter ASPNETCORE6 providing:
 
 Simple development of Universal secure Multiplatform MultiDB Backend Server
@@ -117,18 +117,18 @@ With RESTFULL / WEBSOCKET implementations
 
 ---
 
-## FYI Reporting - Report Editor / Viewer
+### FYI Reporting - Report Editor / Viewer
 FreeWare Full Report Designer and Viewer for printing all types of documents / barcodes, EAN, QR
 
 ---
-## EASYTOOLS
+### EASYTOOLS
 * Add-ons for touch panels, controls, data types, forms, media, documents, 3D,
 * They are completely free to download (including every license pack)  
 * Open Source community to include more than 1000 tools in the system by community  
 
 ----
  
-## EXISTING CLONE SYSTEMS CREATED IN 14 DAYS
+### EXISTING CLONE SYSTEMS CREATED IN 14 DAYS
 1. **LicenseSrv**
 MultiOS license server with listening API GET/POST server / generation of unlimited static/dynamic license CODES and application client to manage the Server
 1. **GUIDES** Windows XP+ Implementation of production sources in the production of a production company For office / touch panels with an unlimited number of clients and the possibility of printing
@@ -137,7 +137,7 @@ MultiOS license server with listening API GET/POST server / generation of unlimi
 
 ---
 
-## SOLUTION - WHERE TO FIND COMPLETE INFORMATION
+### SOLUTION - WHERE TO FIND COMPLETE INFORMATION
 All documentation, license, case study, price list, media, developer information, help, manuals, technology information, installation, images, videos, downloads, etc. can be found here:
 
 
@@ -154,7 +154,7 @@ All documentation, license, case study, price list, media, developer information
 **Complete Development Documentation and Smart Search:**   [https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN](https://liborsvoboda.github.io/EASYSYSTEM-EASYSERVER-EN "")  
 
 ---
-## Company contact for suppliers   
+### Company contact for suppliers   
 
 **Email:**
 - Libor.Svoboda@GroupWare-Solution.eu  

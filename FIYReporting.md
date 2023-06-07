@@ -37,8 +37,55 @@ which the definition is full in DB (can be defined multi Datasets)
 * Each join [param] can be separated for run alone or combined with others
 * Full SQL and SQLexec are supported
 
+### Print example from CMD with parameters
 
-### Print SQL examples
+"RdlReader.exe" "C:\WorkListPrint.rdl" -p "&Search=%%&Id=0"
+
+Report has dataset and you can insert field over right mouse/ insert / object /
+
+Expressions
+PageBreak ={PersonalNumber} - new page by  each personalNumber
+
+functions in C# not MSSQL
+
+using ="Filter:" + Replace({?Search}, "%", "")  - Search is param, replace %%
+
+for run report mut be set Default values for parameters
+=Fields!OperationNumber.Value + " " + {Note}
+=Sum({Amount})
+---
+
+### Print SQL Examples
+```sql
+SET FMTONLY OFF;
+
+SELECT
+w.[Id],FORMAT([Date],'MM.yyyy') as Month,
+FORMAT([Date],'dd.MM.yyyy') as Date,
+CONCAT(FORMAT([Date],'MMyy'),w.[PersonalNumber]) as ListBreak,
+w.[PersonalNumber],o.[PartNumber],w.[WorkPlace],w.[OperationNumber],
+[WorkTime],[Pcs],[Amount],[WorkPower] ,[Name],[SurName],o.[Note]
+FROM [WorkList] w,[PersonList] p,[OperationList] o 
+WHERE w.PersonalNumber = p.PersonalNumber AND w.WorkPlace = o.WorkPlace 
+
+AND o.OperationNumber = w.OperationNumber AND
+(@Id = 0 AND ((LEN(@Search) > 2 AND w.Id LIKE @Search) OR LEN(@Search) = 2))
+OR w.Id = @Id 
+
+ORDER BY w.[Date] ASC, w.PersonalNumber, w.[OperationNumber]
+```
+
+```sql
+--Select with simple search and Id selection
+SELECT Id, UserName, TerminalName, Description, Timestamp 
+FROM LoginHistoryList 
+WHERE 1=1 AND (
+( @Search <> '%%' AND id LIKE @Search )
+OR ( @Search = '%%' AND @Id = 0  )
+OR ( @Search = '%%' AND @Id <> 0 AND Id = @Id )
+)
+```
+
 ```sql
 --Selection with direct params
 SELECT Id, UserName, TerminalName, Description, Timestamp 
@@ -49,6 +96,19 @@ OR ( @Search = '%%' AND @Id = 0  )
 OR ( @Search = '%%' AND @Id <> 0 AND Id = @Id )
 )
 ```
+
+```sql
+--Select with advanced Filter
+
+SET FMTONLY OFF;
+DECLARE @whereClause NVARCHAR(MAX) = @Filter ;
+DECLARE @sql NVARCHAR(MAX) = 'SELECT Id, UserName, TerminalName, Description, Timestamp FROM LoginHistoryList  WHERE @whereClause';
+
+SELECT @sql = REPLACE(@sql, '@whereClause', @whereClause);
+
+EXEC sp_executesql @sql;
+```
+
 
 ```sql
 --Selection with ReportQueueList definitions
@@ -123,3 +183,10 @@ ORDER BY w.[Date] ASC, w.PersonalNumber, w.[OperationNumber]
   
 ---
 
+
+### MarkDown Item Template  
+```cs
+
+```
+
+---

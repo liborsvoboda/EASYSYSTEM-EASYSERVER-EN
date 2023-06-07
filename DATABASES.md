@@ -14,9 +14,11 @@ One Command and One Database in Project, never less - its my new Idea
     DB2
     etc
     
+---
+
 ### SHARED PROJECT FILES
    
-[MSSQL EASYBuilder DB installation script](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/blob/main/EASY-DATA-Center_Downloads/ANY%20DATABASES_Help/MSSQL_DB/MSSQL_EASYBuilderDB_UploadDBscript.sql "")
+[MSSQL EASYBuilder DB installation script](https://github.com/liborsvoboda/EASYSYSTEM-EASYSERVER-EN/raw/main/DatabasesKnowledge/MSSQL_EASYBuilderDB_UploadDBscript.sql "")
 
 ---
 ### MSSQL ENGINE HELP COMMANDS AND TYPES
@@ -271,8 +273,14 @@ ALTER TABLE [dbo].[UnitList] ENABLE TRIGGER [TR_UnitList]
 GO
 ```
 
+---
 
+### MarkDown Item Template  
+```cs
 
+```
+
+---
 
 
 

@@ -11,14 +11,14 @@
 [Swagger Documentation](https://github.com/domaindrivendev/Swashbuckle.AspNetCore#swashbuckleaspnetcoreswaggergen "")
 ---
 
-**Administration tools included in Backend server**  
+### Administration tools included in Backend server    
 * ApiDescription Generator - on url: /swagger   
 * Data manager for connected DB - on url: /CoreAdmin  
 * Server Health Service - on url: /ServerHealthService  
 * WEB root  - with Websocket test utility
 
 ---
-## JSON configuration Older Example  (folder Data/config.json):
+### JSON configuration Older Example  (folder Data/config.json):
 
 > "DatabaseConnectionString":      -  MSSQL DB connection string. Its only in config file.   
 "ConfigJwtLocalKey": 	        - Your JWT Local Key you can set random key.   
@@ -39,7 +39,7 @@
 
 
 ---
-## EASYDATACenter Universal BACKEND Server Solution foe ANY LIN/WIN/DB 
+### EASYDATACenter Universal BACKEND Server Solution foe ANY LIN/WIN/DB 
 *     Universal Secure MultiPlatform MultiDATABASE BackEnd Server Project 
 *     WiTH RESTFULL / WEBSOCKET implementations
 *     With All Template types for INSERT / UPDATE / DELETE / SELECT / 
@@ -49,8 +49,9 @@
 *     With Tables, Indexes, ForeignKeys in All Standard DB Using 
 *     FOR SIMPLE COPY / PASTE DEVELOPMENT IN EXTREMELY LOW PRICE 5000Kč/200EURO
 
+---
 
-## USED TECHNOLOGIES (SUPPORT by CORE) IN SOLUTION CORE
+### USED TECHNOLOGIES (SUPPORT by CORE) IN SOLUTION CORE
 * DB types: SQL Server, Oracle, MySQL, SQLite, PostgreSQL, DB2, etc.
 * LINUX, WINDOWS, GCLOUD, DOCKER, AZURE implementation
 * HTTP/HTTPS/WebSocket/RestFull / GET,POST,PATCH,PUT,DELETE,OPTION,etc.
@@ -69,7 +70,7 @@
 
 --- 
 
-## Databases - EASY Way with AUTO Management  
+### Databases - EASY Way with AUTO Management  
 
 - ASPNETCORE6 and Entity Framework 6 are perfect managing solution for any DATABASE   
 - Simple using is Domain for these Technologies, which is simple for each Power User
@@ -77,28 +78,30 @@
 - lot of Free Tools on GitHub, can be simple included with High effect
 
 ---
-**These Tools are Included to Solution Core**
+
+### These Tools are Included to Solution Core  
 - Complex Tool DB Data management  
 - Automatic API Tester and Documentation Generator
 - System Checker with controlling and logging more than 100 Server/Network/DB/IS/OS events
 
 ---
 
-**Used Pimary Technologies for Unlimited Vision - Older**
+### Used Primary Technologies for Unlimited Vision - Older
 
 -	AspNetCore 6
--	Entity Framewok 6
+-	Entity Framework 6
 -	Log4Net
 -	MSSQL connection
 -	HTTP/HTTPS/WebSocket/RestFull / [GET,POST,PATCH,PUT,DELETE,OPTION]
 -	Windows Service / Docker Service / Console application
 -	CookiePolicy
 -	CorsPolicy
--	Authentification / Authorization / Basic – JwtBearer
+-	Authentication / Authorization / Basic – JwtBearer
 -	Automatic EndPoints /Controllers
 
 ---
-##Database Model snapshot to Entity Entity Framework 6:
+
+### Database Model snapshot to Entity Entity Framework 6:
 
 The first green descriptions commands is for simple direct working with MSSQL database. 
 This command generating „full DB Model Entity“ and „full DB API documentation“. 
@@ -116,8 +119,8 @@ Command for: generate full DB Context – Database API documentation
 Scaffold-DbContext "Server=SQLSRV\SQLEXPRESS;Database=DATAPUB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -ContextDir "DbContexts"
 
 2)
-Replace Connection string in DBContect folder/Context filewith this program part. 
-(here you can enable SQL debuging)
+Replace Connection string in DBContect folder/Context file with this program part. 
+(here you can enable SQL debugging)
 
 ```cs
 public DATAPUBContext(DbContextOptions<DATAPUBContext> options)
@@ -142,7 +145,7 @@ if (!optionsBuilder.IsConfigured)
 
 ---
 
-3) Dissable ForeignKey control you must set JSONIgnore & ValidateNever params for key in DBModel. Example is in UserList:
+3) Disable ForeignKey control you must set JSONIgnore & ValidateNever params for key in DBModel. Example is in UserList:
 
 ```cs
 [JsonIgnore]
@@ -154,7 +157,7 @@ public virtual UserRoleList Role { get; set; } = null!;
 ---
 4)
 
-Initite Migrations files to DOTNET migration management for Upload/Manage Database Migrations:   
+Init Migrations files to DOTNET migration management for Upload/Manage Database Migrations:   
 Add-Migration Initial -Context Company.WebApplication1.Data.ApplicationDbContext
 
 Upload migrations to DATABASE  
@@ -184,19 +187,21 @@ dotnet ef database update
 
 ---
 
-Generate executable Files 
+### Generate executable Files 
 
 [https://learn.microsoft.com/cs-cz/dotnet/core/tools/dotnet-publish](https://learn.microsoft.com/cs-cz/dotnet/core/tools/dotnet-publish "")
 
+---
 
-**Run debug**   
+### Run debug     
 dotnet run --project BACKENDCORE -r win-x64 -c Debug --self-contained
 
 Generate exe file Without WebPage support
 dotnet publish BACKENDCORE -c Release -o bin -r win-x64 /p:PublishSingleFile=true
 
+--- 
 
-**DB backup procedure in Linux**  
+### DB backup procedure in Linux    
 ```sql
 CREATE procedure [dbo].[DB_AUTOBACKUP]
 AS
@@ -209,15 +214,18 @@ BEGIN
 END;
 GO
 ```
+---
 
-**One Project support More DBs = DBContexts**   
+### One Project support More DBs = DBContexts   
 these can be used whatever, MOre Api for More App for example
 
 The test version, if requested, should ideally
 be deployed separately for making changes
 
 ---
-**Solution for Data selection by Role - its needed in SELECT API only**  
+
+### Solution for Data selection by Role - its needed in SELECT API only
+
 ```cs
 if (Request.HttpContext.User.IsInRole("Admin"))
 { data = new EASYDATACenterContext().ImageGalleryLists.FromSqlRaw("SELECT * FROM ImageGalleryList WHERE 1=1 AND " + filter.Replace("+", " ")).AsNoTracking().ToList(); }
@@ -230,7 +238,7 @@ else
 ```
 ---
 
-## ASPNETCORE6 & ENTITY FRAMEWORK6 - SUPER SERVER
+### ASPNETCORE6 & ENTITY FRAMEWORK6 - SUPER SERVER
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 * ASPNETCORE is a simple intuitive framework with a whisperer for easy development.  
@@ -241,8 +249,9 @@ else
 * DB Views behave the same as tables  
 * Turn off foreign keys in the model To be able to work freely with the tables  
 
+---
 
-## Server configuration
+### Server configuration
 The server loads the configuration from a file at startup and after connecting to the database
 replaces it with the settings from the database and starts the server according to the parameters
 
@@ -269,7 +278,9 @@ replaces it with the settings from the database and starts the server according 
 * /BackendCheckApi - Api for checking Server Availability
 * /Authentication - Basic authentication Standard message for receiving the Token
 
-## Unique Services of severru
+---
+
+### Unique Services of sever
 
 * /BackendCheckApi - Api for checking Server Availability  
 * /Authentication - Basic authentication Standard message for receiving the Token  
@@ -279,13 +290,9 @@ replaces it with the settings from the database and starts the server according 
 * /CoreAdmin - Data Manager for the connected database  
 * /ServerHealthService - Service for setting health checks; server HW/SW  
 
+---
 
-
-
-
-## API Communication on the BACKEND server side
-
-
+### API Communication on the BACKEND server side
 
 ```en
 //Disable foreign keys in the model by adding JsonIgnore, ValidateNever : Sample
@@ -296,9 +303,10 @@ public virtual UserList User { get; set; } = null!;
 ```    
 
     
+---
 
+### API Template  
 
-**API Template**  
 * The template is ready for complete communication with the table Just RENAME  
 * Authorization, INSERT/UPDATE/SELECT/DELETE  
 
@@ -317,9 +325,10 @@ int result = test.SaveChanges();
 
 ```
 
+---
 
+### EF6 DB procedure query with response
 
-**EF6 DB procedure query with response**  
 ```c
 parameters = new List<SqlParameter> {
 new SqlParameter { ParameterName = "@unlockCode", Value = unlockCode },
@@ -330,17 +339,19 @@ data = new GLOBALNETContext().Database.ExecuteSqlRaw("exec CheckUnlockKey @unloc
 allowed = bool.Parse(parameters[3].Value.ToString());
 ```
 
-
 ---
-## MSSQL IN ASPNETCORE HELP COMMANDS AND TYPES
+
+### MSSQL IN ASPNETCORE HELP COMMANDS AND TYPES  
+
 ```c
 #Command for: Auto Generate full DB – complete Database Model Entity Framework
 Scaffold-DbContext "Server=SQLSRV\SQLEXPRESS;Database=DATAPUB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir DBModel -ContextDir "DBContexts"
 ```  
 
+---
 
+### EF6 Query Check Token.Role/Issuer - UserName, Include sub table Foreign Table
 
-**EF6 Query Check Token.Role/Issuer - UserName, Include sub table Foreign Table**
 ```cs
 if (Request.HttpContext.User.IsInRole("Admin")) {
     data = new hotelsContext().AddressLists.ToList();
@@ -349,13 +360,18 @@ if (Request.HttpContext.User.IsInRole("Admin")) {
         .Where(a => a.User.UserName == Request.HttpContext.User.Claims.First().Issuer).ToList();
 }
 ```   
-    
-**Ignore more Sub Tables from include in API response**  
+---
+
+### Ignore more Sub Tables from include in API response  
+
 ```css
 return JsonSerializer.Serialize(data, new JsonSerializerOptions() { ReferenceHandler = ReferenceHandler.IgnoreCycles,WriteIndented = true });
 ```
 
-**Advanced Query Select for Admin user Request suppport**
+---
+
+### Advanced Query Select for Admin user Request suppport  
+
 ```cs
 if (Request.HttpContext.User.IsInRole("Admin"))
 { data = new hotelsContext().AddressLists.FromSqlRaw("SELECT * FROM AddressList WHERE 1=1 AND " + filter.Replace("+", " ")).AsNoTracking().ToList(); }
@@ -366,7 +382,10 @@ else {
 }
 ```
 
-**Extend Table schema with columns from another table**
+---
+
+### Extend Table schema with columns from another table  
+
 ```cs
 data = new hotelsContext().DocumentTypeLists
 .Include(d => (d.SystemNameNavigation)).Select(x => new ExtendedDocumentTypeList
@@ -381,11 +400,14 @@ data = new hotelsContext().DocumentTypeLists
 }).ToList();
 ```
 
-**Join Table with new custom join condition with exist record**  
+---
+
+### Join Table with new custom join condition with exist record
+
 **And next more condition in WHERE to List<string> **  
 (_joiner, _joined) => _joiner.City
 ```css
-        [HttpGet("/WebApi/Search/GetSearchDial/{language}")]
+        [HttpGet("/GLOBALNETWebApi/Search/GetSearchDial/{language}")]
         public async Task<string> GetSearchDial(string language = "cz") {
 
             List<string> data;
@@ -411,8 +433,10 @@ data = new hotelsContext().DocumentTypeLists
         }
 ```
 
+---
 
-**Join Table with new custom join condition with exist record to Tuple List**  
+### Join Table with new custom join condition with exist record to Tuple List  
+
 ```css
 countryData = _dbContext.CountryLists.
                     Join(_dbContext.HotelLists.Where(a => a.Advertised && a.Approved == true),
@@ -421,7 +445,7 @@ countryData = _dbContext.CountryLists.
 
 
 ---
-## MYSQL IN ASPNETCORE HELP COMMANDS AND TYPES
+### MYSQL IN ASPNETCORE HELP COMMANDS AND TYPES
 
 ```bash
 #Console command for download full database schema to Backend Server Project
@@ -446,14 +470,32 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
     }
 ```
 
+---
 
-## API Condition for Role Admin only  
+### API Condition for Role Admin only  
+
 ```cs
+
 [Authorize(Roles = Role.Admin)]
+[Authorize(Roles = "admin")]
+[CustomAuthorize(Roles = "admin")]
+
+if (Request.HttpContext.User.IsInRole("Admin"))
+
 ```
 ---
 
-## BACKEND server Templates and system rules COPY/PASTE/RENAME supported
+### API Condition Ignore For Swagger Docs
+
+```cs
+
+//[ApiExplorerSettings(IgnoreApi = true)]
+
+```
+---
+
+
+### BACKEND server Templates and system rules COPY/PASTE/RENAME supported
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 
@@ -683,7 +725,9 @@ ALTER TABLE [dbo].[UnitList] ENABLE TRIGGER [TR_UnitList]
 GO   
 ```
 ---
-## API communication - 4 TYPES is enough
+
+### API communication - 4 TYPES is enough  
+
 <sup>**For thinking, the development of tools and work with them worthy in the 21st century**</sup>
 
 It is so. INSERT/UPDATE/DETETE/SELECT are the mentioned types which are enough
@@ -693,7 +737,9 @@ set up for this as a standardized automatic part of the kernel.
 
 System kernel code dump, Where you just always add the address and don't care about anything else
 
-**System APIAddresList - all calls in one place**
+---
+
+### System APIAddresList - all calls in one place  
 
 ```cs
     /// <summary>
@@ -721,7 +767,9 @@ System kernel code dump, Where you just always add the address and don't care ab
     }
 ```
 
-**4 API Calls - SYSTEM Core module**
+---
+
+### 4 API Calls - SYSTEM Core module  
 
 ```cs
     class ApiCommunication
@@ -820,4 +868,12 @@ System kernel code dump, Where you just always add the address and don't care ab
 ```
 
 ----
+
+
+### MarkDown Item Template  
+```cs
+
+```
+
+---
 

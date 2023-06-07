@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # EASY-SYSTEM-Builder & EASY-DATA-Center & Visual Studio Help
 
 ---
@@ -8,4 +8,11 @@
 ```
 <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled> 
 ```
+---
+
+### MarkDown Item Template  
+```cs
+
+```
+
 ---
